@@ -57,6 +57,14 @@ void main() {
     expect(paket.toSet(), hasLength(paket.length));
     for (final a in katalog.appar.values) {
       expect(a.android != null || a.appStoreId != null, isTrue, reason: a.id);
+      // Bara schemats namn, utan "://".
+      if (a.iosSchema != null) {
+        expect(
+          a.iosSchema,
+          matches(RegExp(r'^[a-z][a-z0-9.+-]*$')),
+          reason: a.id,
+        );
+      }
     }
   });
 

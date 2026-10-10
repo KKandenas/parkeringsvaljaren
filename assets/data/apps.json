@@ -1,14 +1,15 @@
 {
   "schemaVersion": 1,
   "kontrollerad": "2026-10-10",
-  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association.",
+  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association. iosSchema: prövat på en riktig iPhone med web/lanktest.html (EasyPark 2026-10-10).",
   "appar": [
     {
       "id": "easypark",
       "namn": "EasyPark",
       "android": "net.easypark.android",
       "appStoreId": "449594317",
-      "webb": "https://www.easypark.com/sv-se"
+      "webb": "https://www.easypark.com/sv-se",
+      "iosSchema": "easypark"
     },
     {
       "id": "parkster",
