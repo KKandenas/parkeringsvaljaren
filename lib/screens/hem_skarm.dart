@@ -61,6 +61,15 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
 
   void _andrat() => setState(() {});
 
+  /// Android vet vilka appar som finns. Webben vet bara om appar som har
+  /// öppnats härifrån, och resten är okända.
+  bool? _arInstallerad(ParkeringsApp app) {
+    if (AppOppnare.arAndroidApp) {
+      return _installerade?.contains(app.android);
+    }
+    return widget.minaAppar.harAppen.contains(app.id) ? true : null;
+  }
+
   Future<void> _lasInstallerade() async {
     final paket = [
       for (final a in widget.katalog.appar.values)
@@ -87,8 +96,12 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   }
 
   Future<void> _oppna(ParkeringsApp app) async {
-    final ok = await _oppnare.oppna(app);
-    if (!ok && mounted) {
+    final svar = await _oppnare.oppna(app);
+    // På webben är det enda sättet att veta att appen finns.
+    if (svar == Oppnat.appen && !AppOppnare.arAndroidApp) {
+      await widget.minaAppar.markeraHarAppen(app.id);
+    }
+    if (svar == Oppnat.misslyckades && mounted) {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('Kunde inte öppna ${app.namn}.')));
@@ -113,7 +126,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       operatorAppar: [?plats?.operatorApp],
       favoriter: widget.minaAppar.favoriter,
       dolda: widget.minaAppar.dolda,
-      installerade: _installerade,
+      installerad: _arInstallerad,
     );
     final f = Farger.av(context);
 

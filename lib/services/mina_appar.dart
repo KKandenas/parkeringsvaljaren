@@ -1,18 +1,30 @@
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Favoriter och dolda appar. Sparas på enheten.
+/// Favoriter, dolda appar och appar som har öppnats härifrån. Sparas på
+/// enheten.
 class MinaAppar extends ChangeNotifier {
   MinaAppar(this._prefs)
     : favoriter = {...?_prefs.getStringList(_favoriterNyckel)},
-      dolda = {...?_prefs.getStringList(_doldaNyckel)};
+      dolda = {...?_prefs.getStringList(_doldaNyckel)},
+      harAppen = {...?_prefs.getStringList(_harAppenNyckel)};
 
   static const _favoriterNyckel = 'favoriter';
   static const _doldaNyckel = 'dolda';
+  static const _harAppenNyckel = 'har_appen';
 
   final SharedPreferences _prefs;
   final Set<String> favoriter;
   final Set<String> dolda;
+
+  /// Appar som webbversionen har öppnat, och som alltså finns på enheten.
+  final Set<String> harAppen;
+
+  Future<void> markeraHarAppen(String id) async {
+    if (!harAppen.add(id)) return;
+    notifyListeners();
+    await _prefs.setStringList(_harAppenNyckel, harAppen.toList()..sort());
+  }
 
   static Future<MinaAppar> las() async =>
       MinaAppar(await SharedPreferences.getInstance());

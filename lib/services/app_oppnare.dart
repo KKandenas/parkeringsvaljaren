@@ -3,14 +3,27 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/katalog.dart';
+import 'schema_prov.dart';
+
+/// Hur det gick att öppna en app.
+enum Oppnat {
+  /// Appen öppnades, så den finns på enheten.
+  appen,
+
+  /// Butiken (eller webbplatsen) öppnades.
+  butiken,
+
+  misslyckades,
+}
 
 /// Ser vilka appar som finns och öppnar dem.
 ///
 /// Android: via MainActivity (kanalen "parkering/appar"). Appen startas med
 /// paketnamnet. Saknas den öppnas Google Play.
 /// Webben: en webbsida kan inte se vilka appar som är installerade. På
-/// iPhone öppnas appens universella länk om den har en, annars App Store,
-/// där det står "Öppna" om appen redan finns.
+/// iPhone öppnas appens universella länk om den har en. Har appen ett
+/// bekräftat URL-schema provas det först, och öppnas inte appen går man
+/// vidare till App Store, där det står "Öppna" om appen redan finns.
 class AppOppnare {
   AppOppnare({MethodChannel? channel})
     : _channel = channel ?? const MethodChannel('parkering/appar');
@@ -37,26 +50,47 @@ class AppOppnare {
     }
   }
 
-  /// Öppnar appen, eller butiken om den saknas. Returnerar false om inget
-  /// gick att öppna.
-  Future<bool> oppna(ParkeringsApp app) async {
+  /// Öppnar appen, eller butiken om den saknas.
+  Future<Oppnat> oppna(ParkeringsApp app) async {
     if (arAndroidApp && app.android != null) {
       try {
         final oppnad = await _channel.invokeMethod<bool>('oppna', {
           'package': app.android,
           'url': app.universellLank,
         });
-        if (oppnad == true) return true;
+        if (oppnad == true) return Oppnat.appen;
       } on PlatformException catch (e) {
         debugPrint('Kunde inte öppna ${app.namn}: $e');
       } on MissingPluginException {
         // Inte i Android-appen (t.ex. tester).
       }
       return await _lank('market://details?id=${app.android}') ||
-          await _lank(app.playUrl);
+              await _lank(app.playUrl)
+          ? Oppnat.butiken
+          : Oppnat.misslyckades;
     }
-    return _lank(lankForWebben(app, defaultTargetPlatform));
+
+    final schema = schemaForWebben(app, defaultTargetPlatform);
+    if (kIsWeb && schema != null && await provaSchema(schema, schemaVantan)) {
+      return Oppnat.appen;
+    }
+    return await _lank(lankForWebben(app, defaultTargetPlatform))
+        ? Oppnat.butiken
+        : Oppnat.misslyckades;
   }
+
+  /// Hur länge webbappen väntar på att appen ska öppnas innan den går
+  /// vidare till App Store.
+  static const schemaVantan = Duration(milliseconds: 2500);
+
+  /// URL-schemat att prova först, bara på iPhone och iPad och bara om
+  /// appen saknar universell länk.
+  static String? schemaForWebben(ParkeringsApp app, TargetPlatform plattform) =>
+      (plattform == TargetPlatform.iOS || plattform == TargetPlatform.macOS) &&
+          app.universellLank == null &&
+          app.iosSchema != null
+      ? '${app.iosSchema}://'
+      : null;
 
   /// Vart webbversionen skickar användaren för appen. Safari på iPad
   /// utger sig för att vara en Mac, så macOS behandlas som iPhone.

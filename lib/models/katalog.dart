@@ -8,6 +8,7 @@ class ParkeringsApp {
     this.android,
     this.appStoreId,
     this.universellLank,
+    this.iosSchema,
     this.webb,
   });
 
@@ -24,6 +25,11 @@ class ParkeringsApp {
   /// apple-app-site-association. Saknas den öppnas App Store i stället.
   final String? universellLank;
 
+  /// Eget URL-schema som öppnar appen på iPhone, t.ex. "parkster" för
+  /// parkster://. Bara scheman som har prövats på en riktig iPhone
+  /// (web/lanktest.html) får stå här.
+  final String? iosSchema;
+
   final String? webb;
 
   String? get playUrl => android == null
@@ -39,6 +45,7 @@ class ParkeringsApp {
     android: json['android'] as String?,
     appStoreId: json['appStoreId'] as String?,
     universellLank: json['universellLank'] as String?,
+    iosSchema: json['iosSchema'] as String?,
     webb: json['webb'] as String?,
   );
 }

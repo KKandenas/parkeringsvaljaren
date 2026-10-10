@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Länktest</title>
+  <style>
+    :root {
+      --bg: #f4f6f9; --kort: #fff; --text: #142033; --dampad: #5a6577;
+      --skylt: #0b4ea2; --accent: #e8a400; --ok: #1f8a4c; --linje: #d9dee7;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1726; --kort: #1b2639; --text: #eef2f8; --dampad: #9aa6ba;
+        --skylt: #2f74d0; --accent: #f2b72c; --ok: #7fe0a6; --linje: #263244;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: max(16px, env(safe-area-inset-top)) 16px 48px;
+    }
+    main { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; }
+    h1 { font-size: 1.6rem; margin: 8px 0 0; }
+    p { margin: 0; }
+    .dampad { color: var(--dampad); font-size: .92rem; }
+    .app { background: var(--kort); border-radius: 14px; padding: 12px; display: grid; gap: 8px; }
+    .app h2 { font-size: 1.05rem; margin: 0; }
+    .knappar { display: flex; flex-wrap: wrap; gap: 8px; }
+    button {
+      font: 600 14px/1 inherit; font-family: inherit; border-radius: 999px; padding: 10px 14px;
+      border: 1px solid var(--linje); background: transparent; color: var(--text); cursor: pointer;
+    }
+    button.ok { background: var(--ok); border-color: var(--ok); color: #fff; }
+    button.nej { opacity: .45; text-decoration: line-through; }
+    button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .sammanfattning { background: var(--kort); border: 2px solid var(--accent); border-radius: 14px; padding: 12px; display: grid; gap: 8px; }
+    textarea { width: 100%; min-height: 110px; font: 13px ui-monospace, Menlo, monospace; background: var(--bg); color: var(--text); border: 1px solid var(--linje); border-radius: 8px; padding: 8px; }
+    .primar { background: var(--accent); border-color: var(--accent); color: #1a1300; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Länktest för parkeringsapparna</h1>
+  <p>Den här sidan tar reda på vilka adresser som öppnar apparna direkt på din iPhone. Öppna den i Safari och prova bara appar som du har installerade.</p>
+  <p class="dampad">Tryck på en knapp. Öppnas appen blir knappen grön när du kommer tillbaka hit. Visar Safari "Adressen är ogiltig" stryks knappen efter tio sekunder. Frågar Safari "Öppna i …?", tryck Öppna. Ingenting skickas någonstans. Resultatet sparas bara i den här webbläsaren.</p>
+
+  <div id="appar"></div>
+
+  <div class="sammanfattning">
+    <strong>Resultat</strong>
+    <p class="dampad">Kopiera texten och klistra in den i chatten.</p>
+    <textarea id="resultat" readonly></textarea>
+    <div class="knappar">
+      <button class="primar" id="kopiera" type="button">Kopiera</button>
+      <button id="nollstall" type="button">Börja om</button>
+    </div>
+  </div>
+</main>
+
+<script>
+// Kandidater: appens namn och dess bundle-id i App Store (itunes.apple.com).
+// Inget av detta är bekräftat förrän det har öppnat appen på en riktig iPhone.
+const APPAR = [
+  ['easypark', 'EasyPark', ['easypark', 'net.easypark.app']],
+  ['parkster', 'Parkster', ['parkster', 'se.parkster.Parkster']],
+  ['mobill', 'Mobill', ['mobill', 'se.mobill.parking.ios']],
+  ['epark', 'ePARK', ['epark', 'eparkera', 'se.netix.eparkera']],
+  ['aimo', 'Aimo Park', ['aimo', 'aimoone', 'com.aimoone.app']],
+  ['apcoa', 'APCOA FLOW', ['apcoa', 'apcoaflow', 'com.apcoa.apcoaparking']],
+  ['qpark', 'Q-Park', ['qpark', 'com.qparkgroup.mobilepark.ios']],
+  ['flowbird', 'Flowbird', ['flowbird', 'com.flowbird.mpp']],
+  ['parking-time', 'Parking Time', ['parkingtime', 'se.parkingtime.app']],
+  ['parkering-goteborg', 'Parkering Göteborg', ['parkeringgoteborg', 'se.goteborg.pbolaget.parkering']],
+  ['gavle-p', 'Gävle P', ['gavlep', 'se.parkeraisverige.gavle']],
+  ['linpark', 'LinPark', ['linpark', 'se.sanktkors.dukaten']],
+];
+const NYCKEL = 'lanktest-v1';
+let resultat = {};
+try { resultat = JSON.parse(localStorage.getItem(NYCKEL) || '{}'); } catch (e) {}
+
+function spara() {
+  try { localStorage.setItem(NYCKEL, JSON.stringify(resultat)); } catch (e) {}
+  visaResultat();
+}
+
+function visaResultat() {
+  const rader = [];
+  for (const [id, , scheman] of APPAR) {
+    for (const s of scheman) {
+      const r = resultat[s];
+      if (r) rader.push(`${id}: ${s}:// ${r === 'ok' ? 'ÖPPNADE APPEN' : 'öppnade inte'}`);
+    }
+  }
+  document.getElementById('resultat').value =
+    rader.length ? 'Länktest ' + (navigator.userAgent.match(/OS [\d_]+/)?.[0] ?? '') + (navigator.standalone ? ' (hemskärmen)' : ' (Safari)') + '\n' + rader.join('\n') : '';
+}
+
+function prova(knapp, schema) {
+  // Appen räknas som öppnad bara om Safari lämnar sidan. En felruta eller
+  // frågan "Öppna i …?" döljer inte sidan.
+  knapp.textContent = schema + ':// …';
+  let klar = false;
+  const avsluta = (ok) => {
+    if (klar) return;
+    klar = true;
+    document.removeEventListener('visibilitychange', dold);
+    window.removeEventListener('pagehide', lamnad);
+    knapp.textContent = schema + '://';
+    resultat[schema] = ok ? 'ok' : 'nej';
+    knapp.className = ok ? 'ok' : 'nej';
+    spara();
+  };
+  const dold = () => { if (document.visibilityState === 'hidden') avsluta(true); };
+  const lamnad = () => avsluta(true);
+  document.addEventListener('visibilitychange', dold);
+  window.addEventListener('pagehide', lamnad);
+  setTimeout(() => avsluta(false), 10000);
+  window.location.href = schema + '://';
+}
+
+const behallare = document.getElementById('appar');
+for (const [id, namn, scheman] of APPAR) {
+  const kort = document.createElement('div');
+  kort.className = 'app';
+  const h = document.createElement('h2');
+  h.textContent = namn;
+  const rad = document.createElement('div');
+  rad.className = 'knappar';
+  for (const s of scheman) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = s + '://';
+    if (resultat[s]) b.className = resultat[s];
+    b.addEventListener('click', () => prova(b, s));
+    rad.appendChild(b);
+  }
+  kort.append(h, rad);
+  behallare.appendChild(kort);
+}
+
+document.getElementById('kopiera').addEventListener('click', async (e) => {
+  const t = document.getElementById('resultat');
+  try { await navigator.clipboard.writeText(t.value); e.target.textContent = 'Kopierat'; }
+  catch (err) { t.select(); e.target.textContent = 'Markerat, kopiera själv'; }
+});
+document.getElementById('nollstall').addEventListener('click', () => {
+  resultat = {}; spara();
+  document.querySelectorAll('#appar button').forEach((b) => (b.className = ''));
+});
+visaResultat();
+</script>
+</body>
+</html>

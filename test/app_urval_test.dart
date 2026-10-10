@@ -24,7 +24,7 @@ void main() {
       kommun: kommun(['a', 'b', 'c', 'd']),
       operatorAppar: ['op'],
       favoriter: {'c'},
-      installerade: {'se.d'},
+      installerad: (a) => a.id == 'd',
     );
     expect(ids(u.galler), ['op', 'c', 'd', 'a', 'b']);
     expect(u.galler.first.skal, Skal.operator);
@@ -68,10 +68,20 @@ void main() {
     final u = valjAppar(
       katalog: katalog,
       favoriter: {'e'},
-      installerade: {'se.c'},
+      installerad: (a) => a.id == 'c',
     );
     expect(u.galler, isEmpty);
     expect(ids(u.andra), ['e', 'c', 'a', 'b', 'd', 'op']);
+  });
+
+  test('på iPhone är bara bekräftade appar kända', () {
+    final u = valjAppar(
+      katalog: katalog,
+      kommun: kommun(['a', 'b']),
+      installerad: (a) => a.id == 'b' ? true : null,
+    );
+    expect(ids(u.galler), ['b', 'a']);
+    expect(u.galler.last.installerad, isNull);
   });
 
   test('installerad är okänt på webben', () {

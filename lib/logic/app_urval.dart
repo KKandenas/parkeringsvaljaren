@@ -49,15 +49,15 @@ Urval valjAppar({
   List<String> operatorAppar = const [],
   Set<String> favoriter = const {},
   Set<String> dolda = const {},
-  Set<String>? installerade,
+
+  /// Om appen finns på enheten: true, false eller null (okänt).
+  bool? Function(ParkeringsApp app)? installerad,
 }) {
   Forslag forslag(ParkeringsApp app, Skal? skal) => Forslag(
     app: app,
     skal: skal,
     favorit: favoriter.contains(app.id),
-    installerad: installerade == null
-        ? null
-        : app.android != null && installerade.contains(app.android),
+    installerad: installerad?.call(app),
   );
 
   final galler = <String, Forslag>{};
