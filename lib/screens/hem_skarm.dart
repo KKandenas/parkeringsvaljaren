@@ -7,6 +7,7 @@ import '../models/katalog.dart';
 import '../services/app_oppnare.dart';
 import '../services/mina_appar.dart';
 import '../services/uppslag.dart';
+import '../tema.dart';
 import '../widgets/app_rad.dart';
 import '../widgets/varning.dart';
 import 'mina_appar_skarm.dart';
@@ -94,6 +95,15 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
     }
   }
 
+  void _rapportera(Plats? plats, List<Forslag> visade) => launchUrl(
+    rattelseLank(
+      kommun: plats?.kommun,
+      operator: plats?.parkering?.operator,
+      visade: [for (final f in visade) f.app],
+    ),
+    mode: LaunchMode.externalApplication,
+  );
+
   @override
   Widget build(BuildContext context) {
     final plats = _plats;
@@ -105,10 +115,18 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       dolda: widget.minaAppar.dolda,
       installerade: _installerade,
     );
+    final f = Farger.av(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parkeringsväljaren'),
+        titleSpacing: 16,
+        title: const Row(
+          children: [
+            PSkylt(storlek: 28),
+            SizedBox(width: 12),
+            Text('Parkeringsväljaren'),
+          ],
+        ),
         actions: [
           IconButton(
             tooltip: 'Leta igen',
@@ -122,6 +140,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 builder: (_) => MinaApparSkarm(
                   katalog: widget.katalog,
                   minaAppar: widget.minaAppar,
+                  onRapportera: () => _rapportera(plats, urval.galler),
                 ),
               ),
             ),
@@ -135,23 +154,38 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
         child: ListView(
           padding: const EdgeInsets.only(bottom: 24),
           children: [
-            _platsKort(context, plats),
+            _var(context, plats),
+            if (plats?.parkering != null) _privat(context, plats!),
             if (urval.galler.isNotEmpty) ...[
               _rubrik(context, 'Gäller här'),
-              for (final f in urval.galler)
-                AppRad(forslag: f, onOppna: () => _oppna(f.app)),
+              for (final (i, forslag) in urval.galler.indexed)
+                AppRad(
+                  forslag: forslag,
+                  forstaval: i == 0,
+                  onOppna: () => _oppna(forslag.app),
+                ),
             ],
             if (urval.andra.isNotEmpty)
-              ExpansionTile(
-                key: ValueKey(urval.galler.isEmpty),
-                initiallyExpanded: urval.galler.isEmpty,
-                title: Text(
-                  urval.galler.isEmpty ? 'Alla appar' : 'Andra appar',
+              Theme(
+                data: Theme.of(context)
+                    .copyWith(dividerColor: Colors.transparent),
+                child: ExpansionTile(
+                  key: ValueKey(urval.galler.isEmpty),
+                  initiallyExpanded: urval.galler.isEmpty,
+                  tilePadding: const EdgeInsets.symmetric(horizontal: 16),
+                  title: Text(
+                    urval.galler.isEmpty ? 'Alla appar' : 'Andra appar',
+                    style: Theme.of(context).textTheme.titleMedium
+                        ?.copyWith(fontWeight: FontWeight.w700),
+                  ),
+                  children: [
+                    for (final forslag in urval.andra)
+                      AppRad(
+                        forslag: forslag,
+                        onOppna: () => _oppna(forslag.app),
+                      ),
+                  ],
                 ),
-                children: [
-                  for (final f in urval.andra)
-                    AppRad(forslag: f, onOppna: () => _oppna(f.app)),
-                ],
               ),
             if (plats != null)
               Padding(
@@ -159,14 +193,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 child: OutlinedButton.icon(
                   icon: const Icon(Icons.flag_outlined),
                   label: const Text('Det här stämmer inte'),
-                  onPressed: () => launchUrl(
-                    rattelseLank(
-                      kommun: plats.kommun,
-                      operator: plats.parkering?.operator,
-                      visade: [for (final f in urval.galler) f.app],
-                    ),
-                    mode: LaunchMode.externalApplication,
-                  ),
+                  onPressed: () => _rapportera(plats, urval.galler),
                 ),
               ),
             Padding(
@@ -178,7 +205,8 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 ),
                 child: Text(
                   'Adresser och parkeringar: © OpenStreetMaps bidragsgivare',
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: Theme.of(context).textTheme.bodySmall
+                      ?.copyWith(color: f.dampad),
                 ),
               ),
             ),
@@ -189,23 +217,30 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   }
 
   Widget _rubrik(BuildContext context, String text) => Padding(
-    padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-    child: Text(text, style: Theme.of(context).textTheme.titleMedium),
+    padding: const EdgeInsets.fromLTRB(16, 16, 16, 6),
+    child: Text(
+      text,
+      style: Theme.of(context).textTheme.titleMedium
+          ?.copyWith(fontWeight: FontWeight.w700),
+    ),
   );
 
-  Widget _platsKort(BuildContext context, Plats? plats) {
-    final textTema = Theme.of(context).textTheme;
+  /// "Du står vid": adress, kommun och var uppgiften om kommunen kommer ifrån.
+  Widget _var(BuildContext context, Plats? plats) {
+    final text = Theme.of(context).textTheme;
+    final f = Farger.av(context);
+    final dampad = text.bodyMedium?.copyWith(color: f.dampad);
     final List<Widget> rader;
     if (_letar && plats == null) {
-      rader = const [
+      rader = [
         Row(
           children: [
-            SizedBox.square(
+            const SizedBox.square(
               dimension: 20,
               child: CircularProgressIndicator(strokeWidth: 2),
             ),
-            SizedBox(width: 12),
-            Text('Letar efter din position …'),
+            const SizedBox(width: 12),
+            Text('Letar efter din position …', style: dampad),
           ],
         ),
       ];
@@ -219,13 +254,17 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       ];
     } else if (plats != null) {
       final kommun = plats.kommun;
-      final parkering = plats.parkering;
       rader = [
-        if (plats.adress != null && plats.adress!.isNotEmpty)
-          Text(plats.adress!, style: textTema.titleMedium),
+        Text('Du står vid', style: dampad),
         Text(
-          kommun == null ? 'Kommunen är okänd' : '${kommun.namn} kommun',
-          style: textTema.bodyLarge,
+          plats.adress?.isNotEmpty == true ? plats.adress! : 'Okänd adress',
+          style: text.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
+        ),
+        Text(
+          kommun == null
+              ? 'Kommunen är okänd'
+              : '${kommun.osmNamn} · gatuparkering',
+          style: dampad,
         ),
         const SizedBox(height: 8),
         if (kommun == null)
@@ -239,8 +278,9 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 mode: LaunchMode.externalApplication,
               ),
               child: Text(
-                'Gatuparkering enligt ${k.titel}, kontrollerad ${k.hamtad}',
-                style: textTema.bodySmall?.copyWith(
+                'Källa: ${k.titel}, kontrollerad ${k.hamtad}',
+                style: text.bodySmall?.copyWith(
+                  color: f.dampad,
                   decoration: TextDecoration.underline,
                 ),
               ),
@@ -248,39 +288,75 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
         ] else
           Text(
             'Vi har inte kontrollerat vilka appar som gäller i '
-            '${kommun.namn} kommun än. Titta på skylten.',
+            '${kommun.osmNamn} än. Titta på skylten.',
           ),
-        if (parkering != null) ...[
-          const SizedBox(height: 8),
-          Text(
-            'Parkeringen ${parkering.namn != null ? '"${parkering.namn}" ' : ''}'
-            'drivs av ${parkering.operator} enligt OpenStreetMap'
-            '${plats.operatorApp == null ? '. Vi vet inte vilken app bolaget använder.' : '.'}',
-          ),
-        ] else if (plats.letarOperator) ...[
-          const SizedBox(height: 8),
+        if (plats.letarOperator) ...[
+          const SizedBox(height: 6),
           Text(
             'Frågar OpenStreetMap vem som driver parkeringen …',
-            style: textTema.bodySmall,
+            style: text.bodySmall?.copyWith(color: f.dampad),
           ),
         ] else if (plats.operatorFel) ...[
-          const SizedBox(height: 8),
+          const SizedBox(height: 6),
           Text(
             'Kunde inte fråga OpenStreetMap om privata parkeringar.',
-            style: textTema.bodySmall,
+            style: text.bodySmall?.copyWith(color: f.dampad),
           ),
         ],
       ];
     } else {
       rader = const [];
     }
-    return Card(
-      margin: const EdgeInsets.all(16),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: rader,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: rader,
+      ),
+    );
+  }
+
+  /// Närmaste parkering i OpenStreetMap som har en operatör.
+  Widget _privat(BuildContext context, Plats plats) {
+    final text = Theme.of(context).textTheme;
+    final f = Farger.av(context);
+    final p = plats.parkering!;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+      child: Material(
+        color: f.kort,
+        borderRadius: BorderRadius.circular(14),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Närmaste parkering · ${p.avstand.round()} m',
+                style: text.bodySmall?.copyWith(color: f.dampad),
+              ),
+              Text(
+                p.namn ?? 'Parkering utan namn',
+                style: text.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+              ),
+              Text(
+                'Drivs av ${p.operator} (enligt OpenStreetMap)'
+                '${plats.operatorApp == null ? '. Vi vet inte vilken app bolaget använder.' : ''}',
+                style: text.bodyMedium?.copyWith(color: f.dampad),
+              ),
+              const SizedBox(height: 4),
+              InkWell(
+                onTap: () => _rapportera(plats, const []),
+                child: Text(
+                  'Fel bolag? Rätta här.',
+                  style: text.bodySmall?.copyWith(
+                    color: f.dampad,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -22,7 +22,10 @@ void main() {
     expect(matcher.appFor('APCOA PARKING'), 'apcoa');
     expect(matcher.appFor('Parkering Göteborg'), 'parkering-goteborg');
     // De vanligaste värdena i Sverige enligt taginfo.
-    expect(matcher.appFor('Göteborgs Stads Parkerings AB'), 'parkering-goteborg');
+    expect(
+      matcher.appFor('Göteborgs Stads Parkerings AB'),
+      'parkering-goteborg',
+    );
     expect(matcher.appFor('Aimopark'), 'aimo');
     expect(matcher.appFor('Biskopen / Aimo Park'), 'aimo');
     expect(matcher.appFor('Q-Park AB'), 'qpark');

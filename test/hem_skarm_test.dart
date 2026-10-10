@@ -3,7 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:parkeringsvaljaren/models/katalog.dart';
 import 'package:parkeringsvaljaren/screens/hem_skarm.dart';
 import 'package:parkeringsvaljaren/services/mina_appar.dart';
+import 'package:parkeringsvaljaren/services/osm.dart';
 import 'package:parkeringsvaljaren/services/uppslag.dart';
+import 'package:parkeringsvaljaren/tema.dart';
+import 'package:parkeringsvaljaren/widgets/app_rad.dart';
 import 'package:parkeringsvaljaren/widgets/varning.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,6 +33,7 @@ void main() {
   Future<void> visa(WidgetTester tester, Plats plats, MinaAppar mina) async {
     await tester.pumpWidget(
       MaterialApp(
+        theme: tema(Brightness.light),
         home: HemSkarm(
           katalog: katalog,
           minaAppar: mina,
@@ -47,10 +51,16 @@ void main() {
       await minaAppar({}),
     );
     expect(find.text(Varning.text), findsOneWidget);
-    expect(find.text('Kalmar kommun'), findsOneWidget);
+    expect(find.text('Kalmar kommun · gatuparkering'), findsOneWidget);
+    expect(find.text('Du står vid'), findsOneWidget);
     expect(find.text('Gäller här'), findsOneWidget);
     expect(find.text('Mobill'), findsOneWidget);
     expect(find.textContaining('kontrollerad'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('Det här stämmer inte'),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
     expect(find.text('Det här stämmer inte'), findsOneWidget);
   });
 
@@ -82,11 +92,37 @@ void main() {
       Plats(kommun: kommunMedKod('0180'), operatorApp: 'qpark'),
       await minaAppar({}),
     );
-    final forsta = tester.widget<ListTile>(find.byType(ListTile).first);
-    expect((forsta.title as Text).data, 'Q-Park');
-    expect(
-      find.text('Driver parkeringen enligt OpenStreetMap'),
-      findsOneWidget,
+    final forsta = tester.widget<AppRad>(find.byType(AppRad).first);
+    expect(forsta.forslag.app.namn, 'Q-Park');
+    expect(forsta.forstaval, isTrue);
+    expect(find.text('Bolagets egen app'), findsOneWidget);
+  });
+
+  testWidgets('privat parkering: bolaget och "Fel bolag?"', (tester) async {
+    await visa(
+      tester,
+      Plats(
+        kommun: kommunMedKod('0180'),
+        parkering: const OsmParkering(
+          namn: 'Zenit',
+          operator: 'Q-Park',
+          avstand: 12,
+        ),
+        operatorApp: 'qpark',
+      ),
+      await minaAppar({}),
     );
+    expect(find.text('Zenit'), findsOneWidget);
+    expect(find.text('Närmaste parkering · 12 m'), findsOneWidget);
+    expect(find.textContaining('Drivs av Q-Park'), findsOneWidget);
+    expect(find.text('Fel bolag? Rätta här.'), findsOneWidget);
+  });
+
+  test('initialer i stället för loggor', () {
+    expect(initialer('EasyPark'), 'EP');
+    expect(initialer('Aimo Park'), 'AP');
+    expect(initialer('Mobill'), 'Mo');
+    expect(initialer('ePARK'), 'eP');
+    expect(initialer('Q-Park'), 'QP');
   });
 }

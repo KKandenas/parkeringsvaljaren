@@ -4,6 +4,7 @@ import 'models/katalog.dart';
 import 'screens/hem_skarm.dart';
 import 'services/mina_appar.dart';
 import 'services/uppslag.dart';
+import 'tema.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,17 +29,12 @@ class Parkeringsvaljaren extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const fro = Color(0xFF1565C0);
     return MaterialApp(
       title: 'Parkeringsväljaren',
       debugShowCheckedModeBanner: false,
       locale: const Locale('sv', 'SE'),
-      theme: ThemeData(colorSchemeSeed: fro, useMaterial3: true),
-      darkTheme: ThemeData(
-        colorSchemeSeed: fro,
-        brightness: Brightness.dark,
-        useMaterial3: true,
-      ),
+      theme: tema(Brightness.light),
+      darkTheme: tema(Brightness.dark),
       home: HemSkarm(
         katalog: katalog,
         minaAppar: minaAppar,
