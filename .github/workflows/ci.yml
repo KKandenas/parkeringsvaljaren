@@ -1,0 +1,19 @@
+name: Tester
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart analyze
+      # Testerna kontrollerar också datafilerna (test/data_test.dart).
+      - run: flutter test

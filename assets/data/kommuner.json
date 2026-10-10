@@ -1,0 +1,2158 @@
+{
+  "schemaVersion": 1,
+  "grunddata": {
+    "kalla": "Kommunkoder och namn: SCB (api.scb.se, tabell BefolkningNy). osmNamn: OpenStreetMap, relationer med ref:scb.",
+    "hamtad": "2026-10-10"
+  },
+  "kommuner": [
+    {
+      "kod": "0114",
+      "namn": "Upplands Väsby",
+      "osmNamn": "Upplands Väsby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0115",
+      "namn": "Vallentuna",
+      "osmNamn": "Vallentuna kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0117",
+      "namn": "Österåker",
+      "osmNamn": "Österåkers kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0120",
+      "namn": "Värmdö",
+      "osmNamn": "Värmdö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0123",
+      "namn": "Järfälla",
+      "osmNamn": "Järfälla kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0125",
+      "namn": "Ekerö",
+      "osmNamn": "Ekerö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0126",
+      "namn": "Huddinge",
+      "osmNamn": "Huddinge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0127",
+      "namn": "Botkyrka",
+      "osmNamn": "Botkyrka kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0128",
+      "namn": "Salem",
+      "osmNamn": "Salems kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0136",
+      "namn": "Haninge",
+      "osmNamn": "Haninge kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ],
+        "anmarkning": "På besöks- och personalparkeringen utanför kommunhuset går det bara att betala med Aimo Park."
+      },
+      "parkeringssida": "https://www.haninge.se/bygga-trafik-och-miljo/trafik-och-gator/parkering/parkera/",
+      "kallor": [
+        {
+          "url": "https://www.haninge.se/bygga-trafik-och-miljo/trafik-och-gator/parkering/parkera/",
+          "titel": "Parkera – Haninge kommun",
+          "citat": "Leverantörer som kommunen samarbetar med är Easypark, Epark, Mobill och Parkster.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0138",
+      "namn": "Tyresö",
+      "osmNamn": "Tyresö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0139",
+      "namn": "Upplands-Bro",
+      "osmNamn": "Upplands-Bro kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "mobill"
+        ],
+        "anmarkning": "Kommunen anger apparna för parkeringarna i Kungsängen centrum."
+      },
+      "parkeringssida": "https://www.upplands-bro.se/gata-och-trafik/parkera-i-upplands-bro.html",
+      "kallor": [
+        {
+          "url": "https://www.upplands-bro.se/gata-och-trafik/parkera-i-upplands-bro.html",
+          "titel": "Parkera i Upplands-Bro – Upplands-Bro kommun",
+          "citat": "På parkeringarna i Kungsängen centrum kan du betala med apparna Parkster och Mobill.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0140",
+      "namn": "Nykvarn",
+      "osmNamn": "Nykvarns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0160",
+      "namn": "Täby",
+      "osmNamn": "Täby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0162",
+      "namn": "Danderyd",
+      "osmNamn": "Danderyds kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ],
+        "anmarkning": "Vid betalning via Easypark tillkommer Easyparks serviceavgift."
+      },
+      "parkeringssida": "https://www.danderyd.se/trafik-och-resor/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.danderyd.se/trafik-och-resor/parkering/",
+          "titel": "Parkering – Danderyds kommun",
+          "citat": "genom en apptjänst från Easypark eller Parkster",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0163",
+      "namn": "Sollentuna",
+      "osmNamn": "Sollentuna kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "parkster",
+          "mobill"
+        ],
+        "anmarkning": "Enligt kommunen erbjuder EasyPark och Epark parkering utan extra avgift."
+      },
+      "parkeringssida": "https://www.sollentuna.se/trafik--gator/Parkering/betala/",
+      "kallor": [
+        {
+          "url": "https://www.sollentuna.se/trafik--gator/Parkering/betala/",
+          "titel": "Så här betalar du din parkeringsavgift i Sollentuna – Sollentuna kommun",
+          "citat": "digitala betaltjänster från de leverantörer som har avtal med Sollentuna kommun",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0180",
+      "namn": "Stockholm",
+      "osmNamn": "Stockholms kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ],
+        "anmarkning": "Enligt staden erbjuder Parkster och Epark parkering utan extra avgift i sina appar."
+      },
+      "parkeringssida": "https://parkering.stockholm/betala-parkering/",
+      "kallor": [
+        {
+          "url": "https://parkering.stockholm/betala-parkering/",
+          "titel": "Betala parkering – parkering.stockholm (Stockholms stad)",
+          "citat": "fyra leverantörer för digitala betaltjänster för parkering på gatumark i Stockholm",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0181",
+      "namn": "Södertälje",
+      "osmNamn": "Södertälje kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster",
+          "epark",
+          "mobill"
+        ]
+      },
+      "parkeringssida": "https://www.sodertalje.se/stad-och-trafik/aktuellt/flera-parkeringsappar-att-valja-fran-den-1-oktober/",
+      "kallor": [
+        {
+          "url": "https://www.sodertalje.se/stad-och-trafik/aktuellt/flera-parkeringsappar-att-valja-fran-den-1-oktober/",
+          "titel": "Flera parkeringsappar att välja från den 1 oktober – Södertälje kommun (2024-09-17)",
+          "citat": "förutom Easypark även välja att använda apparna Parkster, E-parkera samt Mobill",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0182",
+      "namn": "Nacka",
+      "osmNamn": "Nacka kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "easypark",
+          "mobill",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.nacka.se/stadsutveckling-trafik/trafik-och-resande/parkering/parkeringsavgifter-och-boendeparkering/betala-parkering/",
+      "kallor": [
+        {
+          "url": "https://www.nacka.se/stadsutveckling-trafik/trafik-och-resande/parkering/parkeringsavgifter-och-boendeparkering/betala-parkering/",
+          "titel": "Betala parkering – Nacka kommun",
+          "citat": "Easypark erbjuder parkering utan extra avgift via sin webbtjänst",
+          "hamtad": "2026-10-10"
+        },
+        {
+          "url": "https://www.nacka.se/nyheter-start/2026/03/nya-satt-att-betala-parkeringsavgift-i-nacka/",
+          "titel": "Nya sätt att betala parkeringsavgift i Nacka – Nacka kommun (mars 2026)",
+          "citat": "fyra auktoriserade leverantörer: E-park Easypark Mobill Parkster",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0183",
+      "namn": "Sundbyberg",
+      "osmNamn": "Sundbybergs kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.sundbyberg.se/trafik-och-gator/parkering/betala-parkering",
+      "kallor": [
+        {
+          "url": "https://www.sundbyberg.se/trafik-och-gator/parkering/betala-parkering",
+          "titel": "Betala parkering – Sundbybergs stad",
+          "citat": "hos våra mobilbetalningsleverantörer: Easypark E-park Mobill Parkster",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0184",
+      "namn": "Solna",
+      "osmNamn": "Solna kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "mobill",
+          "parkster",
+          "easypark"
+        ]
+      },
+      "parkeringssida": "https://www.solna.se/bygga-bo--miljo/parkera-i-solna/besoksparkering",
+      "kallor": [
+        {
+          "url": "https://www.solna.se/bygga-bo--miljo/parkera-i-solna/besoksparkering",
+          "titel": "Besöksparkering – Solna stad",
+          "citat": "olika aktörer för telefonbetalning av parkering … Mobill Parkster EasyPark",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0186",
+      "namn": "Lidingö",
+      "osmNamn": "Lidingö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0187",
+      "namn": "Vaxholm",
+      "osmNamn": "Vaxholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0188",
+      "namn": "Norrtälje",
+      "osmNamn": "Norrtälje kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0191",
+      "namn": "Sigtuna",
+      "osmNamn": "Sigtuna kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0192",
+      "namn": "Nynäshamn",
+      "osmNamn": "Nynäshamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0305",
+      "namn": "Håbo",
+      "osmNamn": "Håbo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0319",
+      "namn": "Älvkarleby",
+      "osmNamn": "Älvkarleby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0330",
+      "namn": "Knivsta",
+      "osmNamn": "Knivsta kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0331",
+      "namn": "Heby",
+      "osmNamn": "Heby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0360",
+      "namn": "Tierp",
+      "osmNamn": "Tierps kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0380",
+      "namn": "Uppsala",
+      "osmNamn": "Uppsala kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster",
+          "mobill",
+          "epark"
+        ],
+        "anmarkning": "Gäller platser som övervakas av kommunägda Uppsala parkering, från 1 oktober 2026."
+      },
+      "parkeringssida": "https://www.uppsala.se/kommun-och-politik/nyheter-och-pressmeddelanden/2026/fler-appar-och-nya-omradeskoder-for-parkering/",
+      "kallor": [
+        {
+          "url": "https://www.uppsala.se/kommun-och-politik/nyheter-och-pressmeddelanden/2026/fler-appar-och-nya-omradeskoder-for-parkering/",
+          "titel": "Fler appar och nya områdeskoder för parkering – Uppsala kommun (29 september 2026)",
+          "citat": "fyra olika betalappar … EasyPark, Parkster, Mobill och ePARK",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0381",
+      "namn": "Enköping",
+      "osmNamn": "Enköpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0382",
+      "namn": "Östhammar",
+      "osmNamn": "Östhammars kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0428",
+      "namn": "Vingåker",
+      "osmNamn": "Vingåkers kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0461",
+      "namn": "Gnesta",
+      "osmNamn": "Gnesta kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0480",
+      "namn": "Nyköping",
+      "osmNamn": "Nyköpings kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark",
+          "epark",
+          "mobill"
+        ]
+      },
+      "parkeringssida": "https://www.nykoping.se/trafik--resor/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.nykoping.se/trafik--resor/parkering/",
+          "titel": "Parkering – Nyköpings kommun",
+          "citat": "Du kan betala med kort eller parkeringsapparna Parkster, Easypark, ePARK eller Mobill.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0481",
+      "namn": "Oxelösund",
+      "osmNamn": "Oxelösunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0482",
+      "namn": "Flen",
+      "osmNamn": "Flens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0483",
+      "namn": "Katrineholm",
+      "osmNamn": "Katrineholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0484",
+      "namn": "Eskilstuna",
+      "osmNamn": "Eskilstuna kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "mobill",
+          "epark",
+          "parkster",
+          "easypark"
+        ]
+      },
+      "parkeringssida": "https://www.eskilstuna.se/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.eskilstuna.se/trafik-och-gator/parkering",
+          "titel": "Parkering – Eskilstuna kommun",
+          "citat": "betalas genom mobil betaltjänst hos Mobill, ePARK, Parkster, EasyPark",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0486",
+      "namn": "Strängnäs",
+      "osmNamn": "Strängnäs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0488",
+      "namn": "Trosa",
+      "osmNamn": "Trosa kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0509",
+      "namn": "Ödeshög",
+      "osmNamn": "Ödeshögs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0512",
+      "namn": "Ydre",
+      "osmNamn": "Ydre kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0513",
+      "namn": "Kinda",
+      "osmNamn": "Kinda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0560",
+      "namn": "Boxholm",
+      "osmNamn": "Boxholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0561",
+      "namn": "Åtvidaberg",
+      "osmNamn": "Åtvidabergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0562",
+      "namn": "Finspång",
+      "osmNamn": "Finspångs kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "aimo"
+        ]
+      },
+      "parkeringssida": "https://finspang.se/bobyggaochmiljo/gata-och-trafik/gator/parkering",
+      "kallor": [
+        {
+          "url": "https://finspang.se/bobyggaochmiljo/gata-och-trafik/gator/parkering",
+          "titel": "Parkering – Finspångs kommun",
+          "citat": "Du kan betala via appen Aimo",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0563",
+      "namn": "Valdemarsvik",
+      "osmNamn": "Valdemarsviks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0580",
+      "namn": "Linköping",
+      "osmNamn": "Linköpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0581",
+      "namn": "Norrköping",
+      "osmNamn": "Norrköpings kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "Välj inställningen Lokal i EasyPark för att slippa serviceavgift på kommunal mark."
+      },
+      "parkeringssida": "https://norrkoping.se/boende-trafik-och-miljo/resa-och-parkera/parkering-i-norrkoping",
+      "kallor": [
+        {
+          "url": "https://norrkoping.se/boende-trafik-och-miljo/resa-och-parkera/parkering-i-norrkoping",
+          "titel": "Parkering i Norrköping – Norrköpings kommun",
+          "citat": "Samtliga biljettyper … kan du köpa med parkeringsappen EasyPark",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0582",
+      "namn": "Söderköping",
+      "osmNamn": "Söderköpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0583",
+      "namn": "Motala",
+      "osmNamn": "Motala kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark"
+        ]
+      },
+      "parkeringssida": "https://www.motala.se/stadsplanering-och-trafik/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.motala.se/stadsplanering-och-trafik/parkering/",
+          "titel": "Parkering – Motala kommun",
+          "citat": "Du betalar parkeringen enklast via appen Epark eller sms.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0584",
+      "namn": "Vadstena",
+      "osmNamn": "Vadstena kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0586",
+      "namn": "Mjölby",
+      "osmNamn": "Mjölby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0604",
+      "namn": "Aneby",
+      "osmNamn": "Aneby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0617",
+      "namn": "Gnosjö",
+      "osmNamn": "Gnosjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0642",
+      "namn": "Mullsjö",
+      "osmNamn": "Mullsjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0643",
+      "namn": "Habo",
+      "osmNamn": "Habo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0662",
+      "namn": "Gislaved",
+      "osmNamn": "Gislaveds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0665",
+      "namn": "Vaggeryd",
+      "osmNamn": "Vaggeryds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0680",
+      "namn": "Jönköping",
+      "osmNamn": "Jönköpings kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.jonkoping.se/artiklar/nyhetsartiklar/2024-09-01-en-parkeringsapp-blir-tva-i-jonkopings-kommun",
+      "kallor": [
+        {
+          "url": "https://www.jonkoping.se/artiklar/nyhetsartiklar/2024-09-01-en-parkeringsapp-blir-tva-i-jonkopings-kommun",
+          "titel": "En parkeringsapp blir två i Jönköpings kommun – Jönköpings kommun (2024-09-01)",
+          "citat": "ytterligare ett sätt att betala … appen Parkster. Sedan tidigare erbjuder kommunen appen Epark.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0682",
+      "namn": "Nässjö",
+      "osmNamn": "Nässjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0683",
+      "namn": "Värnamo",
+      "osmNamn": "Värnamo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0684",
+      "namn": "Sävsjö",
+      "osmNamn": "Sävsjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0685",
+      "namn": "Vetlanda",
+      "osmNamn": "Vetlanda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0686",
+      "namn": "Eksjö",
+      "osmNamn": "Eksjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0687",
+      "namn": "Tranås",
+      "osmNamn": "Tranås kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0760",
+      "namn": "Uppvidinge",
+      "osmNamn": "Uppvidinge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0761",
+      "namn": "Lessebo",
+      "osmNamn": "Lessebo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0763",
+      "namn": "Tingsryd",
+      "osmNamn": "Tingsryds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0764",
+      "namn": "Alvesta",
+      "osmNamn": "Alvesta kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.alvesta.se/gator-och-trafik/parkering-och-laddstolpar/parkeringsplatser-och-laddplatser/",
+      "kallor": [
+        {
+          "url": "https://www.alvesta.se/gator-och-trafik/parkering-och-laddstolpar/parkeringsplatser-och-laddplatser/",
+          "titel": "Parkeringsplatser och laddplatser – Alvesta kommun",
+          "citat": "Du kan läsa mer om betalning via SMS och app hos Parkster.",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0765",
+      "namn": "Älmhult",
+      "osmNamn": "Älmhults kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0767",
+      "namn": "Markaryd",
+      "osmNamn": "Markaryds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0780",
+      "namn": "Växjö",
+      "osmNamn": "Växjö kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "mobill",
+          "epark",
+          "easypark"
+        ],
+        "anmarkning": "Ingen serviceavgift hos någon av kommunens upphandlade leverantörer, enligt kommunen."
+      },
+      "parkeringssida": "https://www.vaxjo.se/sidor/trafik-och-stadsplanering/kommunal-parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.vaxjo.se/sidor/trafik-och-stadsplanering/kommunal-parkering.html",
+          "titel": "Kommunal parkering – Växjö kommun",
+          "citat": "Växjö kommun har avtal med Mobill, ePark och EasyPark",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0781",
+      "namn": "Ljungby",
+      "osmNamn": "Ljungby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0821",
+      "namn": "Högsby",
+      "osmNamn": "Högsby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0834",
+      "namn": "Torsås",
+      "osmNamn": "Torsås kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0840",
+      "namn": "Mörbylånga",
+      "osmNamn": "Mörbylånga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0860",
+      "namn": "Hultsfred",
+      "osmNamn": "Hultsfreds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0861",
+      "namn": "Mönsterås",
+      "osmNamn": "Mönsterås kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0862",
+      "namn": "Emmaboda",
+      "osmNamn": "Emmaboda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0880",
+      "namn": "Kalmar",
+      "osmNamn": "Kalmar kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parking-time"
+        ]
+      },
+      "parkeringssida": "https://kalmar.se/trafik-och-resor/parkering/betala-med-app-eller-sms.html",
+      "kallor": [
+        {
+          "url": "https://kalmar.se/trafik-och-resor/parkering/betala-med-app-eller-sms.html",
+          "titel": "Betala med app eller SMS – Kalmar kommun",
+          "citat": "ladda ner någon av följande appar … Easypark E-park Mobill Parking Time",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "0881",
+      "namn": "Nybro",
+      "osmNamn": "Nybro kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0882",
+      "namn": "Oskarshamn",
+      "osmNamn": "Oskarshamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0883",
+      "namn": "Västervik",
+      "osmNamn": "Västerviks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0884",
+      "namn": "Vimmerby",
+      "osmNamn": "Vimmerby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0885",
+      "namn": "Borgholm",
+      "osmNamn": "Borgholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "0980",
+      "namn": "Gotland",
+      "osmNamn": "Gotlands kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1060",
+      "namn": "Olofström",
+      "osmNamn": "Olofströms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1080",
+      "namn": "Karlskrona",
+      "osmNamn": "Karlskrona kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1081",
+      "namn": "Ronneby",
+      "osmNamn": "Ronneby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1082",
+      "namn": "Karlshamn",
+      "osmNamn": "Karlshamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1083",
+      "namn": "Sölvesborg",
+      "osmNamn": "Sölvesborgs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1214",
+      "namn": "Svalöv",
+      "osmNamn": "Svalövs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1230",
+      "namn": "Staffanstorp",
+      "osmNamn": "Staffanstorps kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1231",
+      "namn": "Burlöv",
+      "osmNamn": "Burlövs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1233",
+      "namn": "Vellinge",
+      "osmNamn": "Vellinge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1256",
+      "namn": "Östra Göinge",
+      "osmNamn": "Östra Göinge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1257",
+      "namn": "Örkelljunga",
+      "osmNamn": "Örkelljunga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1260",
+      "namn": "Bjuv",
+      "osmNamn": "Bjuvs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1261",
+      "namn": "Kävlinge",
+      "osmNamn": "Kävlinge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1262",
+      "namn": "Lomma",
+      "osmNamn": "Lomma kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1263",
+      "namn": "Svedala",
+      "osmNamn": "Svedala kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1264",
+      "namn": "Skurup",
+      "osmNamn": "Skurups kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1265",
+      "namn": "Sjöbo",
+      "osmNamn": "Sjöbo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1266",
+      "namn": "Hörby",
+      "osmNamn": "Hörby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1267",
+      "namn": "Höör",
+      "osmNamn": "Höörs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1270",
+      "namn": "Tomelilla",
+      "osmNamn": "Tomelilla kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1272",
+      "namn": "Bromölla",
+      "osmNamn": "Bromölla kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1273",
+      "namn": "Osby",
+      "osmNamn": "Osby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1275",
+      "namn": "Perstorp",
+      "osmNamn": "Perstorps kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1276",
+      "namn": "Klippan",
+      "osmNamn": "Klippans kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1277",
+      "namn": "Åstorp",
+      "osmNamn": "Åstorps kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1278",
+      "namn": "Båstad",
+      "osmNamn": "Båstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1280",
+      "namn": "Malmö",
+      "osmNamn": "Malmö kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://malmo.se/Bo-och-leva/Stadsmiljo-och-trafik/Parkering/Parkeringsavgifter/Sa-betalar-du-for-parkering.html",
+      "kallor": [
+        {
+          "url": "https://malmo.se/Bo-och-leva/Stadsmiljo-och-trafik/Parkering/Parkeringsavgifter/Sa-betalar-du-for-parkering.html",
+          "titel": "Så betalar du för parkering – Malmö stad",
+          "citat": "Du kan betala för parkering i Malmö med din mobiltelefon via fyra företag",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "1281",
+      "namn": "Lund",
+      "osmNamn": "Lunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1282",
+      "namn": "Landskrona",
+      "osmNamn": "Landskrona kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1283",
+      "namn": "Helsingborg",
+      "osmNamn": "Helsingborgs kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://helsingborg.se/trafik-och-stadsplanering/parkering/parkeringsplatser-allmanna/betala-parkering/betala-parkering-med-telefon/",
+      "kallor": [
+        {
+          "url": "https://helsingborg.se/trafik-och-stadsplanering/parkering/parkeringsplatser-allmanna/betala-parkering/betala-parkering-med-telefon/",
+          "titel": "Betala parkering med telefon – Helsingborgs stad",
+          "citat": "Helsingborgs stad har avtal med: Easy Park AB Parkster AB",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "1284",
+      "namn": "Höganäs",
+      "osmNamn": "Höganäs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1285",
+      "namn": "Eslöv",
+      "osmNamn": "Eslövs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1286",
+      "namn": "Ystad",
+      "osmNamn": "Ystads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1287",
+      "namn": "Trelleborg",
+      "osmNamn": "Trelleborgs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1290",
+      "namn": "Kristianstad",
+      "osmNamn": "Kristianstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1291",
+      "namn": "Simrishamn",
+      "osmNamn": "Simrishamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1292",
+      "namn": "Ängelholm",
+      "osmNamn": "Ängelholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1293",
+      "namn": "Hässleholm",
+      "osmNamn": "Hässleholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1315",
+      "namn": "Hylte",
+      "osmNamn": "Hylte kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1380",
+      "namn": "Halmstad",
+      "osmNamn": "Halmstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1381",
+      "namn": "Laholm",
+      "osmNamn": "Laholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1382",
+      "namn": "Falkenberg",
+      "osmNamn": "Falkenbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1383",
+      "namn": "Varberg",
+      "osmNamn": "Varbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1384",
+      "namn": "Kungsbacka",
+      "osmNamn": "Kungsbacka kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1401",
+      "namn": "Härryda",
+      "osmNamn": "Härryda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1402",
+      "namn": "Partille",
+      "osmNamn": "Partille kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1407",
+      "namn": "Öckerö",
+      "osmNamn": "Öckerö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1415",
+      "namn": "Stenungsund",
+      "osmNamn": "Stenungsunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1419",
+      "namn": "Tjörn",
+      "osmNamn": "Tjörns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1421",
+      "namn": "Orust",
+      "osmNamn": "Orust kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1427",
+      "namn": "Sotenäs",
+      "osmNamn": "Sotenäs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1430",
+      "namn": "Munkedal",
+      "osmNamn": "Munkedals kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1435",
+      "namn": "Tanum",
+      "osmNamn": "Tanums kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1438",
+      "namn": "Dals-Ed",
+      "osmNamn": "Dals-Eds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1439",
+      "namn": "Färgelanda",
+      "osmNamn": "Färgelanda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1440",
+      "namn": "Ale",
+      "osmNamn": "Ale kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1441",
+      "namn": "Lerum",
+      "osmNamn": "Lerums kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1442",
+      "namn": "Vårgårda",
+      "osmNamn": "Vårgårda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1443",
+      "namn": "Bollebygd",
+      "osmNamn": "Bollebygds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1444",
+      "namn": "Grästorp",
+      "osmNamn": "Grästorps kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1445",
+      "namn": "Essunga",
+      "osmNamn": "Essunga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1446",
+      "namn": "Karlsborg",
+      "osmNamn": "Karlsborgs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1447",
+      "namn": "Gullspång",
+      "osmNamn": "Gullspångs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1452",
+      "namn": "Tranemo",
+      "osmNamn": "Tranemo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1460",
+      "namn": "Bengtsfors",
+      "osmNamn": "Bengtsfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1461",
+      "namn": "Mellerud",
+      "osmNamn": "Melleruds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1462",
+      "namn": "Lilla Edet",
+      "osmNamn": "Lilla Edets kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1463",
+      "namn": "Mark",
+      "osmNamn": "Marks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1465",
+      "namn": "Svenljunga",
+      "osmNamn": "Svenljunga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1466",
+      "namn": "Herrljunga",
+      "osmNamn": "Herrljunga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1470",
+      "namn": "Vara",
+      "osmNamn": "Vara kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1471",
+      "namn": "Götene",
+      "osmNamn": "Götene kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1472",
+      "namn": "Tibro",
+      "osmNamn": "Tibro kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1473",
+      "namn": "Töreboda",
+      "osmNamn": "Töreboda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1480",
+      "namn": "Göteborg",
+      "osmNamn": "Göteborgs Stad",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkering-goteborg",
+          "easypark",
+          "mobill",
+          "parkster",
+          "parking-time",
+          "fastpark",
+          "epark"
+        ],
+        "anmarkning": "Gäller Parkering Göteborgs (stadens parkeringsbolag) besöksparkering."
+      },
+      "parkeringssida": "https://www.parkeringgoteborg.se/parkera/betala-parkering/",
+      "kallor": [
+        {
+          "url": "https://www.parkeringgoteborg.se/parkera/betala-parkering/",
+          "titel": "Betala parkering – Parkering Göteborg",
+          "citat": "Easypark, Mobill, Parkster, Parking Time, FastPark och ePARKs appar",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "1481",
+      "namn": "Mölndal",
+      "osmNamn": "Mölndals kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1482",
+      "namn": "Kungälv",
+      "osmNamn": "Kungälvs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1484",
+      "namn": "Lysekil",
+      "osmNamn": "Lysekils kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1485",
+      "namn": "Uddevalla",
+      "osmNamn": "Uddevalla kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1486",
+      "namn": "Strömstad",
+      "osmNamn": "Strömstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1487",
+      "namn": "Vänersborg",
+      "osmNamn": "Vänersborgs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1488",
+      "namn": "Trollhättan",
+      "osmNamn": "Trollhättans kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1489",
+      "namn": "Alingsås",
+      "osmNamn": "Alingsås kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1490",
+      "namn": "Borås",
+      "osmNamn": "Borås kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1491",
+      "namn": "Ulricehamn",
+      "osmNamn": "Ulricehamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1492",
+      "namn": "Åmål",
+      "osmNamn": "Åmåls kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1493",
+      "namn": "Mariestad",
+      "osmNamn": "Mariestads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1494",
+      "namn": "Lidköping",
+      "osmNamn": "Lidköpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1495",
+      "namn": "Skara",
+      "osmNamn": "Skara kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1496",
+      "namn": "Skövde",
+      "osmNamn": "Skövde kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1497",
+      "namn": "Hjo",
+      "osmNamn": "Hjo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1498",
+      "namn": "Tidaholm",
+      "osmNamn": "Tidaholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1499",
+      "namn": "Falköping",
+      "osmNamn": "Falköpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1715",
+      "namn": "Kil",
+      "osmNamn": "Kils kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1730",
+      "namn": "Eda",
+      "osmNamn": "Eda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1737",
+      "namn": "Torsby",
+      "osmNamn": "Torsby kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1760",
+      "namn": "Storfors",
+      "osmNamn": "Storfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1761",
+      "namn": "Hammarö",
+      "osmNamn": "Hammarö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1762",
+      "namn": "Munkfors",
+      "osmNamn": "Munkfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1763",
+      "namn": "Forshaga",
+      "osmNamn": "Forshaga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1764",
+      "namn": "Grums",
+      "osmNamn": "Grums kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1765",
+      "namn": "Årjäng",
+      "osmNamn": "Årjängs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1766",
+      "namn": "Sunne",
+      "osmNamn": "Sunne kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1780",
+      "namn": "Karlstad",
+      "osmNamn": "Karlstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1781",
+      "namn": "Kristinehamn",
+      "osmNamn": "Kristinehamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1782",
+      "namn": "Filipstad",
+      "osmNamn": "Filipstads kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1783",
+      "namn": "Hagfors",
+      "osmNamn": "Hagfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1784",
+      "namn": "Arvika",
+      "osmNamn": "Arvika kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1785",
+      "namn": "Säffle",
+      "osmNamn": "Säffle kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1814",
+      "namn": "Lekeberg",
+      "osmNamn": "Lekebergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1860",
+      "namn": "Laxå",
+      "osmNamn": "Laxå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1861",
+      "namn": "Hallsberg",
+      "osmNamn": "Hallsbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1862",
+      "namn": "Degerfors",
+      "osmNamn": "Degerfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1863",
+      "namn": "Hällefors",
+      "osmNamn": "Hällefors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1864",
+      "namn": "Ljusnarsberg",
+      "osmNamn": "Ljusnarsbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1880",
+      "namn": "Örebro",
+      "osmNamn": "Örebro kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1881",
+      "namn": "Kumla",
+      "osmNamn": "Kumla kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1882",
+      "namn": "Askersund",
+      "osmNamn": "Askersunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1883",
+      "namn": "Karlskoga",
+      "osmNamn": "Karlskoga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1884",
+      "namn": "Nora",
+      "osmNamn": "Nora kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1885",
+      "namn": "Lindesberg",
+      "osmNamn": "Lindesbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1904",
+      "namn": "Skinnskatteberg",
+      "osmNamn": "Skinnskattebergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1907",
+      "namn": "Surahammar",
+      "osmNamn": "Surahammars kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1960",
+      "namn": "Kungsör",
+      "osmNamn": "Kungsörs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1961",
+      "namn": "Hallstahammar",
+      "osmNamn": "Hallstahammars kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1962",
+      "namn": "Norberg",
+      "osmNamn": "Norbergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1980",
+      "namn": "Västerås",
+      "osmNamn": "Västerås kommun",
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "mobill",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.vasteras.se/trafik-och-gator/parkera-i-vasteras.html",
+      "kallor": [
+        {
+          "url": "https://www.vasteras.se/trafik-och-gator/parkera-i-vasteras.html",
+          "titel": "Parkera i Västerås – Västerås stad",
+          "citat": "Välj din favoritapp när du ska betala för Västerås stads allmänna parkeringar",
+          "hamtad": "2026-10-10"
+        }
+      ],
+      "kontrollerad": "2026-10-10"
+    },
+    {
+      "kod": "1981",
+      "namn": "Sala",
+      "osmNamn": "Sala kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1982",
+      "namn": "Fagersta",
+      "osmNamn": "Fagersta kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1983",
+      "namn": "Köping",
+      "osmNamn": "Köpings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "1984",
+      "namn": "Arboga",
+      "osmNamn": "Arboga kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2021",
+      "namn": "Vansbro",
+      "osmNamn": "Vansbro kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2023",
+      "namn": "Malung-Sälen",
+      "osmNamn": "Malung-Sälens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2026",
+      "namn": "Gagnef",
+      "osmNamn": "Gagnefs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2029",
+      "namn": "Leksand",
+      "osmNamn": "Leksands kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2031",
+      "namn": "Rättvik",
+      "osmNamn": "Rättviks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2034",
+      "namn": "Orsa",
+      "osmNamn": "Orsa kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2039",
+      "namn": "Älvdalen",
+      "osmNamn": "Älvdalens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2061",
+      "namn": "Smedjebacken",
+      "osmNamn": "Smedjebackens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2062",
+      "namn": "Mora",
+      "osmNamn": "Mora kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2080",
+      "namn": "Falun",
+      "osmNamn": "Falu kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2081",
+      "namn": "Borlänge",
+      "osmNamn": "Borlänge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2082",
+      "namn": "Säter",
+      "osmNamn": "Säters kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2083",
+      "namn": "Hedemora",
+      "osmNamn": "Hedemora kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2084",
+      "namn": "Avesta",
+      "osmNamn": "Avesta kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2085",
+      "namn": "Ludvika",
+      "osmNamn": "Ludvika kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2101",
+      "namn": "Ockelbo",
+      "osmNamn": "Ockelbo kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2104",
+      "namn": "Hofors",
+      "osmNamn": "Hofors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2121",
+      "namn": "Ovanåker",
+      "osmNamn": "Ovanåkers kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2132",
+      "namn": "Nordanstig",
+      "osmNamn": "Nordanstigs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2161",
+      "namn": "Ljusdal",
+      "osmNamn": "Ljusdals kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2180",
+      "namn": "Gävle",
+      "osmNamn": "Gävle kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2181",
+      "namn": "Sandviken",
+      "osmNamn": "Sandvikens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2182",
+      "namn": "Söderhamn",
+      "osmNamn": "Söderhamns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2183",
+      "namn": "Bollnäs",
+      "osmNamn": "Bollnäs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2184",
+      "namn": "Hudiksvall",
+      "osmNamn": "Hudiksvalls kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2260",
+      "namn": "Ånge",
+      "osmNamn": "Ånge kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2262",
+      "namn": "Timrå",
+      "osmNamn": "Timrå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2280",
+      "namn": "Härnösand",
+      "osmNamn": "Härnösands kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2281",
+      "namn": "Sundsvall",
+      "osmNamn": "Sundsvalls kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2282",
+      "namn": "Kramfors",
+      "osmNamn": "Kramfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2283",
+      "namn": "Sollefteå",
+      "osmNamn": "Sollefteå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2284",
+      "namn": "Örnsköldsvik",
+      "osmNamn": "Örnsköldsviks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2303",
+      "namn": "Ragunda",
+      "osmNamn": "Ragunda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2305",
+      "namn": "Bräcke",
+      "osmNamn": "Bräcke kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2309",
+      "namn": "Krokom",
+      "osmNamn": "Krokoms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2313",
+      "namn": "Strömsund",
+      "osmNamn": "Strömsunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2321",
+      "namn": "Åre",
+      "osmNamn": "Åre kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2326",
+      "namn": "Berg",
+      "osmNamn": "Bergs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2361",
+      "namn": "Härjedalen",
+      "osmNamn": "Härjedalens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2380",
+      "namn": "Östersund",
+      "osmNamn": "Östersunds kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2401",
+      "namn": "Nordmaling",
+      "osmNamn": "Nordmalings kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2403",
+      "namn": "Bjurholm",
+      "osmNamn": "Bjurholms kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2404",
+      "namn": "Vindeln",
+      "osmNamn": "Vindelns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2409",
+      "namn": "Robertsfors",
+      "osmNamn": "Robertsfors kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2417",
+      "namn": "Norsjö",
+      "osmNamn": "Norsjö kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2418",
+      "namn": "Malå",
+      "osmNamn": "Malå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2421",
+      "namn": "Storuman",
+      "osmNamn": "Storumans kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2422",
+      "namn": "Sorsele",
+      "osmNamn": "Sorsele kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2425",
+      "namn": "Dorotea",
+      "osmNamn": "Dorotea kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2460",
+      "namn": "Vännäs",
+      "osmNamn": "Vännäs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2462",
+      "namn": "Vilhelmina",
+      "osmNamn": "Vilhelmina kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2463",
+      "namn": "Åsele",
+      "osmNamn": "Åsele kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2480",
+      "namn": "Umeå",
+      "osmNamn": "Umeå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2481",
+      "namn": "Lycksele",
+      "osmNamn": "Lycksele kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2482",
+      "namn": "Skellefteå",
+      "osmNamn": "Skellefteå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2505",
+      "namn": "Arvidsjaur",
+      "osmNamn": "Arvidsjaurs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2506",
+      "namn": "Arjeplog",
+      "osmNamn": "Arjeplogs kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2510",
+      "namn": "Jokkmokk",
+      "osmNamn": "Jokkmokks kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2513",
+      "namn": "Överkalix",
+      "osmNamn": "Överkalix kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2514",
+      "namn": "Kalix",
+      "osmNamn": "Kalix kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2518",
+      "namn": "Övertorneå",
+      "osmNamn": "Övertorneå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2521",
+      "namn": "Pajala",
+      "osmNamn": "Pajala kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2523",
+      "namn": "Gällivare",
+      "osmNamn": "Gällivare kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2560",
+      "namn": "Älvsbyn",
+      "osmNamn": "Älvsbyns kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2580",
+      "namn": "Luleå",
+      "osmNamn": "Luleå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2581",
+      "namn": "Piteå",
+      "osmNamn": "Piteå kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2582",
+      "namn": "Boden",
+      "osmNamn": "Bodens kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2583",
+      "namn": "Haparanda",
+      "osmNamn": "Haparanda kommun",
+      "status": "okand"
+    },
+    {
+      "kod": "2584",
+      "namn": "Kiruna",
+      "osmNamn": "Kiruna kommun",
+      "status": "okand"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "kontrollerad": "2026-10-10",
+  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association.",
+  "appar": [
+    {
+      "id": "easypark",
+      "namn": "EasyPark",
+      "android": "net.easypark.android",
+      "appStoreId": "449594317",
+      "webb": "https://www.easypark.com/sv-se"
+    },
+    {
+      "id": "parkster",
+      "namn": "Parkster",
+      "android": "se.parkster.client.android",
+      "appStoreId": "533140250",
+      "universellLank": "https://www.parkster.se/app",
+      "webb": "https://www.parkster.se"
+    },
+    {
+      "id": "mobill",
+      "namn": "Mobill",
+      "android": "se.mobill.parking",
+      "appStoreId": "1066302005",
+      "webb": "https://mobill.se"
+    },
+    {
+      "id": "epark",
+      "namn": "ePARK",
+      "android": "se.netix.eparkera",
+      "appStoreId": "500644505",
+      "webb": "https://www.epark.se"
+    },
+    {
+      "id": "aimo",
+      "namn": "Aimo Park",
+      "android": "com.aimoone.app",
+      "appStoreId": "1580733496",
+      "webb": "https://www.aimopark.se",
+      "alias": [
+        "Aimo"
+      ]
+    },
+    {
+      "id": "apcoa",
+      "namn": "APCOA FLOW",
+      "android": "com.europark.mobilparkering",
+      "appStoreId": "1354962285",
+      "webb": "https://www.apcoa.se",
+      "alias": [
+        "APCOA"
+      ]
+    },
+    {
+      "id": "qpark",
+      "namn": "Q-Park",
+      "android": "com.qpark.mobilepark.android",
+      "appStoreId": "1477955834",
+      "webb": "https://www.q-park.se"
+    },
+    {
+      "id": "flowbird",
+      "namn": "Flowbird",
+      "android": "group.flowbird.mpp",
+      "appStoreId": "1440123516",
+      "webb": "https://flowbird.se"
+    },
+    {
+      "id": "parkering-goteborg",
+      "namn": "Parkering Göteborg",
+      "android": "se.goteborg.pbolaget.android",
+      "appStoreId": "1184264972",
+      "webb": "https://www.parkeringgoteborg.se"
+    },
+    {
+      "id": "gavle-p",
+      "namn": "Gävle P",
+      "android": "se.parkeraisverige.gavle",
+      "appStoreId": "1666259064",
+      "webb": "https://gavleparkering.se"
+    },
+    {
+      "id": "linpark",
+      "namn": "LinPark",
+      "android": "se.knowit.dukaten.parkering.android",
+      "appStoreId": "583934690"
+    },
+    {
+      "id": "parking-time",
+      "namn": "Parking Time",
+      "android": "se.parkingtime.app",
+      "appStoreId": "1611019108",
+      "webb": "https://parkingtime.se"
+    },
+    {
+      "id": "fastpark",
+      "namn": "FastPark",
+      "android": "com.fastpark.fastparkapp",
+      "webb": "https://www.fastpark.se"
+    }
+  ]
+}

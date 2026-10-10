@@ -1,0 +1,191 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-10T17:26:53Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 29834773,
+  "lat": 59.3340695,
+  "lon": 18.0626714,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Hötorget",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 446162169,
+  "lat": 59.3347585,
+  "lon": 18.0631944,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "capacity": "69",
+    "check_date": "2019-12-19",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Konserthusgaraget",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 469866404,
+  "lat": 59.3319076,
+  "lon": 18.0594156,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Continentalgaraget",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 470495625,
+  "lat": 59.3328797,
+  "lon": 18.0597673,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Zenit",
+    "operator": "Q-Park",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 470495628,
+  "lat": 59.3323427,
+  "lon": 18.0610093,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Citygaraget",
+    "operator": "Q-Park",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 475902870,
+  "lat": 59.3351292,
+  "lon": 18.0664892,
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "layer": "-1",
+    "name": "Oxtorget",
+    "operator": "QPark",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 504630049,
+  "lat": 59.3305291,
+  "lon": 18.0655884,
+  "tags": {
+    "amenity": "parking",
+    "layer": "-1",
+    "name": "Gallerian",
+    "operator": "Stockholms Stads Parkerings AB",
+    "parking": "underground",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 512538843,
+  "lat": 59.3307534,
+  "lon": 18.0680598,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "capacity": "827",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Gallerian",
+    "operator": "Stockholms Stads Parkerings AB",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 512538844,
+  "lat": 59.3307943,
+  "lon": 18.0687502,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Gallerian",
+    "operator": "Stockholms Stads Parkerings AB",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 1440775371,
+  "lat": 59.3309101,
+  "lon": 18.0632319,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Klara Östra Kyrkogata 4",
+    "operator": "Stockholm parkering",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 13321650531,
+  "lat": 59.3327435,
+  "lon": 18.0621373,
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "capacity": "2",
+    "fee": "no",
+    "name": "Parkeringsplats för utryckningsfordon",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1243588809,
+  "center": {
+    "lat": 59.3334925,
+    "lon": 18.0672312
+  },
+  "tags": {
+    "access": "customers",
+    "amenity": "parking",
+    "building:architecture": "brutalist",
+    "building:levels": "7",
+    "building:part": "yes",
+    "parking": "multi-storey",
+    "roof:colour": "#cfcfcf"
+  }
+}
+
+  ]
+}

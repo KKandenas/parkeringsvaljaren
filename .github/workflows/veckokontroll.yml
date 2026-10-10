@@ -1,0 +1,20 @@
+name: Veckokontroll av källor
+
+# Varje måndag 06:00 svensk vintertid. Misslyckas jobbet mejlar GitHub den
+# som senast ändrade schemat i den här filen.
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+jobs:
+  kallor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart run tool/kontrollera_kallor.dart

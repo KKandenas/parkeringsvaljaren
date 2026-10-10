@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "kalla": "Bara bolag som själva ger ut appen (se utvecklare på Google Play och App Store i apps.json). monster jämförs med operator-taggen i OpenStreetMap efter att den gjorts om till gemener utan skiljetecken. Vanligaste värdena kontrollerade mot taginfo.geofabrik.de/europe:sweden (key=operator) 2026-10-10. Europark: APCOA FLOW har paketnamnet com.europark.mobilparkering.",
+  "operatorer": [
+    {
+      "monster": [
+        "aimo"
+      ],
+      "app": "aimo"
+    },
+    {
+      "monster": [
+        "aimopark"
+      ],
+      "app": "aimo"
+    },
+    {
+      "monster": [
+        "q park"
+      ],
+      "app": "qpark"
+    },
+    {
+      "monster": [
+        "qpark"
+      ],
+      "app": "qpark"
+    },
+    {
+      "monster": [
+        "apcoa"
+      ],
+      "app": "apcoa"
+    },
+    {
+      "monster": [
+        "easypark"
+      ],
+      "app": "easypark"
+    },
+    {
+      "monster": [
+        "parkster"
+      ],
+      "app": "parkster"
+    },
+    {
+      "monster": [
+        "parkering goteborg"
+      ],
+      "app": "parkering-goteborg"
+    },
+    {
+      "monster": [
+        "dukaten"
+      ],
+      "app": "linpark"
+    },
+    {
+      "monster": [
+        "goteborgs stads parkerings"
+      ],
+      "app": "parkering-goteborg"
+    },
+    {
+      "monster": [
+        "europark"
+      ],
+      "app": "apcoa"
+    }
+  ]
+}
