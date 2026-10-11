@@ -820,7 +820,21 @@
       "kod": "0586",
       "namn": "Mjölby",
       "osmNamn": "Mjölby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Ingen p-skiva behövs på kommunens platser."
+      },
+      "parkeringssida": "https://www.mjolby.se/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.mjolby.se/trafik-och-gator/parkering",
+          "titel": "Parkering – Mjölby kommun (uppdaterad 2 oktober 2026)",
+          "citat": "I Mjölby kommun är det gratis att parkera på kommunens parkeringsplatser.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0604",
@@ -850,7 +864,20 @@
       "kod": "0662",
       "namn": "Gislaved",
       "osmNamn": "Gislaveds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.gislaved.se/trafik-och-gator/parkering-i-kommunen/parkering",
+      "kallor": [
+        {
+          "url": "https://www.gislaved.se/trafik-och-gator/parkering-i-kommunen/parkering",
+          "titel": "Parkering – Gislaveds kommun",
+          "citat": "Det kostar ingenting att parkera på kommunala parkeringsplatser",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0665",
@@ -1206,7 +1233,23 @@
       "kod": "1082",
       "namn": "Karlshamn",
       "osmNamn": "Karlshamns kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "I centrala Karlshamn är parkeringen främst avgiftsfri med p-skiva. Avgift tas bara på Stortorget och på resecentrums långtidsparkering."
+      },
+      "parkeringssida": "https://www.karlshamn.se/trafik-och-resor/parkering/parkeringsplatser-allmanna/",
+      "kallor": [
+        {
+          "url": "https://www.karlshamn.se/trafik-och-resor/parkering/parkeringsplatser-allmanna/",
+          "titel": "Parkeringsplatser, allmänna – Karlshamns kommun (uppdaterad 2026-05-21)",
+          "citat": "Du betalar din parkeringsavgift via SMS-parkering eller med appen Easy Park",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1083",
@@ -1496,7 +1539,25 @@
       "kod": "1286",
       "namn": "Ystad",
       "osmNamn": "Ystads kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark",
+          "mobill"
+        ],
+        "anmarkning": "Tilläggsavgifter kan förekomma beroende på vilket företag du väljer."
+      },
+      "parkeringssida": "https://ystad.se/samhallsutveckling-och-trafik/trafik-gator-och-torg/parkera-i-ystad/avgift-for-parkering",
+      "kallor": [
+        {
+          "url": "https://ystad.se/samhallsutveckling-och-trafik/trafik-gator-och-torg/parkera-i-ystad/avgift-for-parkering",
+          "titel": "Avgift för parkering – Ystads kommun (uppdaterad 2026-07-28)",
+          "citat": "Kommunen har avtal med: Parkster Easypark Mobill",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1287",
