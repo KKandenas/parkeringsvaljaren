@@ -158,6 +158,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       installerad: _arInstallerad,
     );
     final f = Farger.av(context);
+    final avgiftsfri = plats?.kommun?.status == KommunStatus.avgiftsfri;
 
     return Scaffold(
       appBar: AppBar(
@@ -217,8 +218,9 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 data: Theme.of(context)
                     .copyWith(dividerColor: Colors.transparent),
                 child: ExpansionTile(
-                  key: ValueKey(urval.galler.isEmpty),
-                  initiallyExpanded: urval.galler.isEmpty,
+                  // Hopfälld där ingen app behövs.
+                  key: ValueKey((urval.galler.isEmpty, avgiftsfri)),
+                  initiallyExpanded: urval.galler.isEmpty && !avgiftsfri,
                   tilePadding: const EdgeInsets.symmetric(horizontal: 16),
                   title: Text(
                     urval.galler.isEmpty ? 'Alla appar' : 'Andra appar',
@@ -348,7 +350,8 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
         ),
         if (kommun == null)
           const Text('Vi kunde inte avgöra kommunen här.')
-        else if (kommun.status == KommunStatus.verifierad) ...[
+        else if (kommun.arKontrollerad) ...[
+          if (kommun.status == KommunStatus.avgiftsfri) _avgiftsfri(context),
           if (kommun.anmarkning != null) Text(kommun.anmarkning!),
           for (final k in kommun.kallor)
             InkWell(
@@ -391,6 +394,30 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: rader,
+      ),
+    );
+  }
+
+  Widget _avgiftsfri(BuildContext context) {
+    final f = Farger.av(context);
+    return Container(
+      margin: const EdgeInsets.only(bottom: 6),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: f.ok.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.check_circle_outline, color: f.ok),
+          const SizedBox(width: 10),
+          const Expanded(
+            child: Text(
+              'Gatuparkeringen är avgiftsfri enligt kommunen. Kontrollera '
+              'skylten, p-skiva kan krävas.',
+            ),
+          ),
+        ],
       ),
     );
   }

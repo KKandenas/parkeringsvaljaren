@@ -88,6 +88,10 @@ enum KommunStatus {
 
   /// Apparna står på kommunens eller dess parkeringsbolags webbplats.
   verifierad,
+
+  /// Kommunen skriver att gatuparkeringen är avgiftsfri (ofta med
+  /// p-skiva). Ingen app behövs på kommunens gator.
+  avgiftsfri,
 }
 
 /// En kommun ur assets/data/kommuner.json.
@@ -113,6 +117,9 @@ class Kommun {
   final String osmNamn;
 
   final KommunStatus status;
+
+  /// Kontrollerad mot en källa, med appar eller som avgiftsfri.
+  bool get arKontrollerad => status != KommunStatus.okand;
 
   /// Appar för kommunal gatuparkering, i kommunens ordning.
   final List<String> appar;

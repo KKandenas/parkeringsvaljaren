@@ -85,9 +85,20 @@ Testerna täcker:
 | `assets/data/apps.json` | Apparna | Paketnamn från Google Play, App Store-id från Apples sök-API, universella länkar från appens `apple-app-site-association` |
 | `assets/data/operatorer.json` | OSM-operatör till app | Bara bolag som själva ger ut appen |
 
-En kommun har `status: "verifierad"` bara om kommunens egen webbplats, eller
-dess parkeringsbolags, räknar upp apparna. Övriga har `status: "okand"`, och
-appen säger då att uppgiften saknas och att skylten gäller.
+`status` är något av:
+
+- `verifierad`: kommunens egen webbplats, eller dess parkeringsbolags,
+  räknar upp apparna.
+- `avgiftsfri`: kommunen skriver att gatuparkeringen är avgiftsfri, ofta
+  med p-skiva. `appar` är då tom, och appen visar "Gatuparkeringen är
+  avgiftsfri enligt kommunen". Veckokontrollen kontrollerar att källan
+  fortfarande säger det.
+- `okand`: inte kontrollerad. Appen säger att uppgiften saknas och att
+  skylten gäller.
+
+En källa som bara visar innehållet med JavaScript märks
+`"kraverJavascript": true`. Veckokontrollen kontrollerar då bara att sidan
+svarar.
 
 ## Uppdatera kommunlistan
 

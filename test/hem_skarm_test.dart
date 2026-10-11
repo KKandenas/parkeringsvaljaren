@@ -125,4 +125,20 @@ void main() {
     expect(initialer('ePARK'), 'eP');
     expect(initialer('Q-Park'), 'QP');
   });
+
+  testWidgets('avgiftsfri kommun: besked och hopfälld lista', (tester) async {
+    await visa(
+      tester,
+      Plats(kommun: kommunMedKod('1383')),
+      await minaAppar({}),
+    );
+    expect(
+      find.textContaining('Gatuparkeringen är avgiftsfri'),
+      findsOneWidget,
+    );
+    expect(find.text('Gäller här'), findsNothing);
+    expect(find.text('Alla appar'), findsOneWidget);
+    // Listan är hopfälld, så inga appkort syns.
+    expect(find.byType(AppRad), findsNothing);
+  });
 }

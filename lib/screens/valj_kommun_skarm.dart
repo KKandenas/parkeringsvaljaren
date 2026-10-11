@@ -22,9 +22,7 @@ class _ValjKommunSkarmState extends State<ValjKommunSkarm> {
     final f = Farger.av(context);
     final text = Theme.of(context).textTheme;
     final kommuner = sokKommuner(widget.kommuner, _sok);
-    final antalKlara = widget.kommuner
-        .where((k) => k.status == KommunStatus.verifierad)
-        .length;
+    final antalKlara = widget.kommuner.where((k) => k.arKontrollerad).length;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Välj kommun')),
@@ -50,8 +48,8 @@ class _ValjKommunSkarmState extends State<ValjKommunSkarm> {
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: Text(
-              'Apparna är kontrollerade för $antalKlara av '
-              '${widget.kommuner.length} kommuner. Övriga visar alla appar.',
+              '$antalKlara av ${widget.kommuner.length} kommuner är '
+              'kontrollerade. Övriga visar alla appar.',
               style: text.bodySmall?.copyWith(color: f.dampad),
             ),
           ),
@@ -67,11 +65,14 @@ class _ValjKommunSkarmState extends State<ValjKommunSkarm> {
                     itemCount: kommuner.length,
                     itemBuilder: (context, i) {
                       final k = kommuner[i];
-                      final klar = k.status == KommunStatus.verifierad;
+                      final klar = k.arKontrollerad;
+                      final fri = k.status == KommunStatus.avgiftsfri;
                       return ListTile(
                         title: Text(k.namn),
                         subtitle: Text(
-                          klar
+                          fri
+                              ? 'Avgiftsfri gatuparkering · kontrollerad ${k.kontrollerad}'
+                              : klar
                               ? '${k.appar.length} ${k.appar.length == 1 ? 'app' : 'appar'} · kontrollerad ${k.kontrollerad}'
                               : 'Inte kontrollerad än',
                           style: text.bodySmall?.copyWith(color: f.dampad),

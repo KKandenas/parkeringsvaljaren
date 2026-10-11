@@ -29,7 +29,11 @@ void main() {
         expect(k.appar, isEmpty, reason: '$namn är okänd men har appar');
         continue;
       }
-      expect(k.appar, isNotEmpty, reason: namn);
+      if (k.status == KommunStatus.avgiftsfri) {
+        expect(k.appar, isEmpty, reason: '$namn är avgiftsfri men har appar');
+      } else {
+        expect(k.appar, isNotEmpty, reason: namn);
+      }
       expect(k.appar.toSet(), hasLength(k.appar.length), reason: namn);
       expect(k.kallor, isNotEmpty, reason: '$namn saknar källa');
       expect(k.kontrollerad, matches(datum), reason: namn);

@@ -61,6 +61,14 @@ Future<void> main() async {
       // Där räcker det att sidan svarar.
       if (kraverJavascript.contains(kalla.url)) continue;
       final text = utanMellanslag(sidtext(svar));
+      if (kommun.status == KommunStatus.avgiftsfri) {
+        if (!fritt.any(text.contains)) {
+          problem.add(
+            '${kommun.namn}: ${kalla.url} säger inte längre att parkeringen är avgiftsfri',
+          );
+        }
+        continue;
+      }
       final saknas = [
         for (final id in kommun.appar)
           if (!alias[id]!.any((namn) => text.contains(utanMellanslag(namn))))
@@ -114,6 +122,18 @@ Future<void> main() async {
   }
   exitCode = 1;
 }
+
+/// Ord som visar att en källa beskriver avgiftsfri parkering.
+final fritt = [
+  'avgiftsfri',
+  'gratis',
+  'kostaringet',
+  'kostnadsfri',
+  'ingenavgift',
+  'ingaparkeringsavgifter',
+  'pskiva',
+  'parkeringsskiva',
+].map(utanMellanslag).toList();
 
 String utanMellanslag(String text) => normalisera(text).replaceAll(' ', '');
 

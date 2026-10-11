@@ -37,7 +37,21 @@
       "kod": "0117",
       "namn": "Österåker",
       "osmNamn": "Österåkers kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsbegränsat enligt skylt, ofta med p-skiva."
+      },
+      "parkeringssida": "https://www.osteraker.se/trafikinfrastruktur/parkering.4.592cfecd176fc0db8782c91.html",
+      "kallor": [
+        {
+          "url": "https://www.osteraker.se/trafikinfrastruktur/parkering.4.592cfecd176fc0db8782c91.html",
+          "titel": "Parkering – Österåkers kommun (uppdaterad 16 juni 2026)",
+          "citat": "Det kostar inget att stå på de kommunala parkeringsplatserna men du får bara stå en viss tid.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0120",
@@ -153,7 +167,21 @@
       "kod": "0138",
       "namn": "Tyresö",
       "osmNamn": "Tyresö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Parkeringen vid gallerian i Tyresö centrum är inte kommunal och kan kosta."
+      },
+      "parkeringssida": "https://www.tyreso.se/boende--miljo/trafik/parkering-och-parkeringsregler.html",
+      "kallor": [
+        {
+          "url": "https://www.tyreso.se/boende--miljo/trafik/parkering-och-parkeringsregler.html",
+          "titel": "Parkering och parkeringsregler – Tyresö kommun (uppdaterad 6 oktober 2026)",
+          "citat": "I Tyresö kostar det ingenting att parkera på allmänna gator och vägar.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0139",
@@ -368,7 +396,20 @@
       "kod": "0186",
       "namn": "Lidingö",
       "osmNamn": "Lidingö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://lidingo.se/trafik-infrastruktur/parkering/",
+      "kallor": [
+        {
+          "url": "https://lidingo.se/trafik-infrastruktur/parkering/",
+          "titel": "Parkering – Lidingö stad",
+          "citat": "Det är avgiftsfritt att parkera på Lidingö men på vissa ställen behöver du parkeringsskiva.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0187",
@@ -1590,7 +1631,21 @@
       "kod": "1383",
       "namn": "Varberg",
       "osmNamn": "Varbergs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs."
+      },
+      "parkeringssida": "https://varberg.se/trafik-och-gator/parkering/parkeringsskiva",
+      "kallor": [
+        {
+          "url": "https://varberg.se/trafik-och-gator/parkering/parkeringsskiva",
+          "titel": "Parkeringsskiva – Varbergs kommun (uppdaterad 2026-07-08)",
+          "citat": "I Varbergs kommun får du parkera gratis på kommunala parkeringar, så länge du har en p-skiva",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1384",
@@ -1619,7 +1674,21 @@
       "kod": "1401",
       "namn": "Härryda",
       "osmNamn": "Härryda kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Undantag: vissa nattparkeringar i Mölnlycke och Landvetter kräver tillstånd, som köps i EasyPark eller Parkster."
+      },
+      "parkeringssida": "https://www.harryda.se/trafikochresor/parkering.4.1439a0061817fd1d9403e94.html",
+      "kallor": [
+        {
+          "url": "https://www.harryda.se/trafikochresor/parkering.4.1439a0061817fd1d9403e94.html",
+          "titel": "Parkering – Härryda kommun (uppdaterad 2026-03-27)",
+          "citat": "vanligtvis kostnadsfritt att parkera på allmänna gator, vägar och parkeringsplatser",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1402",
@@ -1706,7 +1775,21 @@
       "kod": "1441",
       "namn": "Lerum",
       "osmNamn": "Lerums kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Privata parkeringar, till exempel vid butiker, kan ta avgift enligt skylt."
+      },
+      "parkeringssida": "https://lerum.se/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://lerum.se/trafik-och-gator/parkering",
+          "titel": "Parkering – Lerums kommun (uppdaterad 2026-09-22)",
+          "citat": "Det är gratis att parkera på allmän plats i Lerums kommun.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1442",
@@ -1922,7 +2005,20 @@
       "kod": "1487",
       "namn": "Vänersborg",
       "osmNamn": "Vänersborgs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://vanersborg.se/trafik-och-resor/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://vanersborg.se/trafik-och-resor/trafik-och-gator/parkering",
+          "titel": "Parkering – Vänersborgs kommun (uppdaterad 14 september 2026)",
+          "citat": "Det finns inga parkeringsavgifter eller datumparkeringar.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1488",
@@ -2616,7 +2712,21 @@
       "kod": "2181",
       "namn": "Sandviken",
       "osmNamn": "Sandvikens kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa privata kund- och besöksparkeringar tar betalt via app enligt skylt."
+      },
+      "parkeringssida": "https://sandviken.se/trafikinfrastruktur/trafikvagarochparkering/parkeringisandviken.4282.html",
+      "kallor": [
+        {
+          "url": "https://sandviken.se/trafikinfrastruktur/trafikvagarochparkering/parkeringisandviken.4282.html",
+          "titel": "Parkering i Sandviken – Sandvikens kommun (uppdaterad 2026-09-30)",
+          "citat": "gratis att parkera på de cirka 700 parkeringsplatser som finns på allmän mark i centrum",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2182",
