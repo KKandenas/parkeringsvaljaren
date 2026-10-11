@@ -104,6 +104,13 @@
       "namn": "FastPark",
       "android": "com.fastpark.fastparkapp",
       "webb": "https://www.fastpark.se"
+    },
+    {
+      "id": "faluappen",
+      "namn": "Faluappen",
+      "android": "se.falup",
+      "appStoreId": "760260967",
+      "webb": "https://falup.se"
     }
   ]
 }

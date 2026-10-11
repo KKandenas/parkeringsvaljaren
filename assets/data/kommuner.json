@@ -33,7 +33,23 @@
       "kod": "0123",
       "namn": "Järfälla",
       "osmNamn": "Järfälla kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "Kommunen anger appen för Barkarbystaden. På övrig allmän mark är parkeringen avgiftsfri."
+      },
+      "parkeringssida": "https://www.jarfalla.se/gatorochtrafik/parkering/parkeraibarkarbystaden.4.5ef46051556de3110246a2.html",
+      "kallor": [
+        {
+          "url": "https://www.jarfalla.se/gatorochtrafik/parkering/parkeraibarkarbystaden.4.5ef46051556de3110246a2.html",
+          "titel": "Parkera i Barkarbystaden – Järfälla kommun",
+          "citat": "Här kan du läsa om hur du betalar med appen Easypark",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0125",
@@ -45,13 +61,46 @@
       "kod": "0126",
       "namn": "Huddinge",
       "osmNamn": "Huddinge kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark"
+        ],
+        "anmarkning": "Välj prisplanen \"Easypark lokal\" (Huddinge kommun) eller ett verifierat konto i Epark för att slippa serviceavgift."
+      },
+      "parkeringssida": "https://www.huddinge.se/stadsplanering-och-trafik/parkering-och-tillstand/stanna-och-parkera/betala-parkering",
+      "kallor": [
+        {
+          "url": "https://www.huddinge.se/stadsplanering-och-trafik/parkering-och-tillstand/stanna-och-parkera/betala-parkering",
+          "titel": "Betala parkering – Huddinge kommun (uppdaterad 30 januari 2026)",
+          "citat": "Det finns två leverantörer i systemet idag; Easypark och Epark.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0127",
       "namn": "Botkyrka",
       "osmNamn": "Botkyrka kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "Kommunen anger appen för de avgiftsbelagda infartsparkeringarna."
+      },
+      "parkeringssida": "https://www.botkyrka.se/stadsplanering-och-trafik/parkering/infartsparkering",
+      "kallor": [
+        {
+          "url": "https://www.botkyrka.se/stadsplanering-och-trafik/parkering/infartsparkering",
+          "titel": "Infartsparkering – Botkyrka kommun (uppdaterad 1 juli 2026)",
+          "citat": "genom kommunens upphandlade leverantör Easypark",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0128",
@@ -947,7 +996,24 @@
       "kod": "0980",
       "namn": "Gotland",
       "osmNamn": "Gotlands kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark"
+        ],
+        "anmarkning": "Enligt regionen tar EasyPark en serviceavgift."
+      },
+      "parkeringssida": "https://gotland.se/trafik-gator-och-parker/parkera-och-ladda/betala-parkeringsavgift-sa-har",
+      "kallor": [
+        {
+          "url": "https://gotland.se/trafik-gator-och-parker/parkera-och-ladda/betala-parkeringsavgift-sa-har",
+          "titel": "Betala parkeringsavgift så här – Region Gotland (uppdaterad 21 augusti 2026)",
+          "citat": "I dagsläget finns två olika parkeringsappar … Parkster och EasyPark.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1060",
@@ -959,7 +1025,33 @@
       "kod": "1080",
       "namn": "Karlskrona",
       "osmNamn": "Karlskrona kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster",
+          "epark"
+        ],
+        "anmarkning": "Från 13 oktober 2026 kan även Mobill och Parking Time användas, enligt kommunen. Boendeparkering löses då i E-park."
+      },
+      "parkeringssida": "https://www.karlskrona.se/samhallsplanering-och-trafik/parkering-och-trafik/parkering-i-karlskrona/",
+      "kallor": [
+        {
+          "url": "https://www.karlskrona.se/samhallsplanering-och-trafik/parkering-och-trafik/parkering-i-karlskrona/",
+          "titel": "Parkering i Karlskrona – Karlskrona kommun (uppdaterad 2 juni 2025)",
+          "citat": "tre olika leverantörer … Easy Park Parkster ePARK",
+          "kraverJavascript": true,
+          "hamtad": "2026-10-11"
+        },
+        {
+          "url": "https://www.karlskrona.se/nyheter-karlskrona-kommun/fler-valm%C3%B6jligheter-n%C3%A4r-du-betalar-f%C3%B6r-parkering",
+          "titel": "Fler valmöjligheter när du betalar för parkering – Karlskrona kommun (7 oktober 2026)",
+          "citat": "Från och med den 13 oktober utökas antalet appar",
+          "kraverJavascript": true,
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1081",
@@ -1291,7 +1383,24 @@
       "kod": "1292",
       "namn": "Ängelholm",
       "osmNamn": "Ängelholms kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "mobill",
+          "parkster"
+        ],
+        "anmarkning": "Första timmen är avgiftsfri på kommunens avgiftsbelagda platser."
+      },
+      "parkeringssida": "https://www.engelholm.se/trafik-och-stadsplanering/parkering/betala-parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.engelholm.se/trafik-och-stadsplanering/parkering/betala-parkering.html",
+          "titel": "Betala parkering – Ängelholms kommun (uppdaterad 2026-08-31)",
+          "citat": "Ängelholms kommun har avtal med två leverantörer, Mobill och Parkster.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1293",
@@ -1365,7 +1474,24 @@
       "kod": "1384",
       "namn": "Kungsbacka",
       "osmNamn": "Kungsbacka kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://kungsbacka.se/trafik-resor-och-utemiljo/parkering/avgift-for-parkering",
+      "kallor": [
+        {
+          "url": "https://kungsbacka.se/trafik-resor-och-utemiljo/parkering/avgift-for-parkering",
+          "titel": "Avgift för parkering – Kungsbacka kommun",
+          "citat": "På alla våra avgiftsbelagda p-ytor … EasyPark … E-Park … Parkster",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1401",
@@ -1594,7 +1720,24 @@
       "kod": "1481",
       "namn": "Mölndal",
       "osmNamn": "Mölndals kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkering-goteborg",
+          "easypark"
+        ],
+        "anmarkning": "Gäller avgiftsbelagda bostadsgator. Kommunen nämner även Inteleon SMS Park."
+      },
+      "parkeringssida": "https://www.molndal.se/trafik-och-resor/parkering-och-tillstand/parkering-pa-bostadsgator",
+      "kallor": [
+        {
+          "url": "https://www.molndal.se/trafik-och-resor/parkering-och-tillstand/parkering-pa-bostadsgator",
+          "titel": "Parkering på bostadsgator – Mölndals stad (uppdaterad 23 januari 2026)",
+          "citat": "Betalning via telefon kan göras med Parkering Göteborg, Easypark eller Inteleon SMS Park.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1482",
@@ -2209,7 +2352,25 @@
       "kod": "2080",
       "namn": "Falun",
       "osmNamn": "Falu kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "faluappen",
+          "easypark",
+          "aimo"
+        ],
+        "anmarkning": "Gäller Falu P:s (kommunens parkeringsbolag) parkeringar. Med Faluappen tillkommer inga extra avgifter."
+      },
+      "parkeringssida": "https://falup.se/p-biljett/",
+      "kallor": [
+        {
+          "url": "https://falup.se/p-biljett/",
+          "titel": "P-biljett – Falu P",
+          "citat": "kan du betala med Faluappen, EasyPark, Aimo, SMS, talsvar eller i betal­automat",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2081",
@@ -2392,7 +2553,25 @@
       "kod": "2284",
       "namn": "Örnsköldsvik",
       "osmNamn": "Örnsköldsviks kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark",
+          "mobill",
+          "epark"
+        ]
+      },
+      "parkeringssida": "https://www.ornskoldsvik.se/bo-miljo-och-trafik/trafik-och-resor/parkering/sa-har-betalar-du-din-parkering",
+      "kallor": [
+        {
+          "url": "https://www.ornskoldsvik.se/bo-miljo-och-trafik/trafik-och-resor/parkering/sa-har-betalar-du-din-parkering",
+          "titel": "Så här betalar du din parkering – Örnsköldsviks kommun",
+          "citat": "Dessa leverantörer av parkeringsappar fungerar i Örnsköldsvik. Parkster Easy Park Mobill ePARK",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2303",
@@ -2440,7 +2619,25 @@
       "kod": "2380",
       "namn": "Östersund",
       "osmNamn": "Östersunds kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://ostersund.se/trafik-och-infrastruktur/biltrafik/parkera-motorfordon/parkera-i-centrum.html",
+      "kallor": [
+        {
+          "url": "https://ostersund.se/trafik-och-infrastruktur/biltrafik/parkera-motorfordon/parkera-i-centrum.html",
+          "titel": "Parkera i centrum – Östersunds kommun",
+          "citat": "Kommunen har avtal med följande parkeringsbolag: EasyPark … ePARK … Mobill … Parkster",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2401",
@@ -2547,7 +2744,24 @@
       "kod": "2482",
       "namn": "Skellefteå",
       "osmNamn": "Skellefteå kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "parkster"
+        ],
+        "anmarkning": "Verifiera kontot med BankID i ePARK för att slippa extra avgifter."
+      },
+      "parkeringssida": "https://skelleftea.se/invanare/startsida/trafik-och-samhallsutveckling/parkering/betala-parkering",
+      "kallor": [
+        {
+          "url": "https://skelleftea.se/invanare/startsida/trafik-och-samhallsutveckling/parkering/betala-parkering",
+          "titel": "Betala parkering – Skellefteå kommun (uppdaterad 20 april 2026)",
+          "citat": "På kommunens parkeringar finns det två olika parkeringsappar som gäller, ePARK och Parkster.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2505",
@@ -2607,7 +2821,25 @@
       "kod": "2580",
       "namn": "Luleå",
       "osmNamn": "Luleå kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "parkster",
+          "easypark",
+          "mobill"
+        ]
+      },
+      "parkeringssida": "https://www.lulea.se/boende--gator/gator-och-trafik/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.lulea.se/boende--gator/gator-och-trafik/parkering.html",
+          "titel": "Parkering – Luleå kommun",
+          "citat": "Luleå kommun erbjuder parkering med följande system: e-park … Parkster … EasyPark … Mobill",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2581",

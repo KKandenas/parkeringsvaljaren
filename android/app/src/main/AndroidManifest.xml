@@ -70,5 +70,6 @@
         <package android:name="se.knowit.dukaten.parkering.android"/>
         <package android:name="se.parkingtime.app"/>
         <package android:name="com.fastpark.fastparkapp"/>
+        <package android:name="se.falup"/>
     </queries>
 </manifest>
