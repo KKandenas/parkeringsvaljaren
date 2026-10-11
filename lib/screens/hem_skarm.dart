@@ -11,6 +11,7 @@ import '../tema.dart';
 import '../widgets/app_rad.dart';
 import '../widgets/varning.dart';
 import 'mina_appar_skarm.dart';
+import 'valj_kommun_skarm.dart';
 
 class HemSkarm extends StatefulWidget {
   const HemSkarm({
@@ -35,6 +36,13 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   Plats? _plats;
   Object? _fel;
   bool _letar = false;
+
+  /// Kommunen är vald för hand, inte efter positionen.
+  bool _forHand = false;
+
+  /// Räknas upp vid varje uppslag och val, så att ett gammalt uppslag som
+  /// blir klart sent inte skriver över ett nyare.
+  int _uppslagNr = 0;
   Set<String>? _installerade;
 
   @override
@@ -80,19 +88,37 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   }
 
   Future<void> _leta() async {
+    final nr = ++_uppslagNr;
     setState(() {
       _letar = true;
+      _forHand = false;
       _fel = null;
     });
     try {
       await for (final plats in widget.uppslag.har()) {
-        if (mounted) setState(() => _plats = plats);
+        if (mounted && nr == _uppslagNr) setState(() => _plats = plats);
       }
     } catch (e) {
-      if (mounted) setState(() => _fel = e);
+      if (mounted && nr == _uppslagNr) setState(() => _fel = e);
     } finally {
-      if (mounted) setState(() => _letar = false);
+      if (mounted && nr == _uppslagNr) setState(() => _letar = false);
     }
+  }
+
+  Future<void> _valjKommun() async {
+    final kommun = await Navigator.of(context).push<Kommun>(
+      MaterialPageRoute(
+        builder: (_) => ValjKommunSkarm(kommuner: widget.katalog.kommuner),
+      ),
+    );
+    if (kommun == null || !mounted) return;
+    _uppslagNr++;
+    setState(() {
+      _plats = Plats(kommun: kommun);
+      _forHand = true;
+      _letar = false;
+      _fel = null;
+    });
   }
 
   Future<void> _oppna(ParkeringsApp app) async {
@@ -148,6 +174,11 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
             tooltip: 'Leta igen',
             onPressed: _letar ? null : _leta,
             icon: const Icon(Icons.my_location),
+          ),
+          IconButton(
+            tooltip: 'Välj kommun',
+            onPressed: _valjKommun,
+            icon: const Icon(Icons.location_city),
           ),
           IconButton(
             tooltip: 'Mina appar',
@@ -266,23 +297,55 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
           _fel is PositionFel ? '$_fel' : 'Kunde inte slå upp platsen. Kontrollera nätet och försök igen.',
         ),
         const SizedBox(height: 8),
-        FilledButton(onPressed: _leta, child: const Text('Försök igen')),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            FilledButton(onPressed: _leta, child: const Text('Försök igen')),
+            OutlinedButton.icon(
+              onPressed: _valjKommun,
+              icon: const Icon(Icons.location_city),
+              label: const Text('Välj kommun'),
+            ),
+          ],
+        ),
       ];
     } else if (plats != null) {
       final kommun = plats.kommun;
+      final rubrik = text.headlineSmall?.copyWith(fontWeight: FontWeight.w800);
       rader = [
-        Text('Du står vid', style: dampad),
-        Text(
-          plats.adress?.isNotEmpty == true ? plats.adress! : 'Okänd adress',
-          style: text.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
+        if (_forHand && kommun != null) ...[
+          Text('Vald kommun', style: dampad),
+          Text(kommun.osmNamn, style: rubrik),
+          Text('Gatuparkering · ingen position används', style: dampad),
+        ] else ...[
+          Text('Du står vid', style: dampad),
+          Text(
+            plats.adress?.isNotEmpty == true ? plats.adress! : 'Okänd adress',
+            style: rubrik,
+          ),
+          Text(
+            kommun == null
+                ? 'Kommunen är okänd'
+                : '${kommun.osmNamn} · gatuparkering',
+            style: dampad,
+          ),
+        ],
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            style: TextButton.styleFrom(
+              padding: EdgeInsets.zero,
+              visualDensity: VisualDensity.compact,
+            ),
+            onPressed: _forHand ? _leta : _valjKommun,
+            icon: Icon(
+              _forHand ? Icons.my_location : Icons.location_city,
+              size: 18,
+            ),
+            label: Text(_forHand ? 'Använd min position' : 'Välj kommun'),
+          ),
         ),
-        Text(
-          kommun == null
-              ? 'Kommunen är okänd'
-              : '${kommun.osmNamn} · gatuparkering',
-          style: dampad,
-        ),
-        const SizedBox(height: 8),
         if (kommun == null)
           const Text('Vi kunde inte avgöra kommunen här.')
         else if (kommun.status == KommunStatus.verifierad) ...[

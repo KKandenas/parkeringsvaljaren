@@ -27,3 +27,14 @@ String normalisera(String text) {
   }
   return buffer.toString().replaceAll(RegExp(r'[^a-z0-9]+'), ' ').trim();
 }
+
+/// Jämför namn i svensk bokstavsordning: Å, Ä och Ö efter Z, i den ordningen.
+int svenskOrdning(String a, String b) => _nyckel(a).compareTo(_nyckel(b));
+
+String _nyckel(String s) => s
+    .toLowerCase()
+    .replaceAll('å', '{0')
+    .replaceAll('ä', '{1')
+    .replaceAll('æ', '{1')
+    .replaceAll('ö', '{2')
+    .replaceAll('ø', '{2');

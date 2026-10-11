@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../logic/rattelse.dart';
+import '../logic/normalisera.dart';
 import '../models/katalog.dart';
 import '../services/app_oppnare.dart';
 import '../services/mina_appar.dart';
@@ -59,7 +60,7 @@ class _MinaApparSkarmState extends State<MinaApparSkarm> {
     final f = Farger.av(context);
     final text = Theme.of(context).textTheme;
     final appar = widget.katalog.appar.values.toList()
-      ..sort((a, b) => a.namn.toLowerCase().compareTo(b.namn.toLowerCase()));
+      ..sort((a, b) => svenskOrdning(a.namn, b.namn));
     return [
       Padding(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
