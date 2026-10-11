@@ -2309,7 +2309,24 @@
       "kod": "1493",
       "namn": "Mariestad",
       "osmNamn": "Mariestads kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "mobill"
+        ],
+        "anmarkning": "Avgift tas inne i centrum (första 30 minuterna gratis men registrering krävs). En nyhet från juni 2025 anger att bara Parkster gäller."
+      },
+      "parkeringssida": "https://mariestad.se/trafik-och-gator/parkering-och-stallplatser/parkera-i-mariestad",
+      "kallor": [
+        {
+          "url": "https://mariestad.se/trafik-och-gator/parkering-och-stallplatser/parkera-i-mariestad",
+          "titel": "Parkera i Mariestad – Mariestads kommun",
+          "citat": "Du kan betala via Parksters eller Mobills app, sms eller ringa talsvar.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1494",
@@ -2537,7 +2554,21 @@
       "kod": "1784",
       "namn": "Arvika",
       "osmNamn": "Arvika kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På många platser krävs p-skiva."
+      },
+      "parkeringssida": "https://www.arvika.se/trafikochresor/parkering.2430.html",
+      "kallor": [
+        {
+          "url": "https://www.arvika.se/trafikochresor/parkering.2430.html",
+          "titel": "Parkering – Arvika kommun (uppdaterad 24 juni 2026)",
+          "citat": "De kommunala parkeringsplatserna är avgiftsfria",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1785",
@@ -2717,7 +2748,21 @@
       "kod": "1983",
       "namn": "Köping",
       "osmNamn": "Köpings kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa platser krävs p-skiva."
+      },
+      "parkeringssida": "https://koping.se/vme/gator--trafik/parkering.html",
+      "kallor": [
+        {
+          "url": "https://koping.se/vme/gator--trafik/parkering.html",
+          "titel": "Parkering – Köpings kommun (uppdaterad 20 augusti 2026)",
+          "citat": "I Köpings kommun parkerar du gratis på alla allmänna parkeringsplatser.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1984",
@@ -2958,13 +3003,41 @@
       "kod": "2182",
       "namn": "Söderhamn",
       "osmNamn": "Söderhamns kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "De flesta centrala platser är tidsbegränsade med p-skiva."
+      },
+      "parkeringssida": "https://www.soderhamn.se/sidor/trafik-och-gator/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.soderhamn.se/sidor/trafik-och-gator/parkering.html",
+          "titel": "Parkering – Söderhamns kommun (uppdaterad 30 juni 2026)",
+          "citat": "I Söderhamn är alla kommunala parkeringsplatser avgiftsfria.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2183",
       "namn": "Bollnäs",
       "osmNamn": "Bollnäs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Merparten av de allmänna parkeringarna är avgiftsfria. Privata parkeringshus tar betalt."
+      },
+      "parkeringssida": "https://bollnas.se/trafik-och-resor/parkering",
+      "kallor": [
+        {
+          "url": "https://bollnas.se/trafik-och-resor/parkering",
+          "titel": "Parkering – Bollnäs kommun (uppdaterad 16 september 2026)",
+          "citat": "närmare 1.400 allmänna parkeringar i Bollnäs centrum. Merparten är avgiftsfria!",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2184",
@@ -2988,7 +3061,23 @@
       "kod": "2280",
       "namn": "Härnösand",
       "osmNamn": "Härnösands kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster"
+        ],
+        "anmarkning": "Sedan 2 februari 2026 är det avgift i delar av centrum, men alltid gratis de två första timmarna. Parkeringen måste ändå registreras i Parkster."
+      },
+      "parkeringssida": "https://harnosand.se/bygga-bo-trafik--miljo/gata-park-trafik-och-hamn/parkering.html",
+      "kallor": [
+        {
+          "url": "https://harnosand.se/bygga-bo-trafik--miljo/gata-park-trafik-och-hamn/parkering.html",
+          "titel": "Parkering – Härnösands kommun (uppdaterad 2026-06-24)",
+          "citat": "måste du alltid registrera parkeringen i Parksters app",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2281",
