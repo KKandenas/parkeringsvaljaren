@@ -32,7 +32,11 @@
       "namn": "ePARK",
       "android": "se.netix.eparkera",
       "appStoreId": "500644505",
-      "webb": "https://www.epark.se"
+      "webb": "https://www.epark.se",
+      "alias": [
+        "Electronic Parking",
+        "E-parkera"
+      ]
     },
     {
       "id": "aimo",
