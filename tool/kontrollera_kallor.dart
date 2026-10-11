@@ -40,6 +40,15 @@ Future<void> main() async {
       ],
   };
 
+  final kraverJavascript = {
+    for (final k
+        in (json.decode(File('assets/data/kommuner.json').readAsStringSync())
+                as Map)['kommuner']
+            as List)
+      for (final kalla in (k['kallor'] as List? ?? const []))
+        if (kalla['kraverJavascript'] == true) kalla['url'] as String,
+  };
+
   for (final kommun in katalog.kommuner) {
     if (kommun.status != KommunStatus.verifierad) continue;
     for (final kalla in kommun.kallor) {
@@ -48,6 +57,9 @@ Future<void> main() async {
         problem.add('${kommun.namn}: källan svarar inte: ${kalla.url}');
         continue;
       }
+      // Sidor som bara visar innehållet med JavaScript kan inte läsas här.
+      // Där räcker det att sidan svarar.
+      if (kraverJavascript.contains(kalla.url)) continue;
       final text = utanMellanslag(sidtext(svar));
       final saknas = [
         for (final id in kommun.appar)

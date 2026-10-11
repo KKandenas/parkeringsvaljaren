@@ -547,7 +547,27 @@
       "kod": "0580",
       "namn": "Linköping",
       "osmNamn": "Linköpings kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "linpark",
+          "easypark",
+          "epark",
+          "mobill",
+          "parkster"
+        ],
+        "anmarkning": "Kommunen hänvisar till bolagens webbplatser för vilka parkeringar varje app gäller. Dukaten (LinPark) driver de större parkeringarna och parkeringshusen."
+      },
+      "parkeringssida": "https://www.linkoping.se/stadsplanering-och-trafik/trafik-och-parkering/parkering",
+      "kallor": [
+        {
+          "url": "https://www.linkoping.se/stadsplanering-och-trafik/trafik-och-parkering/parkering",
+          "titel": "Parkering – Linköpings kommun (uppdaterad 4 maj 2026)",
+          "citat": "flera olika telefonparkeringsföretag … LinPark Dukaten EasyPark E-parkera Mobill Parkster",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0581",
@@ -1113,7 +1133,25 @@
       "kod": "1281",
       "namn": "Lund",
       "osmNamn": "Lunds kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark",
+          "mobill"
+        ],
+        "anmarkning": "Lunds kommunala parkeringsbolag LKP sköter gatuparkeringen. Sedan 1 juli 2025 går det bara att betala med telefonen."
+      },
+      "parkeringssida": "https://lkpab.se/vara-tjanster/betalmetoder/",
+      "kallor": [
+        {
+          "url": "https://lkpab.se/vara-tjanster/betalmetoder/",
+          "titel": "Betalmetoder & kvitto – LKP (Lunds kommuns parkeringsbolag)",
+          "citat": "Både Parkster, Easypark och Mobill erbjuder sms-parkering",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1282",
@@ -1286,7 +1324,24 @@
       "kod": "1380",
       "namn": "Halmstad",
       "osmNamn": "Halmstads kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster",
+          "mobill"
+        ]
+      },
+      "parkeringssida": "https://www.halmstad.se/trafikochinfrastruktur/parkeraihalmstad/avgiftforparkering.n830.html",
+      "kallor": [
+        {
+          "url": "https://www.halmstad.se/trafikochinfrastruktur/parkeraihalmstad/avgiftforparkering.n830.html",
+          "titel": "Avgift för parkering – Halmstads kommun (uppdaterad 19 december 2025)",
+          "citat": "Du kan betala med någon av apparna Easypark, Parkster eller Mobill.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1381",
@@ -1640,7 +1695,27 @@
       "kod": "1490",
       "namn": "Borås",
       "osmNamn": "Borås kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark",
+          "epark",
+          "mobill"
+        ],
+        "anmarkning": "Gäller Borås kommuns Parkerings AB:s parkeringsområden. Välj paketet Borås Lokal/Basic i EasyPark för att undvika extra avgifter."
+      },
+      "parkeringssida": "https://parkeringboras.se/betala-parkering",
+      "kallor": [
+        {
+          "url": "https://parkeringboras.se/betala-parkering",
+          "titel": "Betala parkering – Borås Parkering (Borås kommuns Parkerings AB)",
+          "citat": "På våra parkeringsområden kan du betala med någon av följande appar: Parkster EasyPark ePARK Mobill",
+          "kraverJavascript": true,
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1491",
@@ -1920,7 +1995,23 @@
       "kod": "1880",
       "namn": "Örebro",
       "osmNamn": "Örebro kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "Välj abonnemanget \"EasyPark Basic (Örebro)\" i appen för att slippa serviceavgift."
+      },
+      "parkeringssida": "https://www.orebro.se/bygga-bo--trafik/trafik--gator/parkering/betala-parkeringsavgiften.html",
+      "kallor": [
+        {
+          "url": "https://www.orebro.se/bygga-bo--trafik/trafik--gator/parkering/betala-parkeringsavgiften.html",
+          "titel": "Betala parkeringsavgiften – Örebro kommun (uppdaterad 8 oktober 2026)",
+          "citat": "På kommunens parkeringsplatser kan du betala via EasyParks parkeringsapp, sms eller med kort.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1881",
@@ -2199,7 +2290,27 @@
       "kod": "2180",
       "namn": "Gävle",
       "osmNamn": "Gävle kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "gavle-p",
+          "parkster",
+          "easypark",
+          "epark",
+          "mobill"
+        ],
+        "anmarkning": "Gävle Parkeringsservice är kommunens parkeringsbolag. Vid sms-betalning tillkommer en extra avgift."
+      },
+      "parkeringssida": "https://gavleparkering.se/betalning/",
+      "kallor": [
+        {
+          "url": "https://gavleparkering.se/betalning/",
+          "titel": "Betala parkeringsavgifter – Gävle Parkeringsservice",
+          "citat": "vår egna app Gävle P, Parkster, EasyPark, ePARK och Mobill",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2181",
@@ -2247,7 +2358,23 @@
       "kod": "2281",
       "namn": "Sundsvall",
       "osmNamn": "Sundsvalls kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://sundsvall.se/kommun/samhallsplanering-och-trafik/bilparkering/betala-parkering",
+      "kallor": [
+        {
+          "url": "https://sundsvall.se/kommun/samhallsplanering-och-trafik/bilparkering/betala-parkering",
+          "titel": "Betala parkering – Sundsvalls kommun (uppdaterad 17 juni 2026)",
+          "citat": "via våra två leverantörer: Easypark … Parkster",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2282",
@@ -2391,7 +2518,24 @@
       "kod": "2480",
       "namn": "Umeå",
       "osmNamn": "Umeå kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster",
+          "easypark"
+        ],
+        "anmarkning": "Det kommunala bolaget Upab sköter parkeringen i Umeå."
+      },
+      "parkeringssida": "https://upab.se/parkera/betala-parkering/",
+      "kallor": [
+        {
+          "url": "https://upab.se/parkera/betala-parkering/",
+          "titel": "Betala parkering – Upab (Umeå Parkering AB)",
+          "citat": "ladda ner någon av apparna … Välj mellan: Parkster … EasyPark",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2481",
