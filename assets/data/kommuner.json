@@ -490,7 +490,21 @@
       "kod": "0305",
       "namn": "Håbo",
       "osmNamn": "Håbo kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vid Bålsta centrum gäller p-skiva."
+      },
+      "parkeringssida": "https://www.habo.se/trafik-och-infrastruktur/trafik-vagar-och-gator/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.habo.se/trafik-och-infrastruktur/trafik-vagar-och-gator/parkering.html",
+          "titel": "Parkering – Håbo kommun",
+          "citat": "Samtliga kommunens parkeringar är kostnadsfria",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0319",
@@ -502,7 +516,24 @@
       "kod": "0330",
       "namn": "Knivsta",
       "osmNamn": "Knivsta kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ],
+        "anmarkning": "Avgift tas på de centrala pendlarparkeringarna på vardagar. Övriga centrala kommunala platser är gratis med p-skiva."
+      },
+      "parkeringssida": "https://knivsta.se/trafik-och-utemiljoer/trafik-gator-och-vagar/parkering/parkeringsavgifter-och-biljetter",
+      "kallor": [
+        {
+          "url": "https://knivsta.se/trafik-och-utemiljoer/trafik-gator-och-vagar/parkering/parkeringsavgifter-och-biljetter",
+          "titel": "Parkeringsavgifter och biljetter – Knivsta kommun",
+          "citat": "Du kan använda antingen EasyPark eller Parkster för köp av biljetter.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0331",
@@ -570,7 +601,21 @@
       "kod": "0382",
       "namn": "Östhammar",
       "osmNamn": "Östhammars kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa parkeringar kräver p-skiva. Husbilsplatserna i Öregrund betalas med EasyPark."
+      },
+      "parkeringssida": "https://www.osthammar.se/sv/boendetrafikmiljo/trafik-snorojning-och-resor/var-finns-det-parkering",
+      "kallor": [
+        {
+          "url": "https://www.osthammar.se/sv/boendetrafikmiljo/trafik-snorojning-och-resor/var-finns-det-parkering",
+          "titel": "Var finns det parkering? – Östhammars kommun (uppdaterad 2026-05-22)",
+          "citat": "Det är gratis att parkera i Östhammars kommun, men vissa parkeringar kräver P-Skiva.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0428",
@@ -1386,7 +1431,21 @@
       "kod": "1263",
       "namn": "Svedala",
       "osmNamn": "Svedala kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vid Kuben i Bara (privat mark) gäller Parkster i stället för p-skiva."
+      },
+      "parkeringssida": "https://www.svedala.se/bo/trafik-och-resor/trafik-och-gator/parkering/parkeringsplatser-allmanna/",
+      "kallor": [
+        {
+          "url": "https://www.svedala.se/bo/trafik-och-resor/trafik-och-gator/parkering/parkeringsplatser-allmanna/",
+          "titel": "Allmänna parkeringsplatser – Svedala kommun (uppdaterad 2024-08-12)",
+          "citat": "All parkering på allmän plats är avgiftsfri i kommunen.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1264",
@@ -2638,7 +2697,21 @@
       "kod": "1881",
       "namn": "Kumla",
       "osmNamn": "Kumla kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrala Kumla är parkeringstiden begränsad på vissa platser."
+      },
+      "parkeringssida": "https://www.kumla.se/trafik-och-infrastruktur/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.kumla.se/trafik-och-infrastruktur/parkering.html",
+          "titel": "Parkering – Kumla kommun (uppdaterad 2025-07-08)",
+          "citat": "I Kumla är samtliga parkeringar på gator och torg kostnadsfria.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1882",
@@ -2677,7 +2750,21 @@
       "kod": "1885",
       "namn": "Lindesberg",
       "osmNamn": "Lindesbergs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrala Lindesberg krävs p-skiva."
+      },
+      "parkeringssida": "https://www.lindesberg.se/trafik-och-gator/trafikplanering-regler-och-sakerhet/parkering",
+      "kallor": [
+        {
+          "url": "https://www.lindesberg.se/trafik-och-gator/trafikplanering-regler-och-sakerhet/parkering",
+          "titel": "Parkering – Lindesbergs kommun (uppdaterad 2025-08-04)",
+          "citat": "I Lindesbergs kommun är samtliga parkeringar på gator och torg kostnadsfria.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1904",
@@ -2736,7 +2823,21 @@
       "kod": "1981",
       "namn": "Sala",
       "osmNamn": "Sala kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs i centrum. En digital p-skiva finns i appen ePark."
+      },
+      "parkeringssida": "https://www.sala.se/info/4390",
+      "kallor": [
+        {
+          "url": "https://www.sala.se/info/4390",
+          "titel": "Parkeringsplatser, allmänna – Sala kommun (uppdaterad 2024-09-19)",
+          "citat": "I Sala centrum parkerar du gratis med P-skiva.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1982",
@@ -2901,7 +3002,21 @@
       "kod": "2084",
       "namn": "Avesta",
       "osmNamn": "Avesta kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Platser med motorvärmare kostar 5 kr per timme. Privata parkeringar kan ha egna regler."
+      },
+      "parkeringssida": "https://avesta.se/trafik-och-infrastruktur/gator-och-trafik/parkering/",
+      "kallor": [
+        {
+          "url": "https://avesta.se/trafik-och-infrastruktur/gator-och-trafik/parkering/",
+          "titel": "Parkering – Avesta kommun (uppdaterad 17 februari 2026)",
+          "citat": "Avesta kommun är välförsedd med avgiftsfria parkeringsplatser",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2085",
