@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kontrollerad": "2026-10-10",
-  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association. iosSchema: prövat på en riktig iPhone med web/lanktest.html (EasyPark 2026-10-10).",
+  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association. iosSchema: prövat på en riktig iPhone med web/lanktest.html (EasyPark 2026-10-10). iosAppLank: universell länk som bara används när man har appen, eftersom den annars öppnar en webbsida i stället för App Store (Mobill: mobill.se/qr*, prövat 2026-10-11).",
   "appar": [
     {
       "id": "easypark",
@@ -24,7 +24,8 @@
       "namn": "Mobill",
       "android": "se.mobill.parking",
       "appStoreId": "1066302005",
-      "webb": "https://mobill.se"
+      "webb": "https://mobill.se",
+      "iosAppLank": "https://mobill.se/qr"
     },
     {
       "id": "epark",

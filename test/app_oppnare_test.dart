@@ -50,4 +50,21 @@ void main() {
       'https://apps.apple.com/se/app/id3',
     );
   });
+
+  test('Mobills länk bara för den som har appen', () {
+    const mobill = ParkeringsApp(
+      id: 'mobill',
+      namn: 'Mobill',
+      appStoreId: '1066302005',
+      iosAppLank: 'https://mobill.se/qr',
+    );
+    expect(
+      AppOppnare.lankForWebben(mobill, TargetPlatform.iOS),
+      'https://apps.apple.com/se/app/id1066302005',
+    );
+    expect(
+      AppOppnare.lankForWebben(mobill, TargetPlatform.iOS, harAppen: true),
+      'https://mobill.se/qr',
+    );
+  });
 }

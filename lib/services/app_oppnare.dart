@@ -50,8 +50,9 @@ class AppOppnare {
     }
   }
 
-  /// Öppnar appen, eller butiken om den saknas.
-  Future<Oppnat> oppna(ParkeringsApp app) async {
+  /// Öppnar appen, eller butiken om den saknas. harAppen: användaren har
+  /// sagt att appen finns, eller den har öppnats härifrån förut.
+  Future<Oppnat> oppna(ParkeringsApp app, {bool harAppen = false}) async {
     if (arAndroidApp && app.android != null) {
       try {
         final oppnad = await _channel.invokeMethod<bool>('oppna', {
@@ -74,9 +75,9 @@ class AppOppnare {
     if (kIsWeb && schema != null && await provaSchema(schema, schemaVantan)) {
       return Oppnat.appen;
     }
-    return await _lank(lankForWebben(app, defaultTargetPlatform))
-        ? Oppnat.butiken
-        : Oppnat.misslyckades;
+    final lank = lankForWebben(app, defaultTargetPlatform, harAppen: harAppen);
+    if (!await _lank(lank)) return Oppnat.misslyckades;
+    return lank == app.iosAppLank ? Oppnat.appen : Oppnat.butiken;
   }
 
   /// Hur länge webbappen väntar på att appen ska öppnas innan den går
@@ -94,13 +95,19 @@ class AppOppnare {
 
   /// Vart webbversionen skickar användaren för appen. Safari på iPad
   /// utger sig för att vara en Mac, så macOS behandlas som iPhone.
-  static String? lankForWebben(ParkeringsApp app, TargetPlatform plattform) =>
-      switch (plattform) {
-        TargetPlatform.iOS || TargetPlatform.macOS =>
-          app.universellLank ?? app.appStoreUrl ?? app.webb,
-        TargetPlatform.android => app.playUrl ?? app.webb,
-        _ => app.webb ?? app.appStoreUrl ?? app.playUrl,
-      };
+  static String? lankForWebben(
+    ParkeringsApp app,
+    TargetPlatform plattform, {
+    bool harAppen = false,
+  }) => switch (plattform) {
+    TargetPlatform.iOS || TargetPlatform.macOS =>
+      app.universellLank ??
+          (harAppen ? app.iosAppLank : null) ??
+          app.appStoreUrl ??
+          app.webb,
+    TargetPlatform.android => app.playUrl ?? app.webb,
+    _ => app.webb ?? app.appStoreUrl ?? app.playUrl,
+  };
 
   static Future<bool> _lank(String? url) async {
     if (url == null) return false;

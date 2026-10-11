@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../logic/rattelse.dart';
 import '../models/katalog.dart';
+import '../services/app_oppnare.dart';
 import '../services/mina_appar.dart';
 import '../tema.dart';
 import '../widgets/app_rad.dart';
@@ -63,7 +64,11 @@ class _MinaApparSkarmState extends State<MinaApparSkarm> {
       Padding(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
         child: Text(
-          'Stjärnmärkta appar visas först. Dolda appar visas aldrig.',
+          AppOppnare.arAndroidApp
+              ? 'Stjärnmärkta appar visas först. Dolda appar visas aldrig.'
+              : 'Stjärnmärkta appar visas först. Dolda appar visas aldrig. '
+                    'Markera de appar du har, så öppnas de direkt när det går '
+                    'och hamnar högre upp.',
           style: text.bodyMedium?.copyWith(color: f.dampad),
         ),
       ),
@@ -78,6 +83,11 @@ class _MinaApparSkarmState extends State<MinaApparSkarm> {
                 dold: mina.dolda.contains(app.id),
                 onFavorit: (pa) => mina.satFavorit(app.id, pa),
                 onDold: (pa) => mina.satDold(app.id, pa),
+                // Android-appen ser själv vilka appar som finns.
+                harAppen: AppOppnare.arAndroidApp
+                    ? null
+                    : mina.harAppen.contains(app.id),
+                onHarAppen: (pa) => mina.satHarAppen(app.id, pa),
               ),
           ],
         ),
@@ -137,6 +147,8 @@ class _AppInstallning extends StatelessWidget {
     required this.dold,
     required this.onFavorit,
     required this.onDold,
+    required this.harAppen,
+    required this.onHarAppen,
   });
 
   final ParkeringsApp app;
@@ -144,6 +156,10 @@ class _AppInstallning extends StatelessWidget {
   final bool dold;
   final ValueChanged<bool> onFavorit;
   final ValueChanged<bool> onDold;
+
+  /// Null där appen själv kan se vilka appar som finns (Android).
+  final bool? harAppen;
+  final ValueChanged<bool> onHarAppen;
 
   @override
   Widget build(BuildContext context) {
@@ -181,6 +197,18 @@ class _AppInstallning extends StatelessWidget {
                           : 'Visas när den gäller',
                       style: text.bodySmall?.copyWith(color: f.dampad),
                     ),
+                    if (harAppen != null)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: FilterChip(
+                          label: const Text('Jag har appen'),
+                          selected: harAppen!,
+                          onSelected: onHarAppen,
+                          visualDensity: VisualDensity.compact,
+                          materialTapTargetSize:
+                              MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
                   ],
                 ),
               ),

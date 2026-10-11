@@ -9,6 +9,7 @@ class ParkeringsApp {
     this.appStoreId,
     this.universellLank,
     this.iosSchema,
+    this.iosAppLank,
     this.webb,
   });
 
@@ -30,6 +31,10 @@ class ParkeringsApp {
   /// (web/lanktest.html) får stå här.
   final String? iosSchema;
 
+  /// Universell länk som öppnar appen men som utan appen leder till en
+  /// webbsida i stället för App Store. Används bara när man har appen.
+  final String? iosAppLank;
+
   final String? webb;
 
   String? get playUrl => android == null
@@ -46,6 +51,7 @@ class ParkeringsApp {
     appStoreId: json['appStoreId'] as String?,
     universellLank: json['universellLank'] as String?,
     iosSchema: json['iosSchema'] as String?,
+    iosAppLank: json['iosAppLank'] as String?,
     webb: json['webb'] as String?,
   );
 }

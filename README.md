@@ -32,10 +32,19 @@ adress, eftersom ärenden är offentliga.
   Saknas appen öppnas Google Play. Alla paketnamn måste stå under
   `<queries>` i `AndroidManifest.xml`, och det kontrolleras av ett test.
 - **iPhone/iPad (webben):** En webbsida kan inte se vilka appar som är
-  installerade. Appar med universell länk (i dag bara Parkster,
-  `parkster.se/app`) öppnas direkt. Övriga öppnas i App Store, där det står
-  "Öppna" om appen redan finns. Mobill tar bara emot `/qr*` (QR-koder på
-  platsen) och kan därför inte öppnas direkt.
+  installerade. Det finns därför fyra vägar, i den här ordningen:
+  1. `universellLank`: öppnar appen, och utan appen App Store
+     (Parkster, `parkster.se/app`).
+  2. `iosAppLank`: universell länk som bara används när man har appen,
+     eftersom den annars öppnar en webbsida (Mobill, `mobill.se/qr`).
+  3. `iosSchema`: URL-schema som provas i 2,5 sekunder. Döljs inte sidan
+     öppnas App Store (EasyPark, `easypark://`).
+  4. App Store, där det står "Öppna" om appen redan finns.
+
+  Under Mina appar markerar man "Jag har appen". Appar som har öppnats
+  härifrån markeras automatiskt. Scheman och länkar läggs in först när de
+  har prövats på en riktig iPhone med `web/lanktest.html`. Prövat
+  2026-10-10–11: Parkering Göteborg svarade inte på något schema.
 
 ## Kör
 

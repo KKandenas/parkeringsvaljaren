@@ -20,8 +20,12 @@ class MinaAppar extends ChangeNotifier {
   /// Appar som webbversionen har öppnat, och som alltså finns på enheten.
   final Set<String> harAppen;
 
-  Future<void> markeraHarAppen(String id) async {
-    if (!harAppen.add(id)) return;
+  Future<void> markeraHarAppen(String id) => satHarAppen(id, true);
+
+  /// "Jag har appen" i Mina appar. Behövs på iPhone, där webbsidan inte
+  /// själv kan se vilka appar som finns.
+  Future<void> satHarAppen(String id, bool pa) async {
+    if (pa ? !harAppen.add(id) : !harAppen.remove(id)) return;
     notifyListeners();
     await _prefs.setStringList(_harAppenNyckel, harAppen.toList()..sort());
   }

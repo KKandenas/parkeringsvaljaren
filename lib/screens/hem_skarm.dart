@@ -96,7 +96,10 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   }
 
   Future<void> _oppna(ParkeringsApp app) async {
-    final svar = await _oppnare.oppna(app);
+    final svar = await _oppnare.oppna(
+      app,
+      harAppen: widget.minaAppar.harAppen.contains(app.id),
+    );
     // På webben är det enda sättet att veta att appen finns.
     if (svar == Oppnat.appen && !AppOppnare.arAndroidApp) {
       await widget.minaAppar.markeraHarAppen(app.id);
