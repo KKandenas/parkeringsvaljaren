@@ -52,33 +52,29 @@ Future<void> main() async {
   for (final kommun in katalog.kommuner) {
     if (kommun.status != KommunStatus.verifierad) continue;
     for (final kalla in kommun.kallor) {
-      final svar = await hamta(kalla.url);
-      if (svar == null) {
-        problem.add('${kommun.namn}: källan svarar inte: ${kalla.url}');
-        continue;
-      }
       // Sidor som bara visar innehållet med JavaScript kan inte läsas här.
       // Där räcker det att sidan svarar.
-      if (kraverJavascript.contains(kalla.url)) continue;
-      final text = utanMellanslag(sidtext(svar));
-      if (kommun.status == KommunStatus.avgiftsfri) {
-        if (!fritt.any(text.contains)) {
-          problem.add(
-            '${kommun.namn}: ${kalla.url} säger inte längre att parkeringen är avgiftsfri',
-          );
-        }
-        continue;
+      final bara = kraverJavascript.contains(kalla.url);
+      String? fel;
+      // Webbplatser svarar ibland tillfälligt med en annan sida. Försök en
+      // gång till innan det räknas som ett problem.
+      for (var forsok = 0; forsok < 2; forsok++) {
+        final svar = await hamta(kalla.url);
+        fel = svar == null
+            ? 'källan svarar inte: ${kalla.url}'
+            : bara
+            ? null
+            : granska(
+                kommun,
+                utanMellanslag(sidtext(svar)),
+                katalog,
+                alias,
+                kalla.url,
+              );
+        if (fel == null) break;
+        await Future<void>.delayed(const Duration(seconds: 5));
       }
-      final saknas = [
-        for (final id in kommun.appar)
-          if (!alias[id]!.any((namn) => text.contains(utanMellanslag(namn))))
-            katalog.appar[id]!.namn,
-      ];
-      if (saknas.isNotEmpty) {
-        problem.add(
-          '${kommun.namn}: ${saknas.join(', ')} nämns inte längre på ${kalla.url}',
-        );
-      }
+      if (fel != null) problem.add('${kommun.namn}: $fel');
     }
   }
 
@@ -123,11 +119,35 @@ Future<void> main() async {
   exitCode = 1;
 }
 
+/// Felet på sidan, eller null om den fortfarande stämmer.
+String? granska(
+  Kommun kommun,
+  String text,
+  Katalog katalog,
+  Map<String, List<String>> alias,
+  String url,
+) {
+  if (kommun.status == KommunStatus.avgiftsfri) {
+    return fritt.any(text.contains)
+        ? null
+        : '$url säger inte längre att parkeringen är avgiftsfri';
+  }
+  final saknas = [
+    for (final id in kommun.appar)
+      if (!alias[id]!.any((namn) => text.contains(utanMellanslag(namn))))
+        katalog.appar[id]!.namn,
+  ];
+  return saknas.isEmpty
+      ? null
+      : '${saknas.join(', ')} nämns inte längre på $url';
+}
+
 /// Ord som visar att en källa beskriver avgiftsfri parkering.
 final fritt = [
   'avgiftsfri',
   'gratis',
   'kostaringet',
+  'ingenting',
   'kostnadsfri',
   'ingenavgift',
   'ingaparkeringsavgifter',

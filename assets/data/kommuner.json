@@ -31,7 +31,21 @@
       "kod": "0115",
       "namn": "Vallentuna",
       "osmNamn": "Vallentuna kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa platser är tidsbegränsade med p-skiva."
+      },
+      "parkeringssida": "https://www.vallentuna.se/trafik-och-gator/parkering-och-tillstand/parkering-och-avgifter",
+      "kallor": [
+        {
+          "url": "https://www.vallentuna.se/trafik-och-gator/parkering-och-tillstand/parkering-och-avgifter",
+          "titel": "Parkering och avgifter – Vallentuna kommun",
+          "citat": "Det kostar inget att parkera på kommunens gator",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0117",
@@ -1262,7 +1276,21 @@
       "kod": "1261",
       "namn": "Kävlinge",
       "osmNamn": "Kävlinge kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I bland annat Kävlinge centrum krävs p-skiva."
+      },
+      "parkeringssida": "https://www.kavlinge.se/trafik-och-infrastruktur/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.kavlinge.se/trafik-och-infrastruktur/trafik-och-gator/parkering",
+          "titel": "Parkering – Kävlinge kommun (uppdaterad 25 augusti 2026)",
+          "citat": "All parkering på gata eller allmän väg i Kävlinge kommun är avgiftsfri.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1262",
@@ -1769,7 +1797,20 @@
       "kod": "1440",
       "namn": "Ale",
       "osmNamn": "Ale kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://ale.se/trafik-gator-och-utemiljo/parkering-och-laddplats.html",
+      "kallor": [
+        {
+          "url": "https://ale.se/trafik-gator-och-utemiljo/parkering-och-laddplats.html",
+          "titel": "Parkering och laddplats – Ale kommun",
+          "citat": "I Ale är det gratis att parkera på allmänna kommunala parkeringsplatser.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1441",
@@ -1855,7 +1896,20 @@
       "kod": "1463",
       "namn": "Mark",
       "osmNamn": "Marks kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.mark.se/bygga-bo-miljo-och-trafik/trafik-och-gator/parkering/avgifter-for-parkering",
+      "kallor": [
+        {
+          "url": "https://www.mark.se/bygga-bo-miljo-och-trafik/trafik-och-gator/parkering/avgifter-for-parkering",
+          "titel": "Avgifter för parkering – Marks kommun (uppdaterad 23 juni 2026)",
+          "citat": "I Marks kommun betalar du ingenting för att parkera på kommunens parkeringsplatser.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1465",
@@ -2200,7 +2254,21 @@
       "kod": "1499",
       "namn": "Falköping",
       "osmNamn": "Falköpings kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På tidsbegränsade platser krävs p-skiva. En digital p-skiva finns i appen Parking Time."
+      },
+      "parkeringssida": "https://www.falkoping.se/trafik--gator/parkering/parkera-med-p-skiva",
+      "kallor": [
+        {
+          "url": "https://www.falkoping.se/trafik--gator/parkering/parkera-med-p-skiva",
+          "titel": "Parkera med p-skiva – Falköpings kommun",
+          "citat": "all parkering på gator och allmänna parkeringsplatser kostnadsfria",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1715",
