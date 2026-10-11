@@ -929,7 +929,21 @@
       "kod": "0685",
       "namn": "Vetlanda",
       "osmNamn": "Vetlanda kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Privata parkeringar kan ta avgift. På de mest centrala platserna krävs p-skiva."
+      },
+      "parkeringssida": "https://vetlanda.se/bygga-bo-och-miljo/gator-och-trafik/parkering",
+      "kallor": [
+        {
+          "url": "https://vetlanda.se/bygga-bo-och-miljo/gator-och-trafik/parkering",
+          "titel": "Parkering – Vetlanda kommun (uppdaterad 21 september 2026)",
+          "citat": "Alla kommunala parkeringsplatser är avgiftsfria.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0686",
@@ -1022,7 +1036,21 @@
       "kod": "0781",
       "namn": "Ljungby",
       "osmNamn": "Ljungby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På många platser krävs p-skiva."
+      },
+      "parkeringssida": "https://www.ljungby.se/trafik-och-samhallsplanering/trafik/parkering-och-laddplats/parkera-bilen",
+      "kallor": [
+        {
+          "url": "https://www.ljungby.se/trafik-och-samhallsplanering/trafik/parkering-och-laddplats/parkera-bilen",
+          "titel": "Parkera bilen – Ljungby kommun (uppdaterad 6 oktober 2025)",
+          "citat": "På kommunens parkeringsplatser i Ljungby är det gratis att parkera",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0821",
@@ -1267,7 +1295,20 @@
       "kod": "1230",
       "namn": "Staffanstorp",
       "osmNamn": "Staffanstorps kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://staffanstorp.se/trafik-och-resor/parkering/",
+      "kallor": [
+        {
+          "url": "https://staffanstorp.se/trafik-och-resor/parkering/",
+          "titel": "Parkering – Staffanstorps kommun",
+          "citat": "här kan du parkera gratis med parkeringsskiva (p-skiva) på kommunens parkeringar",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1231",
@@ -1510,7 +1551,21 @@
       "kod": "1284",
       "namn": "Höganäs",
       "osmNamn": "Höganäs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På tidsbegränsade platser krävs p-skiva."
+      },
+      "parkeringssida": "https://www.hoganas.se/boende-trafik--miljo/trafik/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.hoganas.se/boende-trafik--miljo/trafik/parkering.html",
+          "titel": "Parkering – Höganäs kommun (uppdaterad 5 juni 2026)",
+          "citat": "alla parkeringsplatser i kommunen är avgiftsfria",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1285",
@@ -1690,7 +1745,21 @@
       "kod": "1381",
       "namn": "Laholm",
       "osmNamn": "Laholms kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva ska finnas synligt i framrutan."
+      },
+      "parkeringssida": "https://laholm.se/trafik-och-gator/gator/parkering-och-laddplats/parkeringstillstand",
+      "kallor": [
+        {
+          "url": "https://laholm.se/trafik-och-gator/gator/parkering-och-laddplats/parkeringstillstand",
+          "titel": "Parkeringstillstånd – Laholms kommun (uppdaterad 2026-08-04)",
+          "citat": "I Laholms kommun finns för närvarande inga parkeringsavgifter på allmän plats",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1382",
@@ -1795,7 +1864,21 @@
       "kod": "1415",
       "namn": "Stenungsund",
       "osmNamn": "Stenungsunds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "De två långtidsparkeringarna i centrum (C W Borgs väg 3 och Strandvägen 4) är avgiftsbelagda."
+      },
+      "parkeringssida": "https://www.stenungsund.se/trafik-resor-och-utemiljo/trafik-och-gator/parkering/parkeringsplatser-och-pendelparkering",
+      "kallor": [
+        {
+          "url": "https://www.stenungsund.se/trafik-resor-och-utemiljo/trafik-och-gator/parkering/parkeringsplatser-och-pendelparkering",
+          "titel": "Parkeringsplatser och pendelparkering – Stenungsunds kommun (uppdaterad 2026-08-27)",
+          "citat": "I Stenungsund parkerar du gratis på de flesta av våra parkeringsplatser och längs gatorna.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1419",
@@ -2779,7 +2862,21 @@
       "kod": "2085",
       "namn": "Ludvika",
       "osmNamn": "Ludvika kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Den privata parkeringen på Tages torg är avgiftsbelagd."
+      },
+      "parkeringssida": "https://www.ludvika.se/bygga-bo-och-miljo/parkering/parkeringsskiva",
+      "kallor": [
+        {
+          "url": "https://www.ludvika.se/bygga-bo-och-miljo/parkering/parkeringsskiva",
+          "titel": "Parkeringsskiva – Ludvika kommun",
+          "citat": "Parkeringsskivan är inget betalningssystem. Det är gratis att parkera i Ludvika.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2101",
@@ -3247,7 +3344,24 @@
       "kod": "2582",
       "namn": "Boden",
       "osmNamn": "Bodens kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "aimo",
+          "parkster"
+        ],
+        "anmarkning": "Sedan 16 september 2026 är cirka 350 platser i centrala Boden avgiftsbelagda (första timmen gratis). Övriga platser är gratis. Zonkod 1460."
+      },
+      "parkeringssida": "https://boden.se/gator-och-trafik/gator-och-parkering/parkering",
+      "kallor": [
+        {
+          "url": "https://boden.se/gator-och-trafik/gator-och-parkering/parkering",
+          "titel": "Parkering – Bodens kommun (uppdaterad 2026-09-25)",
+          "citat": "Du kan betala med apparna Aimo och Parkster eller med kort i en betalautomat.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "2583",
