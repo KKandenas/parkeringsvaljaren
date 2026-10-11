@@ -122,9 +122,13 @@ String sidtext(String html) => html
     .replaceAll(RegExp(r'<style.*?</style>', dotAll: true), ' ')
     .replaceAll(RegExp(r'<[^>]+>'), ' ');
 
-/// Sidans innehåll, eller null om den inte svarar 200. Väntar en sekund
-/// efter varje anrop för att inte belasta någon.
-Future<String?> hamta(String url) async {
+/// Sidans innehåll, eller null om den inte svarar 200 ens efter ett nytt
+/// försök.
+Future<String?> hamta(String url) async =>
+    await _hamta(url) ?? await _hamta(url);
+
+/// Väntar en sekund efter varje anrop för att inte belasta någon.
+Future<String?> _hamta(String url) async {
   final client = HttpClient()
     ..userAgent = userAgent
     ..connectionTimeout = const Duration(seconds: 20);
@@ -132,7 +136,8 @@ Future<String?> hamta(String url) async {
     final request = await client.getUrl(Uri.parse(url));
     final response = await request.close().timeout(const Duration(seconds: 30));
     final body = await response
-        .transform(utf8.decoder)
+        // Vissa sidor har tecken som inte är giltig UTF-8.
+        .transform(const Utf8Decoder(allowMalformed: true))
         .join()
         .timeout(const Duration(seconds: 30));
     return response.statusCode == 200 ? body : null;

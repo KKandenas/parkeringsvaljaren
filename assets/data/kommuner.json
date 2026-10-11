@@ -9,7 +9,23 @@
       "kod": "0114",
       "namn": "Upplands Väsby",
       "osmNamn": "Upplands Väsby kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ]
+      },
+      "parkeringssida": "https://www.upplandsvasby.se/trafik-och-resor/trafik-och-gator/parkering/parkeringsplatser-allmanna",
+      "kallor": [
+        {
+          "url": "https://www.upplandsvasby.se/trafik-och-resor/trafik-och-gator/parkering/parkeringsplatser-allmanna",
+          "titel": "Parkeringsplatser, allmänna – Upplands Väsby kommun (uppdaterad 24 augusti 2026)",
+          "citat": "EasyPark App Ladda ner EasyParks app … Ladda ner Parksters app",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0115",
@@ -364,13 +380,50 @@
       "kod": "0188",
       "namn": "Norrtälje",
       "osmNamn": "Norrtälje kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster",
+          "epark",
+          "mobill",
+          "parking-time"
+        ],
+        "anmarkning": "Gäller kommunens parkeringar i stadskärnan, Rävsnäs och Östernäs. Mobill och Parking Time tillkom i september 2026."
+      },
+      "parkeringssida": "https://www.norrtalje.se/nyheterna/2026-09/fler-betalalternativ-for-parkering-i-norrtalje-stadskarna-ravsnas-och-osternas",
+      "kallor": [
+        {
+          "url": "https://www.norrtalje.se/nyheterna/2026-09/fler-betalalternativ-for-parkering-i-norrtalje-stadskarna-ravsnas-och-osternas",
+          "titel": "Fler betalalternativ för parkering – Norrtälje kommun (8 september 2026)",
+          "citat": "Två nya leverantörer, Mobill och Parking Time … EasyPark, Parkster och Electronic Parking",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0191",
       "namn": "Sigtuna",
       "osmNamn": "Sigtuna kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "mobill",
+          "parkster"
+        ],
+        "anmarkning": "Kommunen anger apparna för de avgiftsbelagda infartsparkeringarna. Lördag och söndag är det gratis."
+      },
+      "parkeringssida": "https://www.sigtuna.se/bygga-bo-och-miljo/trafik-och-parkering/parkering-och-tillstand/parkeringsplatser.html",
+      "kallor": [
+        {
+          "url": "https://www.sigtuna.se/bygga-bo-och-miljo/trafik-och-parkering/parkering-och-tillstand/parkeringsplatser.html",
+          "titel": "Parkeringsplatser – Sigtuna kommun",
+          "citat": "Betalning: via app eller sms (Mobills eller Parkster).",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0192",
@@ -437,7 +490,26 @@
       "kod": "0381",
       "namn": "Enköping",
       "osmNamn": "Enköpings kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parking-time",
+          "easypark",
+          "parkster",
+          "mobill",
+          "epark"
+        ]
+      },
+      "parkeringssida": "https://enkoping.se/trafik-och-gator/parkeringsregler-och-parkeringstillstand/betala-parkering.html",
+      "kallor": [
+        {
+          "url": "https://enkoping.se/trafik-och-gator/parkeringsregler-och-parkeringstillstand/betala-parkering.html",
+          "titel": "Betala parkering – Enköpings kommun",
+          "citat": "De leverantörer som är anslutna hos oss … Parking Time … EasyPark … Parkster … Mobill … ePark",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0382",
@@ -527,7 +599,23 @@
       "kod": "0486",
       "namn": "Strängnäs",
       "osmNamn": "Strängnäs kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "Avgift tas bara ut vid Strängnäs resecentrum och Läggesta station. I centrala Strängnäs och Mariefred gäller p-skiva."
+      },
+      "parkeringssida": "https://www.strangnas.se/trafik-och-resor/buss-och-tag/strangnas-resecentrum",
+      "kallor": [
+        {
+          "url": "https://www.strangnas.se/trafik-och-resor/buss-och-tag/strangnas-resecentrum",
+          "titel": "Strängnäs resecentrum – Strängnäs kommun (uppdaterad 10 augusti 2026)",
+          "citat": "Du kan även betala parkeringen via appen Easypark.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "0488",
@@ -1093,7 +1181,23 @@
       "kod": "1233",
       "namn": "Vellinge",
       "osmNamn": "Vellinge kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster"
+        ],
+        "anmarkning": "Gäller sommarparkeringarna 1 maj–30 september (stränderna i Höllviken/Kämpinge, Falsterbo och Skanör samt Skanörs hamn)."
+      },
+      "parkeringssida": "https://vellinge.se/parkering/",
+      "kallor": [
+        {
+          "url": "https://vellinge.se/parkering/",
+          "titel": "Sommarparkering – Vellinge kommun (uppdaterad 6 oktober 2026)",
+          "citat": "Alla sommarparkeringar har parkeringsavgift, som går att betala via app (Parkster)",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1256",
@@ -1462,7 +1566,25 @@
       "kod": "1382",
       "namn": "Falkenberg",
       "osmNamn": "Falkenbergs kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "epark",
+          "parkster"
+        ],
+        "anmarkning": "Kommunen anger apparna för P-hus Centrum. Månadskort köps i Parkster."
+      },
+      "parkeringssida": "https://kommun.falkenberg.se/gator-och-trafik/parkering",
+      "kallor": [
+        {
+          "url": "https://kommun.falkenberg.se/gator-och-trafik/parkering",
+          "titel": "Parkering – Falkenbergs kommun",
+          "citat": "den parkeringsapp (EasyPark, ePARK eller Parkster) som du använde",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1383",
@@ -1832,7 +1954,24 @@
       "kod": "1489",
       "namn": "Alingsås",
       "osmNamn": "Alingsås kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ],
+        "anmarkning": "Kommunens parkeringar är i regel avgiftsfria. Apparna gäller Estrads parkeringshus."
+      },
+      "parkeringssida": "https://www.alingsas.se/trafik-och-gator/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.alingsas.se/trafik-och-gator/parkering/",
+          "titel": "Parkering – Alingsås kommun (uppdaterad 5 oktober 2026)",
+          "citat": "I Estrads parkeringshus … Man betalar med app från Easy Park eller Parkster.",
+          "hamtad": "2026-10-11"
+        }
+      ],
+      "kontrollerad": "2026-10-11"
     },
     {
       "kod": "1490",
