@@ -545,7 +545,21 @@
       "kod": "0360",
       "namn": "Tierp",
       "osmNamn": "Tierps kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Undantag: parkeringen vid Trollsjöns badplats är avgiftsbelagd (EasyPark eller Parkster enligt kommunen). På flera platser krävs p-skiva."
+      },
+      "parkeringssida": "https://www.tierp.se/tierp.se/bo-trafik-och-miljo/trafik/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.tierp.se/tierp.se/bo-trafik-och-miljo/trafik/parkering.html",
+          "titel": "Parkering – Tierps kommun (uppdaterad 2026-04-16)",
+          "citat": "Det är kostnadsfritt att parkera på kommunala parkeringar och längsmed gatorna",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0380",
@@ -1000,7 +1014,20 @@
       "kod": "0687",
       "namn": "Tranås",
       "osmNamn": "Tranås kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://tranas.se/bo-miljo-och-trafik/trafik-och-infrastruktur/parkering/",
+      "kallor": [
+        {
+          "url": "https://tranas.se/bo-miljo-och-trafik/trafik-och-infrastruktur/parkering/",
+          "titel": "Parkering – Tranås kommun",
+          "citat": "I Tranås parkerar du gratis med p-skiva.",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0760",
@@ -1161,7 +1188,21 @@
       "kod": "0881",
       "namn": "Nybro",
       "osmNamn": "Nybro kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa platser i centrala Nybro krävs p-skiva."
+      },
+      "parkeringssida": "https://nybro.se/trafik-resor/gator-trafik/parkering-parkeringsskiva/",
+      "kallor": [
+        {
+          "url": "https://nybro.se/trafik-resor/gator-trafik/parkering-parkeringsskiva/",
+          "titel": "Parkering & Parkeringsskiva – Nybro kommun",
+          "citat": "Alla allmänna parkeringsplatser i Nybro är avgiftsfria",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0882",
@@ -1457,7 +1498,21 @@
       "kod": "1265",
       "namn": "Sjöbo",
       "osmNamn": "Sjöbo kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa ställen finns tidsbegränsning med p-skiva."
+      },
+      "parkeringssida": "https://www.sjobo.se/trafik-och-gator/gator/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.sjobo.se/trafik-och-gator/gator/parkering.html",
+          "titel": "Parkering – Sjöbo kommun (uppdaterad 29 juni 2026)",
+          "citat": "Parkeringsavgift tas inte ut",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1266",
@@ -2417,7 +2472,21 @@
       "kod": "1495",
       "namn": "Skara",
       "osmNamn": "Skara kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "En del privata parkeringar tar avgift."
+      },
+      "parkeringssida": "https://www.skara.se/trafikochgator/parkeringochladdplats/parkeringsplatser.1557.html",
+      "kallor": [
+        {
+          "url": "https://www.skara.se/trafikochgator/parkeringochladdplats/parkeringsplatser.1557.html",
+          "titel": "Parkeringsplatser – Skara kommun (uppdaterad 2025-01-31)",
+          "citat": "I kommunen är det gratis att parkera på kommunala parkeringar.",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1496",
