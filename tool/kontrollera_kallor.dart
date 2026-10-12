@@ -149,6 +149,7 @@ final fritt = [
   'kostaringet',
   'ingenting',
   'tasinteut',
+  'tarinteut',
   'kostnadsfri',
   'ingenavgift',
   'ingaparkeringsavgifter',

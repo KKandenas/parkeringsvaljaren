@@ -150,7 +150,21 @@
       "kod": "0128",
       "namn": "Salem",
       "osmNamn": "Salems kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Parkeringshuset vid Rönninge centrum är privat och inte kommunalt."
+      },
+      "parkeringssida": "https://www.salem.se/trafikgatorochparker/parkering/parkeraisalemskommun.4.2e2b4aa0193076f12cd57b22.html",
+      "kallor": [
+        {
+          "url": "https://www.salem.se/trafikgatorochparker/parkering/parkeraisalemskommun.4.2e2b4aa0193076f12cd57b22.html",
+          "titel": "Parkera i Salems kommun – Salems kommun",
+          "citat": "Parkering på allmän plats inom Salems kommun är avgiftsfri.",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0136",
@@ -1008,7 +1022,20 @@
       "kod": "0686",
       "namn": "Eksjö",
       "osmNamn": "Eksjö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://eksjo.se/bo-miljo-och-trafik/gator-vagar-och-trafik/parkering",
+      "kallor": [
+        {
+          "url": "https://eksjo.se/bo-miljo-och-trafik/gator-vagar-och-trafik/parkering",
+          "titel": "Parkering – Eksjö kommun (uppdaterad 25 augusti 2026)",
+          "citat": "cirka 900 allmänna parkeringsplatser som är avgiftsfria",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0687",
@@ -1072,7 +1099,21 @@
       "kod": "0765",
       "namn": "Älmhult",
       "osmNamn": "Älmhults kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsbegränsat med p-skiva."
+      },
+      "parkeringssida": "https://www.almhult.se/byggabomiljo/gatortorgochparkering.1911.html",
+      "kallor": [
+        {
+          "url": "https://www.almhult.se/byggabomiljo/gatortorgochparkering.1911.html",
+          "titel": "Gator, torg och parkering – Älmhults kommun",
+          "citat": "Det kostar inget att parkera på kommunala parkeringsplatser",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "0767",
@@ -1524,7 +1565,21 @@
       "kod": "1267",
       "namn": "Höör",
       "osmNamn": "Höörs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Ibland krävs p-skiva."
+      },
+      "parkeringssida": "https://www.hoor.se/trafik-gator-parker/trafik-och-gator/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.hoor.se/trafik-gator-parker/trafik-och-gator/parkering/",
+          "titel": "Parkering – Höörs kommun",
+          "citat": "De kommunala parkeringsplatserna är avgiftsfria",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1270",
@@ -1554,7 +1609,21 @@
       "kod": "1276",
       "namn": "Klippan",
       "osmNamn": "Klippans kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Följ tidsbegränsningarna, ofta med p-skiva."
+      },
+      "parkeringssida": "https://www.klippan.se/trafik--infrastruktur/parkering",
+      "kallor": [
+        {
+          "url": "https://www.klippan.se/trafik--infrastruktur/parkering",
+          "titel": "Parkering – Klippans kommun (uppdaterad 6 oktober 2026)",
+          "citat": "Du behöver inte lägga på någon parkeringsavgift i Klippans kommun",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1277",
@@ -3239,7 +3308,21 @@
       "kod": "2262",
       "namn": "Timrå",
       "osmNamn": "Timrå kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa platser gäller tidsbegränsad parkering."
+      },
+      "parkeringssida": "https://www.timra.se/trafikinfrastruktur/gatorvagartrafikparkering/parkeringsplatser.4.714dad16d46439ef932c0.html",
+      "kallor": [
+        {
+          "url": "https://www.timra.se/trafikinfrastruktur/gatorvagartrafikparkering/parkeringsplatser.4.714dad16d46439ef932c0.html",
+          "titel": "Parkeringsplatser och laddplatser – Timrå kommun (uppdaterad 2026-07-21)",
+          "citat": "Kommunen tar inte ut parkeringsavgift",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "2280",
