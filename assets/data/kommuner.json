@@ -1533,7 +1533,20 @@
       "kod": "1264",
       "namn": "Skurup",
       "osmNamn": "Skurups kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.skurup.se/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.skurup.se/trafik-och-gator/parkering",
+          "titel": "Parkering – Skurups kommun",
+          "citat": "All parkering på allmän platsmark är avgiftsfri i Skurups kommun.",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1265",
@@ -1629,7 +1642,20 @@
       "kod": "1277",
       "namn": "Åstorp",
       "osmNamn": "Åstorps kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://astorp.se/bygga-bo-miljo-och-trafik/gata-park-och-trafik/lokala-trafikforeskrifter-och-parkering.html",
+      "kallor": [
+        {
+          "url": "https://astorp.se/bygga-bo-miljo-och-trafik/gata-park-och-trafik/lokala-trafikforeskrifter-och-parkering.html",
+          "titel": "Lokala trafikföreskrifter och parkering – Åstorps kommun",
+          "citat": "Du behöver inte betala någon parkeringsavgift i Åstorps kommun.",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1278",
@@ -2656,7 +2682,20 @@
       "kod": "1761",
       "namn": "Hammarö",
       "osmNamn": "Hammarö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://hammaro.se/trafik-och-gator/parkering-och-laddplats",
+      "kallor": [
+        {
+          "url": "https://hammaro.se/trafik-och-gator/parkering-och-laddplats",
+          "titel": "Parkering och laddplats – Hammarö kommun (uppdaterad 28 maj 2026)",
+          "citat": "Parkering inom Hammarö kommun är avgiftsfri",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "1762",
@@ -3031,7 +3070,23 @@
       "kod": "2029",
       "namn": "Leksand",
       "osmNamn": "Leksands kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark"
+        ],
+        "anmarkning": "I centrum är det gratis att parkera, på flera platser med p-skiva. EasyPark gäller för laddplatser och långtidsparkeringen vid stationen."
+      },
+      "parkeringssida": "https://leksand.se/boende-trafik-och-miljo/trafik-gator-och-vagar/parkering",
+      "kallor": [
+        {
+          "url": "https://leksand.se/boende-trafik-och-miljo/trafik-gator-och-vagar/parkering",
+          "titel": "Parkering – Leksands kommun (uppdaterad 2026-09-17)",
+          "citat": "betalas via EasyParks app",
+          "hamtad": "2026-10-12"
+        }
+      ],
+      "kontrollerad": "2026-10-12"
     },
     {
       "kod": "2031",
