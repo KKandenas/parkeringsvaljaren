@@ -452,7 +452,24 @@
       "kod": "0187",
       "namn": "Vaxholm",
       "osmNamn": "Vaxholms kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ],
+        "anmarkning": "Avgift tas främst i centrala zoner under sommaren."
+      },
+      "parkeringssida": "https://www.vaxholm.se/trafik--infrastruktur/trafik-gator-och-parkering/parkering/betalningsalternativ",
+      "kallor": [
+        {
+          "url": "https://www.vaxholm.se/trafik--infrastruktur/trafik-gator-och-parkering/parkering/betalningsalternativ",
+          "titel": "Betalningsalternativ – Vaxholms stad (uppdaterad 29 juni 2026)",
+          "citat": "Ladda ner valfri app: EasyPark eller Parkster",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0188",
@@ -565,7 +582,20 @@
       "kod": "0331",
       "namn": "Heby",
       "osmNamn": "Heby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.heby.se/boende-trafik-och-miljo/gator-och-trafik",
+      "kallor": [
+        {
+          "url": "https://www.heby.se/boende-trafik-och-miljo/gator-och-trafik",
+          "titel": "Gator och trafik – Heby kommun (uppdaterad 17 november 2025)",
+          "citat": "Vi har kostnadsfri parkering på alla kommunens parkeringar som finns i våra tätorter.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0360",
@@ -673,7 +703,21 @@
       "kod": "0461",
       "namn": "Gnesta",
       "osmNamn": "Gnesta kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa parkeringar har p-skiva."
+      },
+      "parkeringssida": "https://www.gnesta.se/samhallsplaneringinfrastruktur/offentligmiljoignestakommun/parkering.4.6cc22741439b1fb1631c22.html",
+      "kallor": [
+        {
+          "url": "https://www.gnesta.se/samhallsplaneringinfrastruktur/offentligmiljoignestakommun/parkering.4.6cc22741439b1fb1631c22.html",
+          "titel": "Parkering i centrala Gnesta – Gnesta kommun (uppdaterad 2025-01-20)",
+          "citat": "Att parkera i Gnesta tätort är gratis, men vissa parkeringar tillämpar P-skiva.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0480",
@@ -953,7 +997,21 @@
       "kod": "0584",
       "namn": "Vadstena",
       "osmNamn": "Vadstena kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrala Vadstena krävs p-skiva där det är skyltat."
+      },
+      "parkeringssida": "https://www.vadstena.se/bygga-bo-miljo/trafik-och-gator/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.vadstena.se/bygga-bo-miljo/trafik-och-gator/parkering/",
+          "titel": "Parkering med P-skiva – Vadstena kommun",
+          "citat": "P-skivan är inget betalningssystem. Det är gratis att parkera i Vadstena.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0586",
@@ -1069,7 +1127,28 @@
       "kod": "0683",
       "namn": "Värnamo",
       "osmNamn": "Värnamo kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "epark",
+          "parkster",
+          "mobill"
+        ],
+        "anmarkning": "EasyPark gäller inte längre (avtalet upphörde 26 december 2025). Första tiden är ofta gratis men parkeringen måste ändå startas i appen. Helger är kommunala parkeringar gratis."
+      },
+      "parkeringssida": "https://kommun.varnamo.se/bygga-bo-miljo-och-trafik/trafik-och-infrastruktur/trafik-och-gator/parkering/betala-din-parkering-med-mobiltelefon.html",
+      "kallor": [
+        {
+          "url": "https://kommun.varnamo.se/bygga-bo-miljo-och-trafik/trafik-och-infrastruktur/trafik-och-gator/parkering/betala-din-parkering-med-mobiltelefon.html",
+          "titel": "Betala din parkering med mobiltelefon – Värnamo kommun (uppdaterad 29 december 2025)",
+          "citat": "För betalning av parkering samarbetar Värnamo kommun med leverantörerna: ePARK … Parkster … Mobill",
+          "namnsOcksa": [
+            "easypark"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0684",
