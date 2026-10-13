@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:parkeringsvaljaren/logic/app_urval.dart';
 import 'package:parkeringsvaljaren/models/katalog.dart';
 import 'package:parkeringsvaljaren/screens/hem_skarm.dart';
 import 'package:parkeringsvaljaren/services/mina_appar.dart';
@@ -140,5 +141,29 @@ void main() {
     expect(find.text('Alla appar'), findsOneWidget);
     // Listan är hopfälld, så inga appkort syns.
     expect(find.byType(AppRad), findsNothing);
+  });
+
+  testWidgets('app som bara kan öppnas via App Store', (tester) async {
+    final app = katalog.appar['parkering-goteborg']!;
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: tema(Brightness.light),
+        home: Scaffold(
+          body: AppRad(
+            forslag: Forslag(
+              app: app,
+              skal: Skal.kommun,
+              favorit: false,
+              installerad: true,
+            ),
+            viaAppStore: true,
+            onOppna: () {},
+          ),
+        ),
+      ),
+    );
+    expect(find.text('App Store'), findsOneWidget);
+    expect(find.text('Öppna'), findsNothing);
+    expect(find.textContaining('öppnas via App Store'), findsOneWidget);
   });
 }

@@ -89,6 +89,7 @@ class AppRad extends StatelessWidget {
     required this.forslag,
     required this.onOppna,
     this.forstaval = false,
+    this.viaAppStore = false,
   });
 
   final Forslag forslag;
@@ -96,6 +97,9 @@ class AppRad extends StatelessWidget {
 
   /// Det bästa valet här: markeras med en gul ram.
   final bool forstaval;
+
+  /// Appen finns men kan bara öppnas via App Store (iPhone utan direktlänk).
+  final bool viaAppStore;
 
   static String? beskrivning(Forslag f) => switch (f.skal) {
     Skal.operator => 'Bolagets egen app',
@@ -109,7 +113,11 @@ class AppRad extends StatelessWidget {
     final f = Farger.av(context);
     final text = Theme.of(context).textTheme;
     final saknas = forslag.installerad == false;
-    final om = beskrivning(forslag);
+    final viaButik = viaAppStore && forslag.installerad == true;
+    final om = [
+      ?beskrivning(forslag),
+      if (viaButik) 'öppnas via App Store',
+    ].join(' · ');
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Material(
@@ -145,7 +153,7 @@ class AppRad extends StatelessWidget {
                         if (saknas) Marke('Hämta', farg: f.dampad),
                       ],
                     ),
-                    if (om != null)
+                    if (om.isNotEmpty)
                       Text(
                         om,
                         style: text.bodySmall?.copyWith(color: f.dampad),
@@ -154,10 +162,10 @@ class AppRad extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              saknas
+              saknas || viaButik
                   ? OutlinedButton(
                       onPressed: onOppna,
-                      child: const Text('Hämta'),
+                      child: Text(saknas ? 'Hämta' : 'App Store'),
                     )
                   : FilledButton(
                       onPressed: onOppna,

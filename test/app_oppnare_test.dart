@@ -3,6 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:parkeringsvaljaren/models/katalog.dart';
 import 'package:parkeringsvaljaren/services/app_oppnare.dart';
 
+import 'hjalp.dart';
+
 void main() {
   const medSchema = ParkeringsApp(
     id: 'x',
@@ -66,5 +68,19 @@ void main() {
       AppOppnare.lankForWebben(mobill, TargetPlatform.iOS, harAppen: true),
       'https://mobill.se/qr',
     );
+  });
+
+  test('vilka appar som kan öppnas direkt på iPhone', () {
+    final katalog = riktigKatalog();
+    bool direkt(String id, {bool har = false}) => AppOppnare.kanOppnasDirekt(
+      katalog.appar[id]!,
+      TargetPlatform.iOS,
+      harAppen: har,
+    );
+    expect(direkt('easypark'), isTrue); // easypark://
+    expect(direkt('parkster'), isTrue); // parkster.se/app
+    expect(direkt('mobill'), isFalse);
+    expect(direkt('mobill', har: true), isTrue); // mobill.se/qr
+    expect(direkt('parkering-goteborg', har: true), isFalse);
   });
 }

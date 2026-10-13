@@ -84,6 +84,24 @@ class AppOppnare {
   /// vidare till App Store.
   static const schemaVantan = Duration(milliseconds: 2500);
 
+  /// Om webbappen kan öppna appen direkt, eller bara skicka till App
+  /// Store (där det står "Öppna" om appen finns). Gäller iPhone och iPad.
+  static bool kanOppnasDirekt(
+    ParkeringsApp app,
+    TargetPlatform plattform, {
+    bool harAppen = false,
+  }) =>
+      app.universellLank != null ||
+      app.iosSchema != null ||
+      (harAppen && app.iosAppLank != null);
+
+  /// Webbappen på iPhone eller iPad, där appar kan behöva öppnas via App
+  /// Store.
+  static bool get arIphoneWebb =>
+      kIsWeb &&
+      (defaultTargetPlatform == TargetPlatform.iOS ||
+          defaultTargetPlatform == TargetPlatform.macOS);
+
   /// URL-schemat att prova först, bara på iPhone och iPad och bara om
   /// appen saknar universell länk.
   static String? schemaForWebben(ParkeringsApp app, TargetPlatform plattform) =>

@@ -1355,28 +1355,30 @@
         "appar": [
           "easypark",
           "parkster",
-          "epark"
+          "epark",
+          "mobill",
+          "parking-time"
         ],
-        "anmarkning": "Från 13 oktober 2026 kan även Mobill och Parking Time användas, enligt kommunen. Boendeparkering löses då i E-park."
+        "anmarkning": "Från 13 oktober 2026 gäller fem appar. Boendeparkering löses i E-park."
       },
-      "parkeringssida": "https://www.karlskrona.se/samhallsplanering-och-trafik/parkering-och-trafik/parkering-i-karlskrona/",
+      "parkeringssida": "https://www.karlskrona.se/nyheter-karlskrona-kommun/fler-valm%C3%B6jligheter-n%C3%A4r-du-betalar-f%C3%B6r-parkering",
       "kallor": [
+        {
+          "url": "https://www.karlskrona.se/nyheter-karlskrona-kommun/fler-valm%C3%B6jligheter-n%C3%A4r-du-betalar-f%C3%B6r-parkering",
+          "titel": "Fler valmöjligheter när du betalar för parkering – Karlskrona kommun (7 oktober 2026)",
+          "citat": "följande fem appar … EasyPark. Parkster. E-park. Mobill. Parking Time.",
+          "kraverJavascript": true,
+          "hamtad": "2026-10-13"
+        },
         {
           "url": "https://www.karlskrona.se/samhallsplanering-och-trafik/parkering-och-trafik/parkering-i-karlskrona/",
           "titel": "Parkering i Karlskrona – Karlskrona kommun (uppdaterad 2 juni 2025)",
           "citat": "tre olika leverantörer … Easy Park Parkster ePARK",
           "kraverJavascript": true,
           "hamtad": "2026-10-11"
-        },
-        {
-          "url": "https://www.karlskrona.se/nyheter-karlskrona-kommun/fler-valm%C3%B6jligheter-n%C3%A4r-du-betalar-f%C3%B6r-parkering",
-          "titel": "Fler valmöjligheter när du betalar för parkering – Karlskrona kommun (7 oktober 2026)",
-          "citat": "Från och med den 13 oktober utökas antalet appar",
-          "kraverJavascript": true,
-          "hamtad": "2026-10-11"
         }
       ],
-      "kontrollerad": "2026-10-11"
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1081",

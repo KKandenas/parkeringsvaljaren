@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -71,6 +72,15 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
 
   /// Android vet vilka appar som finns. Webben vet bara om appar som har
   /// öppnats härifrån, och resten är okända.
+  /// iPhone: appen kan bara öppnas via App Store.
+  bool _viaAppStore(ParkeringsApp app) =>
+      AppOppnare.arIphoneWebb &&
+      !AppOppnare.kanOppnasDirekt(
+        app,
+        defaultTargetPlatform,
+        harAppen: widget.minaAppar.harAppen.contains(app.id),
+      );
+
   bool? _arInstallerad(ParkeringsApp app) {
     if (AppOppnare.arAndroidApp) {
       return _installerade?.contains(app.android);
@@ -208,6 +218,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
               _rubrik(context, 'Gäller här'),
               for (final (i, forslag) in urval.galler.indexed)
                 AppRad(
+                  viaAppStore: _viaAppStore(forslag.app),
                   forslag: forslag,
                   forstaval: i == 0,
                   onOppna: () => _oppna(forslag.app),
@@ -230,6 +241,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                   children: [
                     for (final forslag in urval.andra)
                       AppRad(
+                        viaAppStore: _viaAppStore(forslag.app),
                         forslag: forslag,
                         onOppna: () => _oppna(forslag.app),
                       ),
