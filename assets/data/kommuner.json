@@ -2420,7 +2420,20 @@
       "kod": "1430",
       "namn": "Munkedal",
       "osmNamn": "Munkedals kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.munkedal.se/trafik-och-resor/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.munkedal.se/trafik-och-resor/trafik-och-gator/parkering",
+          "titel": "Parkering – Munkedals kommun (uppdaterad 2025-12-11)",
+          "citat": "Vi har många parkeringar i kommunen, och att parkera sin bil här är gratis.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1435",
@@ -2447,7 +2460,21 @@
       "kod": "1438",
       "namn": "Dals-Ed",
       "osmNamn": "Dals-Eds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsbegränsning gäller på många platser i centrum."
+      },
+      "parkeringssida": "https://www.dalsed.se/gator-trafik-och-allmanna-platser/gator-och-allmanna-platser/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.dalsed.se/gator-trafik-och-allmanna-platser/gator-och-allmanna-platser/parkering/",
+          "titel": "Parkering – Dals-Eds kommun",
+          "citat": "Parkering på blåmarkerad parkeringsplats är kostnadsfri förutsatt att man följer gällande regler.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1439",
@@ -2528,7 +2555,21 @@
       "kod": "1447",
       "namn": "Gullspång",
       "osmNamn": "Gullspångs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I tätorternas centrum är parkeringen tidsbegränsad."
+      },
+      "parkeringssida": "https://gullspang.se/trafik-och-gator/parkering-och-stallplatser/parkering",
+      "kallor": [
+        {
+          "url": "https://gullspang.se/trafik-och-gator/parkering-och-stallplatser/parkering",
+          "titel": "Parkering – Gullspångs kommun (uppdaterad 11 november 2025)",
+          "citat": "I Gullspångs kommun är det gratis att parkera, men parkering inom tätorternas centrum är tidsbegränsad.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1452",
