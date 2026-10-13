@@ -1893,7 +1893,21 @@
       "kod": "1272",
       "namn": "Bromölla",
       "osmNamn": "Bromölla kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs."
+      },
+      "parkeringssida": "https://www.bromolla.se/trafik-och-resor/trafik-och-gator/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.bromolla.se/trafik-och-resor/trafik-och-gator/parkering/",
+          "titel": "Parkering – Bromölla kommun",
+          "citat": "Bromölla är en avgiftsfri kommun, du betalar inget för parkering men du måste använda parkeringsskiva.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1273",
@@ -3011,7 +3025,21 @@
       "kod": "1715",
       "namn": "Kil",
       "osmNamn": "Kils kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsregler gäller på vissa platser."
+      },
+      "parkeringssida": "https://kil.se/trafik-och-gator/parkering-och-laddplats/parkeringsplatser",
+      "kallor": [
+        {
+          "url": "https://kil.se/trafik-och-gator/parkering-och-laddplats/parkeringsplatser",
+          "titel": "Parkeringsplatser – Kils kommun (uppdaterad 9 juni 2026)",
+          "citat": "Det är avgiftsfritt att parkera på kommunens parkeringsplatser, så länge du följer tidsreglerna som gäller på platsen.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1730",
@@ -3023,7 +3051,20 @@
       "kod": "1737",
       "namn": "Torsby",
       "osmNamn": "Torsby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://torsby.se/trafikresor/trafikochgator/parkeringparkeringsplatser.4.108f9ad3156b3ea51203fd6e.html",
+      "kallor": [
+        {
+          "url": "https://torsby.se/trafikresor/trafikochgator/parkeringparkeringsplatser.4.108f9ad3156b3ea51203fd6e.html",
+          "titel": "Parkering, parkeringsplatser – Torsby kommun",
+          "citat": "I Torsby kommun parkerar du gratis på kommunens gator och vägar.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1760",
@@ -3066,7 +3107,21 @@
       "kod": "1764",
       "namn": "Grums",
       "osmNamn": "Grums kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsregler gäller på vissa platser."
+      },
+      "parkeringssida": "https://www.grums.se/trafikgator/parkeringochladdplats/parkeringsplatser.10321.html",
+      "kallor": [
+        {
+          "url": "https://www.grums.se/trafikgator/parkeringochladdplats/parkeringsplatser.10321.html",
+          "titel": "Parkeringsplatser – Grums kommun (uppdaterad 2025-05-02)",
+          "citat": "Det är avgiftsfritt att parkera på kommunens parkeringsplatser, så länge du följer tidsreglerna som gäller på platsen.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1765",
@@ -3229,13 +3284,40 @@
       "kod": "1863",
       "namn": "Hällefors",
       "osmNamn": "Hällefors kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.hellefors.se/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.hellefors.se/parkering.html",
+          "titel": "Parkering och ställplatser – Hällefors kommun",
+          "citat": "I Hällefors kommun är det avgiftsfritt att parkera.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1864",
       "namn": "Ljusnarsberg",
       "osmNamn": "Ljusnarsbergs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrala Kopparberg kan parkeringstiden vara begränsad."
+      },
+      "parkeringssida": "https://ljusnarsberg.se/trafik-och-gator/trafikplanering-regler-och-sakerhet/parkering",
+      "kallor": [
+        {
+          "url": "https://ljusnarsberg.se/trafik-och-gator/trafikplanering-regler-och-sakerhet/parkering",
+          "titel": "Parkering – Ljusnarsbergs kommun (uppdaterad 9 april 2026)",
+          "citat": "I Ljusnarsbergs kommun är samtliga parkeringar på gator och torg kostnadsfria.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1880",
@@ -3283,7 +3365,21 @@
       "kod": "1882",
       "namn": "Askersund",
       "osmNamn": "Askersunds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrala Askersund krävs p-skiva på flera platser."
+      },
+      "parkeringssida": "https://www.askersund.se/trafik--utemiljo/parkeringsplatser",
+      "kallor": [
+        {
+          "url": "https://www.askersund.se/trafik--utemiljo/parkeringsplatser",
+          "titel": "Parkeringsplatser – Askersunds kommun (uppdaterad 9 april 2026)",
+          "citat": "Det är gratis att parkera på de allmänna parkeringsplatserna i kommunen.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1883",
@@ -3360,7 +3456,20 @@
       "kod": "1962",
       "namn": "Norberg",
       "osmNamn": "Norbergs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://norberg.se/kultur--fritid/parkeringar/parkeringar.html",
+      "kallor": [
+        {
+          "url": "https://norberg.se/kultur--fritid/parkeringar/parkeringar.html",
+          "titel": "Parkeringar – Norbergs kommun",
+          "citat": "I Norberg är det alltid gratis att parkera, ingen p-skiva behövs.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1980",
@@ -3441,7 +3550,21 @@
       "kod": "1984",
       "namn": "Arboga",
       "osmNamn": "Arboga kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Tidsbegränsning gäller på många platser."
+      },
+      "parkeringssida": "https://arboga.se/trafik-gator-och-torg/parkeringar/regler-och-overvakning.html",
+      "kallor": [
+        {
+          "url": "https://arboga.se/trafik-gator-och-torg/parkeringar/regler-och-overvakning.html",
+          "titel": "Regler och övervakning – Arboga kommun (uppdaterad 23 september 2026)",
+          "citat": "I Arboga kommun är all parkering avgiftsfri.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2021",
@@ -3487,7 +3610,24 @@
       "kod": "2031",
       "namn": "Rättvik",
       "osmNamn": "Rättviks kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs."
+      },
+      "parkeringssida": "https://www.rattvik.se/trafik-och-gator/parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.rattvik.se/trafik-och-gator/parkering.html",
+          "titel": "Parkering – Rättviks kommun",
+          "citat": "I Rättviks kommun är all parkering avgiftsfri.",
+          "namnsOcksa": [
+            "aimo"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2034",
@@ -3578,13 +3718,40 @@
       "kod": "2082",
       "namn": "Säter",
       "osmNamn": "Säters kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://sater.se/trafik-stadsplanering/trafik-och-gator/parkeringsplatser/",
+      "kallor": [
+        {
+          "url": "https://sater.se/trafik-stadsplanering/trafik-och-gator/parkeringsplatser/",
+          "titel": "Parkeringsplatser – Säters kommun (uppdaterad 1 juni 2026)",
+          "citat": "Parkering på de kommunala parkeringarna är kostnadsfri och du behöver heller ingen parkeringsskiva eller liknande.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2083",
       "namn": "Hedemora",
       "osmNamn": "Hedemora kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs i centrum."
+      },
+      "parkeringssida": "https://hedemora.se/gator-och-trafik/parkering/",
+      "kallor": [
+        {
+          "url": "https://hedemora.se/gator-och-trafik/parkering/",
+          "titel": "Parkering – Hedemora kommun (uppdaterad 2026-06-16)",
+          "citat": "De kommunala parkeringarna är gratis, men du måste använda en parkeringsskiva (p-skiva) eller motsvarande.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2084",
@@ -3838,7 +4005,21 @@
       "kod": "2283",
       "namn": "Sollefteå",
       "osmNamn": "Sollefteå kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa platser krävs p-skiva."
+      },
+      "parkeringssida": "https://www.solleftea.se/Trafik--infrastruktur/trafik-och-gator/parkering-och-fordon",
+      "kallor": [
+        {
+          "url": "https://www.solleftea.se/Trafik--infrastruktur/trafik-och-gator/parkering-och-fordon",
+          "titel": "Parkering och fordon – Sollefteå kommun (uppdaterad 23 mars 2026)",
+          "citat": "I Sollefteå kommun är det gratis att parkera på alla allmänna parkeringsplatser.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2284",
@@ -3886,7 +4067,24 @@
       "kod": "2313",
       "namn": "Strömsund",
       "osmNamn": "Strömsunds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Motorvärmare vid busstorget betalas med eParkera."
+      },
+      "parkeringssida": "https://www.stromsund.se/785.html",
+      "kallor": [
+        {
+          "url": "https://www.stromsund.se/785.html",
+          "titel": "Parkering – Strömsunds kommun",
+          "citat": "I Strömsunds kommun är det gratis att parkera på alla allmänna parkeringsplatser.",
+          "namnsOcksa": [
+            "epark"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2321",
