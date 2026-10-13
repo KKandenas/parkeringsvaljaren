@@ -97,7 +97,10 @@
       "namn": "Parking Time",
       "android": "se.parkingtime.app",
       "appStoreId": "1611019108",
-      "webb": "https://parkingtime.se"
+      "webb": "https://parkingtime.se",
+      "alias": [
+        "ParkingTime"
+      ]
     },
     {
       "id": "fastpark",

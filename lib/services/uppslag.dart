@@ -13,6 +13,7 @@ Future<Katalog> lasKatalog([AssetBundle? bundle]) async {
     apps: await b.loadString('assets/data/apps.json'),
     kommuner: await b.loadString('assets/data/kommuner.json'),
     operatorer: await b.loadString('assets/data/operatorer.json'),
+    idag: DateTime.now().toIso8601String().substring(0, 10),
   );
 }
 

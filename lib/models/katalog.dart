@@ -95,6 +95,28 @@ enum KommunStatus {
 }
 
 /// En kommun ur assets/data/kommuner.json.
+/// En ändring som kommunen har aviserat, t.ex. nya appar från ett visst
+/// datum.
+class KommandeAndring {
+  const KommandeAndring({
+    required this.fran,
+    required this.appar,
+    this.anmarkning,
+  });
+
+  /// Första dagen ändringen gäller, ÅÅÅÅ-MM-DD.
+  final String fran;
+  final List<String> appar;
+  final String? anmarkning;
+
+  factory KommandeAndring.fromJson(Map<String, dynamic> json) =>
+      KommandeAndring(
+        fran: json['fran'] as String,
+        appar: (json['appar'] as List).cast<String>(),
+        anmarkning: json['anmarkning'] as String?,
+      );
+}
+
 class Kommun {
   const Kommun({
     required this.kod,
@@ -105,7 +127,28 @@ class Kommun {
     this.anmarkning,
     this.kallor = const [],
     this.kontrollerad,
+    this.kommande,
   });
+
+  /// Aviserad ändring. Gäller från och med kommande.fran (se [pa]).
+  final KommandeAndring? kommande;
+
+  /// Kommunen som den ser ut dagen idag (ÅÅÅÅ-MM-DD): har en kommande
+  /// ändring börjat gälla används dess appar och anmärkning.
+  Kommun pa(String idag) {
+    final k = kommande;
+    if (k == null || k.fran.compareTo(idag) > 0) return this;
+    return Kommun(
+      kod: kod,
+      namn: namn,
+      osmNamn: osmNamn,
+      status: KommunStatus.verifierad,
+      appar: k.appar,
+      anmarkning: k.anmarkning ?? anmarkning,
+      kallor: kallor,
+      kontrollerad: kontrollerad,
+    );
+  }
 
   /// SCB:s kommunkod, fyra siffror.
   final String kod;
@@ -144,6 +187,9 @@ class Kommun {
           Kalla.fromJson(k as Map<String, dynamic>),
       ],
       kontrollerad: json['kontrollerad'] as String?,
+      kommande: json['kommande'] == null
+          ? null
+          : KommandeAndring.fromJson(json['kommande'] as Map<String, dynamic>),
     );
   }
 }
@@ -179,6 +225,10 @@ class Katalog {
     required String apps,
     required String kommuner,
     required String operatorer,
+
+    /// Dagen kommande ändringar räknas mot, ÅÅÅÅ-MM-DD. Utan den används
+    /// uppgifterna som de står.
+    String? idag,
   }) => Katalog(
     appar: [
       for (final a in (json.decode(apps) as Map)['appar'] as List)
@@ -186,7 +236,9 @@ class Katalog {
     ],
     kommuner: [
       for (final k in (json.decode(kommuner) as Map)['kommuner'] as List)
-        Kommun.fromJson(k as Map<String, dynamic>),
+        idag == null
+            ? Kommun.fromJson(k as Map<String, dynamic>)
+            : Kommun.fromJson(k as Map<String, dynamic>).pa(idag),
     ],
     operatorer: [
       for (final o in (json.decode(operatorer) as Map)['operatorer'] as List)

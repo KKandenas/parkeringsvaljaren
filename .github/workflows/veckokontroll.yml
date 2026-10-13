@@ -1,15 +1,22 @@
-name: Veckokontroll av källor
+name: Veckokontroll av källorna
 
-# Varje måndag 06:00 svensk vintertid. Misslyckas jobbet mejlar GitHub den
-# som senast ändrade schemat i den här filen.
+# Varje måndag 06:00 svensk vintertid. Varje kommun eller app med problem
+# blir ett ärende med etiketten "veckokontroll", och GitHub mejlar om nya
+# ärenden. Ärenden vars problem har försvunnit stängs. Misslyckas själva
+# jobbet mejlar GitHub den som senast ändrade schemat i den här filen.
 on:
   schedule:
     - cron: '0 5 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   kallor:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -17,4 +24,7 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - run: dart run tool/kontrollera_kallor.dart
+      - run: dart run tool/kontrollera_kallor.dart --json resultat.json
+      - run: tool/skapa_arenden.sh resultat.json
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -48,6 +48,28 @@ void main() {
     }
   });
 
+  test('kommande ändringar och namnsOcksa pekar på kända appar', () {
+    final rader =
+        (json.decode(File('assets/data/kommuner.json').readAsStringSync())
+                as Map)['kommuner']
+            as List;
+    for (final k in rader) {
+      final namn = '${k['kod']} ${k['namn']}';
+      final kommande = k['kommande'] as Map?;
+      if (kommande != null) {
+        expect(kommande['fran'], matches(datum), reason: namn);
+        for (final id in kommande['appar'] as List) {
+          expect(katalog.appar, contains(id), reason: '$namn: okänd app $id');
+        }
+      }
+      for (final kalla in (k['kallor'] as List? ?? const [])) {
+        for (final id in (kalla['namnsOcksa'] as List? ?? const [])) {
+          expect(katalog.appar, contains(id), reason: '$namn: okänd app $id');
+        }
+      }
+    }
+  });
+
   test('apparna har unika id och paketnamn', () {
     final rader =
         (json.decode(File('assets/data/apps.json').readAsStringSync())

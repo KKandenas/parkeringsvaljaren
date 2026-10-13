@@ -22,7 +22,10 @@
           "url": "https://www.upplandsvasby.se/trafik-och-resor/trafik-och-gator/parkering/parkeringsplatser-allmanna",
           "titel": "Parkeringsplatser, allmänna – Upplands Väsby kommun (uppdaterad 24 augusti 2026)",
           "citat": "EasyPark App Ladda ner EasyParks app … Ladda ner Parksters app",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -186,7 +189,10 @@
           "url": "https://www.haninge.se/bygga-trafik-och-miljo/trafik-och-gator/parkering/parkera/",
           "titel": "Parkera – Haninge kommun",
           "citat": "Leverantörer som kommunen samarbetar med är Easypark, Epark, Mobill och Parkster.",
-          "hamtad": "2026-10-10"
+          "hamtad": "2026-10-10",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-10"
@@ -392,7 +398,10 @@
           "url": "https://www.sundbyberg.se/trafik-och-gator/parkering/betala-parkering",
           "titel": "Betala parkering – Sundbybergs stad",
           "citat": "hos våra mobilbetalningsleverantörer: Easypark E-park Mobill Parkster",
-          "hamtad": "2026-10-10"
+          "hamtad": "2026-10-10",
+          "namnsOcksa": [
+            "flowbird"
+          ]
         }
       ],
       "kontrollerad": "2026-10-10"
@@ -515,7 +524,10 @@
           "url": "https://www.habo.se/trafik-och-infrastruktur/trafik-vagar-och-gator/parkering.html",
           "titel": "Parkering – Håbo kommun",
           "citat": "Samtliga kommunens parkeringar är kostnadsfria",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -570,7 +582,10 @@
           "url": "https://www.tierp.se/tierp.se/bo-trafik-och-miljo/trafik/parkering.html",
           "titel": "Parkering – Tierps kommun (uppdaterad 2026-04-16)",
           "citat": "Det är kostnadsfritt att parkera på kommunala parkeringar och längsmed gatorna",
-          "hamtad": "2026-10-12"
+          "hamtad": "2026-10-12",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-12"
@@ -620,7 +635,10 @@
           "url": "https://enkoping.se/trafik-och-gator/parkeringsregler-och-parkeringstillstand/betala-parkering.html",
           "titel": "Betala parkering – Enköpings kommun",
           "citat": "De leverantörer som är anslutna hos oss … Parking Time … EasyPark … Parkster … Mobill … ePark",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "flowbird"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -878,7 +896,10 @@
           "url": "https://www.motala.se/stadsplanering-och-trafik/parkering/",
           "titel": "Parkering – Motala kommun",
           "citat": "Du betalar parkeringen enklast via appen Epark eller sms.",
-          "hamtad": "2026-10-10"
+          "hamtad": "2026-10-10",
+          "namnsOcksa": [
+            "flowbird"
+          ]
         }
       ],
       "kontrollerad": "2026-10-10"
@@ -1262,7 +1283,10 @@
           "url": "https://www.oskarshamn.se/bygga-bo-miljo/trafik-vagar-och-parkering/parkering/",
           "titel": "Parkering – Oskarshamns kommun",
           "citat": "Det funkar både med app och sms hos båda företagen.",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "parking-time"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -1483,7 +1507,21 @@
       "kod": "1260",
       "namn": "Bjuv",
       "osmNamn": "Bjuvs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.bjuv.se/gata-och-utemiljo/trafik-och-gator/trafiksakerhet-lokala-trafikforeskrifter-och-parkering.html",
+      "kallor": [
+        {
+          "url": "https://www.bjuv.se/gata-och-utemiljo/trafik-och-gator/trafiksakerhet-lokala-trafikforeskrifter-och-parkering.html",
+          "titel": "Trafiksäkerhet, lokala trafikföreskrifter och parkering – Bjuvs kommun",
+          "citat": "Du behöver inte lägga på någon parkeringsavgift i Bjuvs kommun.",
+          "kraverJavascript": true,
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1261",
@@ -1574,7 +1612,21 @@
       "kod": "1266",
       "namn": "Hörby",
       "osmNamn": "Hörby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs på de tidsbegränsade platserna."
+      },
+      "parkeringssida": "https://www.horby.se/trafik-och-stadsplanering/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.horby.se/trafik-och-stadsplanering/parkering/",
+          "titel": "Parkering – Hörby kommun (uppdaterad 2026-08-14)",
+          "citat": "Du parkerar gratis på de tidsbegränsade platserna",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1267",
@@ -1663,7 +1715,23 @@
       "kod": "1278",
       "namn": "Båstad",
       "osmNamn": "Båstads kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster"
+        ],
+        "anmarkning": "Avgift tas på vissa platser 1 juni–31 augusti, och nattetid (23–05) vid Båstad station. Övrig tid gäller p-skiva där det är skyltat."
+      },
+      "parkeringssida": "https://www.bastad.se/trafik-och-gator/parkering-och-laddplats/parkeringsplatser.html",
+      "kallor": [
+        {
+          "url": "https://www.bastad.se/trafik-och-gator/parkering-och-laddplats/parkeringsplatser.html",
+          "titel": "Parkeringsplatser – Båstads kommun (uppdaterad 17 juli 2026)",
+          "citat": "Du kan betala avgiften med kort, sms eller med appen Parkster.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1280",
@@ -2054,7 +2122,11 @@
           "url": "https://www.harryda.se/trafikochresor/parkering.4.1439a0061817fd1d9403e94.html",
           "titel": "Parkering – Härryda kommun (uppdaterad 2026-03-27)",
           "citat": "vanligtvis kostnadsfritt att parkera på allmänna gator, vägar och parkeringsplatser",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "easypark",
+            "parkster"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -2651,7 +2723,10 @@
           "url": "https://www.falkoping.se/trafik--gator/parkering/parkera-med-p-skiva",
           "titel": "Parkera med p-skiva – Falköpings kommun",
           "citat": "all parkering på gator och allmänna parkeringsplatser kostnadsfria",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "parking-time"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -2803,7 +2878,10 @@
           "url": "https://www.arvika.se/trafikochresor/parkering.2430.html",
           "titel": "Parkering – Arvika kommun (uppdaterad 24 juni 2026)",
           "citat": "De kommunala parkeringsplatserna är avgiftsfria",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -2830,7 +2908,23 @@
       "kod": "1861",
       "namn": "Hallsberg",
       "osmNamn": "Hallsbergs kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "parkster"
+        ],
+        "anmarkning": "Kommunen anger Parkster för den avgiftsbelagda pendlarparkeringen vid Långgatan."
+      },
+      "parkeringssida": "https://www.hallsberg.se/boende-och-trafik/trafik-gator-och-allman-plats/parkering/parkeringar.html",
+      "kallor": [
+        {
+          "url": "https://www.hallsberg.se/boende-och-trafik/trafik-gator-och-allman-plats/parkering/parkeringar.html",
+          "titel": "Parkeringar – Hallsbergs kommun",
+          "citat": "Betalningen hanteras av Parkster.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1862",
@@ -2993,7 +3087,10 @@
           "url": "https://www.vasteras.se/trafik-och-gator/parkera-i-vasteras.html",
           "titel": "Parkera i Västerås – Västerås stad",
           "citat": "Välj din favoritapp när du ska betala för Västerås stads allmänna parkeringar",
-          "hamtad": "2026-10-10"
+          "hamtad": "2026-10-10",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-10"
@@ -3013,7 +3110,10 @@
           "url": "https://www.sala.se/info/4390",
           "titel": "Parkeringsplatser, allmänna – Sala kommun (uppdaterad 2024-09-19)",
           "citat": "I Sala centrum parkerar du gratis med P-skiva.",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "epark"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -3274,6 +3374,7 @@
           "parkster",
           "easypark",
           "epark",
+          "parking-time",
           "mobill"
         ],
         "anmarkning": "Gävle Parkeringsservice är kommunens parkeringsbolag. Vid sms-betalning tillkommer en extra avgift."
@@ -3283,11 +3384,14 @@
         {
           "url": "https://gavleparkering.se/betalning/",
           "titel": "Betala parkeringsavgifter – Gävle Parkeringsservice",
-          "citat": "vår egna app Gävle P, Parkster, EasyPark, ePARK och Mobill",
-          "hamtad": "2026-10-11"
+          "citat": "vår egna app Gävle P, Parkster, EasyPark, ePARK, ParkingTime och Mobill",
+          "hamtad": "2026-10-13",
+          "namnsOcksa": [
+            "flowbird"
+          ]
         }
       ],
-      "kontrollerad": "2026-10-11"
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2181",
@@ -3376,7 +3480,10 @@
           "url": "https://www.timra.se/trafikinfrastruktur/gatorvagartrafikparkering/parkeringsplatser.4.714dad16d46439ef932c0.html",
           "titel": "Parkeringsplatser och laddplatser – Timrå kommun (uppdaterad 2026-07-21)",
           "citat": "Kommunen tar inte ut parkeringsavgift",
-          "hamtad": "2026-10-12"
+          "hamtad": "2026-10-12",
+          "namnsOcksa": [
+            "parkster"
+          ]
         }
       ],
       "kontrollerad": "2026-10-12"
@@ -3398,7 +3505,10 @@
           "url": "https://harnosand.se/bygga-bo-trafik--miljo/gata-park-trafik-och-hamn/parkering.html",
           "titel": "Parkering – Härnösands kommun (uppdaterad 2026-06-24)",
           "citat": "måste du alltid registrera parkeringen i Parksters app",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -3522,7 +3632,10 @@
           "url": "https://ostersund.se/trafik-och-infrastruktur/biltrafik/parkera-motorfordon/parkera-i-centrum.html",
           "titel": "Parkera i centrum – Östersunds kommun",
           "citat": "Kommunen har avtal med följande parkeringsbolag: EasyPark … ePARK … Mobill … Parkster",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "parking-time"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"
@@ -3724,7 +3837,10 @@
           "url": "https://www.lulea.se/boende--gator/gator-och-trafik/parkering.html",
           "titel": "Parkering – Luleå kommun",
           "citat": "Luleå kommun erbjuder parkering med följande system: e-park … Parkster … EasyPark … Mobill",
-          "hamtad": "2026-10-11"
+          "hamtad": "2026-10-11",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-11"

@@ -126,13 +126,38 @@ En ny app läggs in i `apps.json` och under `<queries>` i
 `AndroidManifest.xml`. Kör sedan `flutter test`.
 
 **Veckokontroll:** `.github/workflows/veckokontroll.yml` kör
-`tool/kontrollera_kallor.dart` varje måndag. Skriptet kontrollerar att varje
-källa svarar och fortfarande nämner apparna, och att apparna finns kvar i
-butikerna. Misslyckas det mejlar GitHub. Det går också att köra lokalt:
+`tool/kontrollera_kallor.dart` varje måndag. För varje kontrollerad kommun
+läser den om källorna och letar efter:
+
+- källor som inte svarar,
+- appar i listan som inte längre nämns (avtalet kan ha upphört),
+- appar ur katalogen som har börjat nämnas (en ny app, eller att en
+  avgiftsfri kommun har infört avgift),
+- avgiftsfria kommuner vars källa inte längre säger att det är gratis,
+- kommande ändringar vars datum har passerat.
+
+Den kontrollerar också att apparna finns kvar i butikerna och att deras
+universella länkar fungerar. `tool/skapa_arenden.sh` gör ett GitHub-ärende
+med etiketten `veckokontroll` per kommun eller app med problem. GitHub
+mejlar om nya ärenden, och ärenden stängs av sig själva när problemet är
+borta. Kör lokalt:
 
 ```bash
 dart run tool/kontrollera_kallor.dart
 ```
+
+**När en källa nämner en app av ett annat skäl,** till exempel Aimo Park som
+sköter parkeringsövervakningen eller Flowbird som tillverkar automaterna,
+lägg appens id under `"namnsOcksa"` för källan, så att den inte larmar.
+
+**Kommande ändringar** som kommunen har aviserat läggs in i förväg:
+
+```json
+"kommande": { "fran": "ÅÅÅÅ-MM-DD", "appar": ["easypark", "mobill"], "anmarkning": "valfri" }
+```
+
+Appen byter till de nya apparna samma dag. Veckokontrollen påminner sedan om
+att föra in ändringen i `gatuparkering` och ta bort `kommande`.
 
 ## Publicera
 
