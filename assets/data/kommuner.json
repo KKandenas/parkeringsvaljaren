@@ -1095,19 +1095,59 @@
       "kod": "0760",
       "namn": "Uppvidinge",
       "osmNamn": "Uppvidinge kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.uppvidinge.se/bo-bygga-och-miljo/trafik-resor-och-gator/parkeringsplatser-allmanna.html",
+      "kallor": [
+        {
+          "url": "https://www.uppvidinge.se/bo-bygga-och-miljo/trafik-resor-och-gator/parkeringsplatser-allmanna.html",
+          "titel": "Parkeringsplatser, allmänna – Uppvidinge kommun (uppdaterad 2026-06-04)",
+          "citat": "I Uppvidinge kommun är parkering på markerade parkeringsrutor avgiftsfri.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0761",
       "namn": "Lessebo",
       "osmNamn": "Lessebo kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Privata parkeringar kan ta avgift."
+      },
+      "parkeringssida": "https://www.lessebo.se/trafik-och-gator/parkering-och-laddplats.html",
+      "kallor": [
+        {
+          "url": "https://www.lessebo.se/trafik-och-gator/parkering-och-laddplats.html",
+          "titel": "Parkering och laddplats – Lessebo kommun (uppdaterad 13 november 2025)",
+          "citat": "I Lessebo kommun är det gratis att parkera på kommunala parkeringsplatser.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0763",
       "namn": "Tingsryd",
       "osmNamn": "Tingsryds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://tingsryd.se/bygga-bo-och-miljo/gator-trafik-och-allmanna-platser/parkering/",
+      "kallor": [
+        {
+          "url": "https://tingsryd.se/bygga-bo-och-miljo/gator-trafik-och-allmanna-platser/parkering/",
+          "titel": "Parkering – Tingsryds kommun (uppdaterad 2026-06-02)",
+          "citat": "Därför är all parkering gratis.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0764",
@@ -1210,7 +1250,20 @@
       "kod": "0834",
       "namn": "Torsås",
       "osmNamn": "Torsås kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.torsas.se/bo-miljo-trafik/trafik-och-infrastruktur/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.torsas.se/bo-miljo-trafik/trafik-och-infrastruktur/parkering/",
+          "titel": "Parkeringstillstånd – Torsås kommun",
+          "citat": "Det är gratis att parkera i Torsås kommun",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0840",
@@ -1228,7 +1281,24 @@
       "kod": "0861",
       "namn": "Mönsterås",
       "osmNamn": "Mönsterås kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa platser är tidsbegränsade, oftast med p-skiva."
+      },
+      "parkeringssida": "https://www.monsteras.se/trafik-resor-och-utemiljo/parkering/parkeringsplatser/",
+      "kallor": [
+        {
+          "url": "https://www.monsteras.se/trafik-resor-och-utemiljo/parkering/parkeringsplatser/",
+          "titel": "Parkeringsplatser – Mönsterås kommun",
+          "citat": "Alla parkeringar är gratis, men vissa parkeringsplatser är tidsbegränsade.",
+          "namnsOcksa": [
+            "aimo"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0862",
@@ -1382,7 +1452,21 @@
       "kod": "1060",
       "namn": "Olofström",
       "osmNamn": "Olofströms kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa centrala platser krävs p-skiva. Privata parkeringar kan ta avgift."
+      },
+      "parkeringssida": "https://olofstrom.se/trafik-och-resor/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://olofstrom.se/trafik-och-resor/trafik-och-gator/parkering",
+          "titel": "Parkering – Olofströms kommun (uppdaterad 14 januari 2026)",
+          "citat": "Alla parkeringsplatser som ägs av kommunen är det gratis att parkera på.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1080",
