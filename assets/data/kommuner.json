@@ -797,7 +797,24 @@
       "kod": "0561",
       "namn": "Åtvidaberg",
       "osmNamn": "Åtvidabergs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Laddplatserna betalas med app (bland annat EasyPark)."
+      },
+      "parkeringssida": "https://www.atvidaberg.se/trafik-och-gator/parkering-och-laddplatser",
+      "kallor": [
+        {
+          "url": "https://www.atvidaberg.se/trafik-och-gator/parkering-och-laddplatser",
+          "titel": "Parkering och laddplatser – Åtvidabergs kommun (uppdaterad 21 maj 2026)",
+          "citat": "I Åtvidabergs kommun är det gratis att parkera på allmänna parkeringsplatser, om inget annat anges.",
+          "namnsOcksa": [
+            "easypark"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0562",
@@ -824,7 +841,21 @@
       "kod": "0563",
       "namn": "Valdemarsvik",
       "osmNamn": "Valdemarsviks kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I centrum krävs p-skiva."
+      },
+      "parkeringssida": "https://www.valdemarsvik.se/kommun/bo-bygga/vag-trafik/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.valdemarsvik.se/kommun/bo-bygga/vag-trafik/parkering/",
+          "titel": "Parkering – Valdemarsviks kommun (uppdaterad 11 september 2024)",
+          "citat": "Parkering på allmänna parkeringar i Valdemarsvik är avgiftsfri.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0580",
@@ -966,7 +997,20 @@
       "kod": "0643",
       "namn": "Habo",
       "osmNamn": "Habo kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://habokommun.se/trafik-och-samhallsplanering/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://habokommun.se/trafik-och-samhallsplanering/trafik-och-gator/parkering",
+          "titel": "Parkering – Habo kommun (uppdaterad 23 mars 2026)",
+          "citat": "Alla kommunala parkeringsplatser i Habo är avgiftsfria.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0662",
@@ -1031,7 +1075,21 @@
       "kod": "0684",
       "namn": "Sävsjö",
       "osmNamn": "Sävsjö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa platser gäller tidsbegränsning."
+      },
+      "parkeringssida": "https://savsjo.se/gator-vagar-och-trafik/parkering-och-tillstand/parkering-och-parkeringstillstand.html",
+      "kallor": [
+        {
+          "url": "https://savsjo.se/gator-vagar-och-trafik/parkering-och-tillstand/parkering-och-parkeringstillstand.html",
+          "titel": "Parkering och parkeringstillstånd – Sävsjö kommun",
+          "citat": "Du kan parkera utan avgift på alla kommunala parkeringsplatser.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0685",

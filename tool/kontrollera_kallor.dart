@@ -225,6 +225,8 @@ final fritt = [
   'inte betala någon parkeringsavgift',
   'kostnadsfri',
   'ingen avgift',
+  'utan avgift',
+  'inte lägga på någon parkeringsavgift',
   'inga parkeringsavgifter',
   'p-skiva',
   'parkeringsskiva',
