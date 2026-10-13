@@ -878,7 +878,21 @@
       "kod": "0582",
       "namn": "Söderköping",
       "osmNamn": "Söderköpings kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "I vissa delar av innerstaden krävs p-skiva."
+      },
+      "parkeringssida": "https://www.soderkoping.se/samhalle-trafik/trafik-parkering-och-resor/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.soderkoping.se/samhalle-trafik/trafik-parkering-och-resor/parkering/",
+          "titel": "Parkeringsplatser och P-skivor – Söderköpings kommun (uppdaterad 2026-08-27)",
+          "citat": "Platserna är avgiftsfria och kan nyttjas året om",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0583",
@@ -2890,7 +2904,21 @@
       "kod": "1785",
       "namn": "Säffle",
       "osmNamn": "Säffle kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa platser i centrum är tidsbegränsade."
+      },
+      "parkeringssida": "https://saffle.se/boende-trafik-och-miljo/gator-och-trafik/parkeringsplatser-och-laddstolpar.html",
+      "kallor": [
+        {
+          "url": "https://saffle.se/boende-trafik-och-miljo/gator-och-trafik/parkeringsplatser-och-laddstolpar.html",
+          "titel": "Parkeringsplatser och laddstolpar – Säffle kommun",
+          "citat": "Det är gratis att parkera på uppmärkta kommunala parkeringsplatser inom Säffle kommun.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1814",
@@ -2921,7 +2949,10 @@
           "url": "https://www.hallsberg.se/boende-och-trafik/trafik-gator-och-allman-plats/parkering/parkeringar.html",
           "titel": "Parkeringar – Hallsbergs kommun",
           "citat": "Betalningen hanteras av Parkster.",
-          "hamtad": "2026-10-13"
+          "hamtad": "2026-10-13",
+          "namnsOcksa": [
+            "aimo"
+          ]
         }
       ],
       "kontrollerad": "2026-10-13"
