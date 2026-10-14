@@ -221,6 +221,12 @@ class Katalog {
   final List<Kommun> kommuner;
   final List<OperatorRegel> operatorer;
 
+  /// Bolagen som driver parkeringar och har egen app, i samma ordning som i
+  /// operatorer.json. Används när man själv väljer bolaget på skylten.
+  List<ParkeringsApp> get bolag => [
+    for (final id in {for (final o in operatorer) o.app}) ?appar[id],
+  ];
+
   factory Katalog.fromJsonStrings({
     required String apps,
     required String kommuner,

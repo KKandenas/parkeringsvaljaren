@@ -14,7 +14,12 @@ iPhone och iPad).
    `osmNamn` i `assets/data/kommuner.json`.
 3. **Overpass** (OpenStreetMap) ger parkeringar inom 60 meter. Har den
    närmaste en `operator` som finns i `assets/data/operatorer.json` visas det
-   bolagets app först. Privata parkeringar (`access=private`) hoppas över.
+   bolagets app först. Saknas operatören, eller är den okänd, prövas namnet
+   (t.ex. "Aimo Park Järntorget"). Privata parkeringar (`access=private`)
+   hoppas över. Få parkeringar har operatör i OpenStreetMap (2026-10-14: 1 av
+   411 i centrala Karlstad, 6 av 558 i centrala Örebro), därför finns också
+   knappen **Privat parkering? Välj bolag**: man väljer bolaget på skylten och
+   dess app hamnar överst. Listan är bolagen i `operatorer.json`.
 4. Kommunens appar för gatuparkering kommer från `kommuner.json`.
 5. Sortering (`lib/logic/app_urval.dart`): operatörens app, favoriter,
    installerade appar och sedan resten i kommunens ordning. Dolda appar visas
@@ -74,7 +79,7 @@ Testerna täcker:
   till Nominatim, samt att kommunen visas även när Overpass är nere.
 - `data_test`: datafilerna. Alla 290 kommuner, belägg för varje verifierad
   kommun, kända app-id och paketnamnen i AndroidManifest.
-- `hem_skarm_test`: startsidan, varningen, dolda appar och operatören först.
+- `hem_skarm_test`: startsidan, varningen, dolda appar, operatören först och bolagsvalet.
 
 ## Var uppgifterna kommer ifrån
 

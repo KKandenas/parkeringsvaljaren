@@ -78,7 +78,7 @@ void main() {
   });
 
   group('Uppslag', () {
-    Uppslag uppslag({bool overpassFel = false}) => Uppslag(
+    Uppslag uppslag({bool overpassFel = false, Object? overpass}) => Uppslag(
       riktigKatalog(),
       nominatim: NominatimClient(
         client: MockClient(
@@ -93,7 +93,9 @@ void main() {
           (_) async => overpassFel
               ? http.Response('busy', 504)
               : http.Response.bytes(
-                  utf8.encode(json.encode(fixtur('overpass_stockholm.json'))),
+                  utf8.encode(
+                    json.encode(overpass ?? fixtur('overpass_stockholm.json')),
+                  ),
                   200,
                 ),
         ),
@@ -112,6 +114,56 @@ void main() {
       expect(plats.parkering?.operator, isNotNull);
       expect(plats.parkering!.arPrivat, isFalse);
       expect(plats.operatorFel, isFalse);
+    });
+
+    Map<String, Object> parkering(double dLat, Map<String, String> tags) => {
+      'type': 'way',
+      'center': {'lat': sergel.$1 + dLat, 'lon': sergel.$2},
+      'tags': {'amenity': 'parking', ...tags},
+    };
+
+    test('namnet avslöjar bolaget när operatören saknas', () async {
+      final plats = await uppslag(
+        overpass: {
+          'elements': [
+            // Närmast, men namnet säger inget om bolaget.
+            parkering(0.0001, {'name': 'Kaimons parkering'}),
+            parkering(0.0002, {'name': 'Aimo Park Järntorget'}),
+            parkering(0.0003, {'operator': 'Q-Park'}),
+          ],
+        },
+      ).slaUpp(sergel.$1, sergel.$2).last;
+      expect(plats.parkering?.namn, 'Aimo Park Järntorget');
+      expect(plats.operatorApp, 'aimo');
+      expect(plats.operatorFranNamn, isTrue);
+    });
+
+    test('okänd operatör men känt namn', () async {
+      final plats = await uppslag(
+        overpass: {
+          'elements': [
+            parkering(0.0001, {
+              'operator': 'Fastighets AB Torget',
+              'name': 'APCOA Torget',
+            }),
+          ],
+        },
+      ).slaUpp(sergel.$1, sergel.$2).last;
+      expect(plats.parkering?.operator, 'Fastighets AB Torget');
+      expect(plats.operatorApp, 'apcoa');
+      expect(plats.operatorFranNamn, isTrue);
+    });
+
+    test('operatören går före namnet', () async {
+      final plats = await uppslag(
+        overpass: {
+          'elements': [
+            parkering(0.0001, {'operator': 'Q-Park', 'name': 'Aimo-huset'}),
+          ],
+        },
+      ).slaUpp(sergel.$1, sergel.$2).last;
+      expect(plats.operatorApp, 'qpark');
+      expect(plats.operatorFranNamn, isFalse);
     });
 
     test('kommunen fungerar även när Overpass är nere', () async {

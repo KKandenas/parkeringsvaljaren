@@ -46,6 +46,9 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
   int _uppslagNr = 0;
   Set<String>? _installerade;
 
+  /// Bolaget man själv valt efter skylten på en privat parkering.
+  String? _valtBolag;
+
   @override
   void initState() {
     super.initState();
@@ -103,6 +106,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       _letar = true;
       _forHand = false;
       _fel = null;
+      _valtBolag = null;
     });
     try {
       await for (final plats in widget.uppslag.har()) {
@@ -127,6 +131,8 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
       _plats = Plats(kommun: kommun);
       _forHand = true;
       _letar = false;
+      _fel = null;
+      _valtBolag = null;
       _fel = null;
     });
   }
@@ -162,7 +168,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
     final urval = valjAppar(
       katalog: widget.katalog,
       kommun: plats?.kommun,
-      operatorAppar: [?plats?.operatorApp],
+      operatorAppar: [?_valtBolag, ?plats?.operatorApp],
       favoriter: widget.minaAppar.favoriter,
       dolda: widget.minaAppar.dolda,
       installerad: _arInstallerad,
@@ -224,6 +230,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                   onOppna: () => _oppna(forslag.app),
                 ),
             ],
+            if (plats != null) _bolagsknapp(),
             if (urval.andra.isNotEmpty)
               Theme(
                 data: Theme.of(context)
@@ -434,6 +441,94 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
     );
   }
 
+  String _drivsAv(Plats plats) {
+    final p = plats.parkering!;
+    final bolag = widget.katalog.appar[plats.operatorApp]?.namn;
+    if (p.operator == null) {
+      return 'Namnet tyder på $bolag (enligt OpenStreetMap)';
+    }
+    final drivs = 'Drivs av ${p.operator} (enligt OpenStreetMap)';
+    return switch ((bolag, plats.operatorFranNamn)) {
+      (null, _) => '$drivs. Vi vet inte vilken app bolaget använder.',
+      (_, true) => '$drivs. Namnet tyder på $bolag.',
+      _ => drivs,
+    };
+  }
+
+  /// För privata parkeringar som OpenStreetMap inte känner till: man väljer
+  /// bolaget på skylten och får dess app överst.
+  Widget _bolagsknapp() {
+    final valt = widget.katalog.appar[_valtBolag];
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: OutlinedButton.icon(
+          icon: const Icon(Icons.local_parking),
+          label: Text(
+            valt == null
+                ? 'Privat parkering? Välj bolag'
+                : 'Bolag på skylten: ${valt.namn} · ändra',
+          ),
+          onPressed: _valjBolag,
+        ),
+      ),
+    );
+  }
+
+  Future<void> _valjBolag() async {
+    final text = Theme.of(context).textTheme;
+    final f = Farger.av(context);
+    // Tom sträng betyder "inget bolag".
+    final val = await showModalBottomSheet<String>(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (context) => SafeArea(
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Vilket bolag står på skylten?',
+                    style: text.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    'Bolagets app hamnar överst. Står bolaget inte här, '
+                    'följ skylten.',
+                    style: text.bodySmall?.copyWith(color: f.dampad),
+                  ),
+                ],
+              ),
+            ),
+            for (final app in widget.katalog.bolag)
+              ListTile(
+                leading: AppLogga(app: app),
+                title: Text(app.namn),
+                selected: app.id == _valtBolag,
+                trailing: app.id == _valtBolag ? const Icon(Icons.check) : null,
+                onTap: () => Navigator.of(context).pop(app.id),
+              ),
+            if (_valtBolag != null)
+              ListTile(
+                leading: const Icon(Icons.close),
+                title: const Text('Inget bolag'),
+                onTap: () => Navigator.of(context).pop(''),
+              ),
+          ],
+        ),
+      ),
+    );
+    if (val == null || !mounted) return;
+    setState(() => _valtBolag = val.isEmpty ? null : val);
+  }
+
   /// Närmaste parkering i OpenStreetMap som har en operatör.
   Widget _privat(BuildContext context, Plats plats) {
     final text = Theme.of(context).textTheme;
@@ -458,8 +553,7 @@ class _HemSkarmState extends State<HemSkarm> with WidgetsBindingObserver {
                 style: text.titleMedium?.copyWith(fontWeight: FontWeight.w800),
               ),
               Text(
-                'Drivs av ${p.operator} (enligt OpenStreetMap)'
-                '${plats.operatorApp == null ? '. Vi vet inte vilken app bolaget använder.' : ''}',
+                _drivsAv(plats),
                 style: text.bodyMedium?.copyWith(color: f.dampad),
               ),
               const SizedBox(height: 4),

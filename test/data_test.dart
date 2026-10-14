@@ -115,4 +115,19 @@ void main() {
       }
     }
   });
+
+  test('bolagslistan: en rad per app, i operatorer.json-ordning', () {
+    expect(
+      [for (final a in katalog.bolag) a.id],
+      [
+        'aimo',
+        'qpark',
+        'apcoa',
+        'easypark',
+        'parkster',
+        'parkering-goteborg',
+        'linpark',
+      ],
+    );
+  });
 }

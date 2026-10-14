@@ -21,6 +21,14 @@ class FastUppslag extends Uppslag {
   Stream<Plats> har() => Stream.value(plats);
 }
 
+/// Som när positionen inte får användas.
+class FelUppslag extends Uppslag {
+  FelUppslag(super.katalog);
+  @override
+  Stream<Plats> har() =>
+      Stream.error(const PositionFel('Appen får inte använda din position.'));
+}
+
 void main() {
   final katalog = riktigKatalog();
   Kommun kommunMedKod(String kod) =>
@@ -63,6 +71,88 @@ void main() {
       scrollable: find.byType(Scrollable).first,
     );
     expect(find.text('Det här stämmer inte'), findsOneWidget);
+  });
+
+  testWidgets('välj bolag på skylten: bolagets app hamnar först', (
+    tester,
+  ) async {
+    await visa(
+      tester,
+      Plats(adress: 'Tullslätten, Kalmar', kommun: kommunMedKod('0880')),
+      await minaAppar({}),
+    );
+    await tester.scrollUntilVisible(
+      find.text('Privat parkering? Välj bolag'),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    // Förbi varningsraden längst ner.
+    await tester.drag(find.byType(ListView), const Offset(0, -150));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Privat parkering? Välj bolag'));
+    await tester.pumpAndSettle();
+    expect(find.text('Vilket bolag står på skylten?'), findsOneWidget);
+    await tester.tap(find.widgetWithText(ListTile, 'Aimo Park'));
+    await tester.pumpAndSettle();
+    expect(find.text('Bolag på skylten: Aimo Park · ändra'), findsOneWidget);
+    final forsta = tester.widget<AppRad>(find.byType(AppRad).first);
+    expect(forsta.forslag.app.id, 'aimo');
+    expect(forsta.forslag.skal, Skal.operator);
+
+    // Och går att ta bort igen.
+    await tester.tap(find.text('Bolag på skylten: Aimo Park · ändra'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Inget bolag'));
+    await tester.pumpAndSettle();
+    expect(find.text('Privat parkering? Välj bolag'), findsOneWidget);
+    expect(
+      tester.widget<AppRad>(find.byType(AppRad).first).forslag.skal,
+      Skal.kommun,
+    );
+  });
+
+  testWidgets('parkering som bara känns igen på namnet', (tester) async {
+    await visa(
+      tester,
+      Plats(
+        kommun: kommunMedKod('0880'),
+        parkering: const OsmParkering(
+          namn: 'Aimo Park Järntorget',
+          operator: null,
+          avstand: 20,
+        ),
+        operatorApp: 'aimo',
+        operatorFranNamn: true,
+      ),
+      await minaAppar({}),
+    );
+    expect(
+      find.text('Namnet tyder på Aimo Park (enligt OpenStreetMap)'),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('vald kommun ersätter felet om positionen', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: tema(Brightness.light),
+        home: HemSkarm(
+          katalog: katalog,
+          minaAppar: await minaAppar({}),
+          uppslag: FelUppslag(katalog),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Appen får inte använda din position.'), findsOneWidget);
+    await tester.tap(find.widgetWithText(OutlinedButton, 'Välj kommun'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Kalmar');
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Kalmar').last);
+    await tester.pumpAndSettle();
+    expect(find.text('Appen får inte använda din position.'), findsNothing);
+    expect(find.text('Vald kommun'), findsOneWidget);
   });
 
   testWidgets('okänd kommun: alla appar och en uppmaning', (tester) async {

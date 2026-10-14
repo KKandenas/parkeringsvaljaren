@@ -25,6 +25,7 @@ class Plats {
     this.kommun,
     this.parkering,
     this.operatorApp,
+    this.operatorFranNamn = false,
     this.operatorFel = false,
     this.letarOperator = false,
   });
@@ -32,11 +33,15 @@ class Plats {
   final String? adress;
   final Kommun? kommun;
 
-  /// Närmaste parkering i OpenStreetMap som har en operatör.
+  /// Närmaste parkering i OpenStreetMap som har en operatör, eller ett namn
+  /// som pekar ut ett känt bolag.
   final OsmParkering? parkering;
 
   /// Appen som hör till operatören, om den är känd.
   final String? operatorApp;
+
+  /// Bolaget kommer från parkeringens namn, inte från operatören.
+  final bool operatorFranNamn;
 
   /// Overpass svarade inte, så privata parkeringar är okända.
   final bool operatorFel;
@@ -95,10 +100,21 @@ class Uppslag {
     final nara = await parkeringar;
     OsmParkering? parkering;
     String? app;
+    var franNamn = false;
     for (final p in nara ?? const <OsmParkering>[]) {
-      if (p.operator == null || p.arPrivat) continue;
+      if (p.arPrivat) continue;
+      // Operatören i första hand. Saknas den, eller är den okänd, kan
+      // namnet avslöja bolaget, t.ex. "Aimo Park Järntorget".
+      final avOperator = p.operator == null
+          ? null
+          : _operatorer.appFor(p.operator!);
+      final avNamn = avOperator == null && p.namn != null
+          ? _operatorer.appFor(p.namn!)
+          : null;
+      if (p.operator == null && avNamn == null) continue;
       parkering = p;
-      app = _operatorer.appFor(p.operator!);
+      app = avOperator ?? avNamn;
+      franNamn = avNamn != null;
       break;
     }
     yield Plats(
@@ -106,6 +122,7 @@ class Uppslag {
       kommun: grund.kommun,
       parkering: parkering,
       operatorApp: app,
+      operatorFranNamn: franNamn,
       operatorFel: nara == null,
     );
   }
