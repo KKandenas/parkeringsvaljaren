@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kontrollerad": "2026-10-10",
-  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association. iosSchema: prövat på en riktig iPhone med web/lanktest.html (EasyPark 2026-10-10). iosAppLank: universell länk som bara används när man har appen, eftersom den annars öppnar en webbsida i stället för App Store (Mobill: mobill.se/qr*, prövat 2026-10-11).",
+  "kalla": "Paketnamn kontrollerade mot Google Play (play.google.com/store/apps/details?id=…), App Store-id mot Apples sök-API (itunes.apple.com/search, country=se). Universella länkar enligt appens /.well-known/apple-app-site-association. iosSchema: prövat på en riktig iPhone med web/lanktest.html (EasyPark 2026-10-10). iosAppLank: universell länk som bara används när man har appen, eftersom den annars öppnar en webbsida i stället för App Store (Mobill: mobill.se/qr*, prövat 2026-10-11). Parkit: Google Play-länken från parkit.se, App Store-utvecklare Parkit Sweden AB (2026-10-14).",
   "appar": [
     {
       "id": "easypark",
@@ -114,6 +114,13 @@
       "android": "se.falup",
       "appStoreId": "760260967",
       "webb": "https://falup.se"
+    },
+    {
+      "id": "parkit",
+      "namn": "Parkit",
+      "android": "com.parkit.controller",
+      "appStoreId": "6447423390",
+      "webb": "https://www.parkit.se"
     }
   ]
 }

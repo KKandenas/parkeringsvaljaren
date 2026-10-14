@@ -127,6 +127,7 @@ void main() {
         'parkster',
         'parkering-goteborg',
         'linpark',
+        'parkit',
       ],
     );
   });

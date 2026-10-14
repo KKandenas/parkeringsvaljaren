@@ -30,6 +30,7 @@ void main() {
     expect(matcher.appFor('Biskopen / Aimo Park'), 'aimo');
     expect(matcher.appFor('Q-Park AB'), 'qpark');
     expect(matcher.appFor('Europark'), 'apcoa');
+    expect(matcher.appFor('Parkit Sweden AB'), 'parkit');
   });
 
   test('bara hela ord', () {

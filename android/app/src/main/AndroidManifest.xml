@@ -71,5 +71,6 @@
         <package android:name="se.parkingtime.app"/>
         <package android:name="com.fastpark.fastparkapp"/>
         <package android:name="se.falup"/>
+        <package android:name="com.parkit.controller"/>
     </queries>
 </manifest>

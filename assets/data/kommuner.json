@@ -102,7 +102,20 @@
       "kod": "0125",
       "namn": "Ekerö",
       "osmNamn": "Ekerö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.ekero.se/ekeros-utveckling-trafik/parkering--parkeringsregler",
+      "kallor": [
+        {
+          "url": "https://www.ekero.se/ekeros-utveckling-trafik/parkering--parkeringsregler",
+          "titel": "Parkering & parkeringsregler – Ekerö kommun (uppdaterad 22 september 2026)",
+          "citat": "I Ekerö kommun kostar det ingenting att parkera på allmänna kommunala parkeringsplatser.",
+          "hamtad": "2026-10-14"
+        }
+      ],
+      "kontrollerad": "2026-10-14"
     },
     {
       "kod": "0126",
@@ -1121,7 +1134,24 @@
       "kod": "0682",
       "namn": "Nässjö",
       "osmNamn": "Nässjö kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva krävs i centrala Nässjö. Appen Parking Time kan användas som digital p-skiva."
+      },
+      "parkeringssida": "https://nassjo.se/gator-och-trafik/parkering/om-parkering-i-nassjo.html",
+      "kallor": [
+        {
+          "url": "https://nassjo.se/gator-och-trafik/parkering/om-parkering-i-nassjo.html",
+          "titel": "Om parkering i Nässjö – Nässjö kommun",
+          "citat": "Med parkeringsskiva parkerar du avgiftsfritt på över 900 parkeringsplatser i centrala Nässjö.",
+          "namnsOcksa": [
+            "parking-time"
+          ],
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "0683",
@@ -1913,7 +1943,21 @@
       "kod": "1273",
       "namn": "Osby",
       "osmNamn": "Osby kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Gäller centrala Osby. P-skiva krävs på vissa platser."
+      },
+      "parkeringssida": "https://www.osby.se/bygga-bo--miljo/min-gata-och-omgivning/parkeringsmojligheter-i-osby-tatort.html",
+      "kallor": [
+        {
+          "url": "https://www.osby.se/bygga-bo--miljo/min-gata-och-omgivning/parkeringsmojligheter-i-osby-tatort.html",
+          "titel": "Parkeringsmöjligheter i Osby tätort – Osby kommun",
+          "citat": "Du parkerar alltid avgiftsfritt med bil i centrala Osby",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1275",
@@ -2545,7 +2589,21 @@
       "kod": "1443",
       "namn": "Bollebygd",
       "osmNamn": "Bollebygds kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På vissa parkeringar gäller tidsbegränsning."
+      },
+      "parkeringssida": "https://www.bollebygd.se/trafik-och-infrastruktur/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.bollebygd.se/trafik-och-infrastruktur/trafik-och-gator/parkering",
+          "titel": "Parkering – Bollebygds kommun (uppdaterad 22 juni 2026)",
+          "citat": "I hela kommunen är det gratis att parkera på de kommunala parkeringarna och gatorna.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1444",
@@ -2595,7 +2653,21 @@
       "kod": "1460",
       "namn": "Bengtsfors",
       "osmNamn": "Bengtsfors kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "P-skiva gäller på vissa parkeringar."
+      },
+      "parkeringssida": "https://www.bengtsforsteknik.se/kommunala-bolag/bengtsfors-teknik-ab/parkering",
+      "kallor": [
+        {
+          "url": "https://www.bengtsforsteknik.se/kommunala-bolag/bengtsfors-teknik-ab/parkering",
+          "titel": "Parkering – Bengtsfors Teknik AB (kommunalt bolag)",
+          "citat": "I Bengtsfors kommun är det gratis att parkera. Det finns inga parkeringsavgifter eller datumparkeringar",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1461",
@@ -2632,7 +2704,20 @@
       "kod": "1465",
       "namn": "Svenljunga",
       "osmNamn": "Svenljunga kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://www.svenljunga.se/bygga-bo-miljo--trafik/trafik-och-gator/parkering",
+      "kallor": [
+        {
+          "url": "https://www.svenljunga.se/bygga-bo-miljo--trafik/trafik-och-gator/parkering",
+          "titel": "Parkering – Svenljunga kommun (uppdaterad 28 oktober 2025)",
+          "citat": "På allmänna parkeringsplatser och kommunala gator är det avgiftsfritt.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1466",
@@ -2650,7 +2735,21 @@
       "kod": "1471",
       "namn": "Götene",
       "osmNamn": "Götene kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Privata parkeringar kan ha andra regler."
+      },
+      "parkeringssida": "https://www.gotene.se/gatorochresor/trafikochvagar/parkering.9898.html",
+      "kallor": [
+        {
+          "url": "https://www.gotene.se/gatorochresor/trafikochvagar/parkering.9898.html",
+          "titel": "Parkering – Götene kommun",
+          "citat": "I kommunen är det gratis att parkera på kommunala parkeringar.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1472",
@@ -2662,7 +2761,21 @@
       "kod": "1473",
       "namn": "Töreboda",
       "osmNamn": "Töreboda kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Parkeringen i centrum är tidsbegränsad."
+      },
+      "parkeringssida": "https://toreboda.se/trafik-och-gator/parkering/parkering",
+      "kallor": [
+        {
+          "url": "https://toreboda.se/trafik-och-gator/parkering/parkering",
+          "titel": "Parkering – Töreboda kommun (uppdaterad 26 februari 2026)",
+          "citat": "I Töreboda är det gratis att parkera i centrum men parkeringen är tidsbegränsad.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1480",
@@ -2770,7 +2883,24 @@
       "kod": "1486",
       "namn": "Strömstad",
       "osmNamn": "Strömstads kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "easypark",
+          "parkster"
+        ],
+        "anmarkning": "Det går också att betala med kort eller mynt i parkeringsautomaten."
+      },
+      "parkeringssida": "https://www.stromstad.se/trafikochinfrastruktur/trafikochgator/parkeraistromstad/olikabetalsattforparkeringsavgiften.4.2af6fd8a14aa9f76aee1ecfb.html",
+      "kallor": [
+        {
+          "url": "https://www.stromstad.se/trafikochinfrastruktur/trafikochgator/parkeraistromstad/olikabetalsattforparkeringsavgiften.4.2af6fd8a14aa9f76aee1ecfb.html",
+          "titel": "Olika betalsätt för parkeringsavgiften – Strömstads kommun (uppdaterad 2026-03-27)",
+          "citat": "Du kan betala din avgift på ett flertal sätt: kortbetalning appen Easypark … appen Parkster",
+          "hamtad": "2026-10-14"
+        }
+      ],
+      "kontrollerad": "2026-10-14"
     },
     {
       "kod": "1487",
@@ -2876,7 +3006,21 @@
       "kod": "1492",
       "namn": "Åmål",
       "osmNamn": "Åmåls kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa platser i centrum är tidsbegränsade."
+      },
+      "parkeringssida": "https://amal.se/bygga-bo-och-leva-hallbart/gator-och-trafik/parkeringsplatser-och-laddstolpar",
+      "kallor": [
+        {
+          "url": "https://amal.se/bygga-bo-och-leva-hallbart/gator-och-trafik/parkeringsplatser-och-laddstolpar",
+          "titel": "Parkeringsplatser och laddstolpar – Åmåls kommun",
+          "citat": "Det är gratis att parkera på uppmärkta kommunala platser inom Åmåls kommun.",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1493",
@@ -3127,13 +3271,41 @@
       "kod": "1765",
       "namn": "Årjäng",
       "osmNamn": "Årjängs kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "Vissa parkeringar är tidsbegränsade."
+      },
+      "parkeringssida": "https://www.arjang.se/kommunalservice/startsida/trafikochinfrastruktur/trafikochgator/parkering.1276.html",
+      "kallor": [
+        {
+          "url": "https://www.arjang.se/kommunalservice/startsida/trafikochinfrastruktur/trafikochgator/parkering.1276.html",
+          "titel": "Parkering – Årjängs kommun (uppdaterad 22 januari 2026)",
+          "citat": "Alla kommunens parkeringsplatser är avgiftsfria",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "1766",
       "namn": "Sunne",
       "osmNamn": "Sunne kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": [],
+        "anmarkning": "På flera platser i centrum krävs p-skiva."
+      },
+      "parkeringssida": "https://www.sunne.se/kommun/trafik-och-resor/parkering/",
+      "kallor": [
+        {
+          "url": "https://www.sunne.se/kommun/trafik-och-resor/parkering/",
+          "titel": "Parkering – Sunne kommun (uppdaterad 28 juli 2026)",
+          "citat": "I Sunne parkerar du gratis.",
+          "hamtad": "2026-10-14"
+        }
+      ],
+      "kontrollerad": "2026-10-14"
     },
     {
       "kod": "1780",
@@ -3633,7 +3805,20 @@
       "kod": "2034",
       "namn": "Orsa",
       "osmNamn": "Orsa kommun",
-      "status": "okand"
+      "status": "avgiftsfri",
+      "gatuparkering": {
+        "appar": []
+      },
+      "parkeringssida": "https://orsa.se/trafik-och-infrastruktur/trafik-gator-och-parkering/parkeringar/parkeringsplatser.html",
+      "kallor": [
+        {
+          "url": "https://orsa.se/trafik-och-infrastruktur/trafik-gator-och-parkering/parkeringar/parkeringsplatser.html",
+          "titel": "Parkeringsplatser – Orsa kommun (uppdaterad 17 september 2026)",
+          "citat": "på alla kommunens parkeringar står du avgiftsfritt",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2039",
@@ -4090,7 +4275,23 @@
       "kod": "2321",
       "namn": "Åre",
       "osmNamn": "Åre kommun",
-      "status": "okand"
+      "status": "verifierad",
+      "gatuparkering": {
+        "appar": [
+          "aimo"
+        ],
+        "anmarkning": "Avgift tas på kommunens parkeringar i Åre by. Pendelparkeringarna är avgiftsfria. SkiStar och hotell har egna parkeringar."
+      },
+      "parkeringssida": "https://www.are.se/trafik-och-gator/parkering/parkeringsplatser-i-are-by",
+      "kallor": [
+        {
+          "url": "https://www.are.se/trafik-och-gator/parkering/parkeringsplatser-i-are-by",
+          "titel": "Parkeringsplatser i Åre by – Åre kommun (uppdaterad 4 maj 2026)",
+          "citat": "På Åre kommuns parkeringar betalar du med app, sms eller med kort i betalautomat. App : Ladda ned Aimo",
+          "hamtad": "2026-10-13"
+        }
+      ],
+      "kontrollerad": "2026-10-13"
     },
     {
       "kod": "2326",
