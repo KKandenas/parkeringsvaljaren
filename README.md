@@ -170,9 +170,17 @@ Inget är publicerat än. Det görs först efter beslut.
 
 - **Webben (PWA):** `flutter build web --release` och lägg upp `build/web`,
   till exempel på GitHub Pages eller Firebase Hosting (gratisplanen Spark).
-- **Android:** `flutter build apk --release`. Planen är att lägga APK-filen
-  som en release i ett publikt GitHub-projekt och låta appen uppdatera sig
-  själv därifrån, som Kandenäs Stream gör.
+- **Android:** `.github/workflows/apk.yml` bygger APK-filen i GitHub. En
+  tagg som `v1.0.0` ger en release med filen, signerad med släppnyckeln i
+  repots hemligheter (se början av filen). Planen är att låta appen
+  uppdatera sig själv därifrån, som Kandenäs Stream gör.
+
+## Utan egen dator
+
+Allt går att göra i GitHub och i Claude Code-sessioner i molnet. Molnmiljön
+`parkeringsvaljaren` installerar Flutter med ett setupskript, så att
+`dart analyze` och `flutter test` går att köra i sessionen. Android-bygget
+görs bara i GitHub Actions.
 
 ## Användningsregler för OpenStreetMap
 
