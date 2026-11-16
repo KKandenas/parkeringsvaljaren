@@ -1,17 +1,7 @@
-import java.util.Properties
-
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
-}
-
-// Släppnyckeln. GitHub Actions skriver key.properties och nyckelfilen från
-// repots hemligheter (se .github/workflows/apk.yml). Saknas filen signeras
-// release-bygget med debugnyckeln, så att `flutter run --release` fungerar.
-val nyckelFil = rootProject.file("key.properties")
-val nyckel = Properties().apply {
-    if (nyckelFil.exists()) nyckelFil.inputStream().use { load(it) }
 }
 
 android {
@@ -39,24 +29,11 @@ android {
         versionName = flutter.versionName
     }
 
-    signingConfigs {
-        if (nyckelFil.exists()) {
-            create("slapp") {
-                storeFile = file(nyckel.getProperty("storeFile"))
-                storePassword = nyckel.getProperty("storePassword")
-                keyAlias = nyckel.getProperty("keyAlias")
-                keyPassword = nyckel.getProperty("keyPassword")
-            }
-        }
-    }
-
     buildTypes {
         release {
-            signingConfig = if (nyckelFil.exists()) {
-                signingConfigs.getByName("slapp")
-            } else {
-                signingConfigs.getByName("debug")
-            }
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
